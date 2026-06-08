@@ -4,16 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Official website of Southern Colored Rooster. Southern grit and country storytelling. Listen to our latest music and view tour dates." />
+
+  <!-- Open Graph / Twitter: controls how the link looks when shared. -->
+  <!-- TIP: swap og:image for the album cover (ideal size 1200x630) when it's ready. -->
+  <meta property="og:type" content="music.band" />
+  <meta property="og:title" content="Southern Colored Rooster" />
+  <meta property="og:description" content="Country rock from Costa Rica to Nashville. Southern grit and country storytelling — where I found the songs I thought had died." />
+  <meta property="og:image" content="https://scrband.com/logo-no-background.png" />
+  <meta property="og:url" content="https://scrband.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Southern Colored Rooster" />
+  <meta name="twitter:description" content="Country rock from Costa Rica to Nashville. New single 'Boots On' coming soon." />
+  <meta name="twitter:image" content="https://scrband.com/logo-no-background.png" />
+
   <title>Southern Colored Rooster</title>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
   <style>
     :root { --gold: #d4a017; }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: 130px; }
     body { font-family: 'Oswald', sans-serif; background: #000; color: #fff; }
     
+    #top-stack { position: fixed; top: 0; left: 0; right: 0; z-index: 100; }
     header {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; justify-content: space-between; align-items: center;
       padding: 18px 40px; background: rgba(0,0,0,0.92); border-bottom: 1px solid #1a1a1a;
     }
@@ -31,7 +44,7 @@
     
     .hero {
       display: flex; flex-direction: column; align-items: center; justify-content: center;
-      text-align: center; padding: 120px 20px 60px; min-height: 100vh;
+      text-align: center; padding: 150px 20px 60px; min-height: 100vh;
       background: radial-gradient(circle at center, #3b1605 0%, #120603 60%, #000 100%);
     }
     .hero-label {
@@ -111,6 +124,117 @@
     
     footer { text-align: center; padding: 30px 20px; background: #0a0a0a; border-top: 1px solid #1a1a1a; font-size: 13px; opacity: 0.4; letter-spacing: 1px; }
     
+    /* ===================== NEW: Announcement bar ===================== */
+    #scr-announce-bar {
+      position: relative; display: flex; align-items: center; justify-content: center;
+      gap: 14px; padding: 10px 44px 10px 16px;
+      background: linear-gradient(90deg, #1a1208, #2a1d0c 50%, #1a1208);
+      border-bottom: 1px solid rgba(212,160,23,0.3);
+      font-size: 13px; letter-spacing: 1px;
+    }
+    #scr-announce-bar.hidden { display: none; }
+    .ab-dot {
+      width: 8px; height: 8px; border-radius: 50%; background: var(--gold); flex: none;
+      box-shadow: 0 0 0 0 rgba(212,160,23,0.6); animation: abpulse 1.9s infinite;
+    }
+    @keyframes abpulse {
+      0%   { box-shadow: 0 0 0 0 rgba(212,160,23,0.55); }
+      70%  { box-shadow: 0 0 0 10px rgba(212,160,23,0); }
+      100% { box-shadow: 0 0 0 0 rgba(212,160,23,0); }
+    }
+    .ab-text { text-transform: uppercase; color: #f4f4f0; text-align: center; }
+    .ab-text b { color: var(--gold); }
+    .ab-cta {
+      background: var(--gold); color: #000; text-decoration: none; white-space: nowrap;
+      font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600;
+      padding: 6px 14px; transition: background .2s, transform .15s;
+    }
+    .ab-cta:hover { background: #e8b520; transform: translateY(-1px); }
+    .ab-close {
+      position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+      background: none; border: none; color: #888; font-size: 20px; line-height: 1; cursor: pointer;
+    }
+    .ab-close:hover { color: #fff; }
+
+    /* ===================== NEW: Coming-soon single card ===================== */
+    .coming-soon-art {
+      position: relative; display: flex; align-items: center; justify-content: center;
+      width: 320px; max-width: 90%; aspect-ratio: 1; border: 1px solid #2a2a2a;
+      background: radial-gradient(circle at 50% 40%, #341f07, #0a0a0a 72%);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+    }
+    .coming-soon-art .cs-title {
+      font-family: 'Playfair Display', serif; color: var(--gold);
+      font-size: 36px; text-align: center; padding: 20px; line-height: 1.15;
+    }
+    .cs-badge {
+      position: absolute; top: 14px; left: 14px; background: var(--gold); color: #000;
+      font-size: 10px; letter-spacing: 2px; padding: 5px 10px; text-transform: uppercase; font-weight: 600;
+    }
+    .next-single-tag {
+      color: var(--gold); font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+      margin-bottom: 10px; display: block;
+    }
+
+    /* ===================== NEW: Tracklist + lyrics ===================== */
+    .tracklist { max-width: 760px; margin: 55px auto 0; }
+    .tracklist-title {
+      text-align: center; color: #fff; font-size: 16px; letter-spacing: 2px;
+      text-transform: uppercase; margin-bottom: 25px;
+    }
+    .track { border-bottom: 1px solid #1a1a1a; }
+    .track-head {
+      display: flex; align-items: center; gap: 16px; width: 100%;
+      background: none; border: none; color: #fff; font-family: 'Oswald', sans-serif;
+      text-align: left; padding: 16px 4px; cursor: pointer; font-size: 16px;
+      letter-spacing: 1px; transition: color .2s;
+    }
+    .track-head:hover { color: var(--gold); }
+    .track-num { color: var(--gold); font-size: 14px; width: 22px; flex: none; }
+    .track-name { flex: 1; }
+    .track-tag {
+      font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #000;
+      background: var(--gold); padding: 3px 8px; flex: none;
+    }
+    .track-tag.soon { background: transparent; color: #888; border: 1px solid #333; }
+    .track-toggle { color: var(--gold); font-size: 18px; flex: none; transition: transform .3s; }
+    .track.open .track-toggle { transform: rotate(45deg); }
+    .lyrics { max-height: 0; overflow: hidden; transition: max-height .5s ease; }
+    .track.open .lyrics { max-height: 4000px; }
+    .lyrics-inner {
+      padding: 6px 4px 26px 42px; color: #cfcabf; font-size: 15px;
+      line-height: 1.85; white-space: pre-line;
+    }
+    .lyrics-inner .tag {
+      color: var(--gold); font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+      display: block; margin: 18px 0 4px;
+    }
+    .lyrics-soon { padding: 6px 4px 22px 42px; color: #888; font-size: 14px; font-style: italic; }
+
+    /* ===================== NEW: Album campaign / reserve ===================== */
+    .album-cta { max-width: 620px; margin: 55px auto 0; text-align: center; }
+    .reserve-form { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 18px; }
+    .reserve-form input {
+      flex: 1; min-width: 220px; max-width: 340px; background: #0e0e0e; border: 1px solid #2a2a2a;
+      color: #fff; font-family: 'Oswald', sans-serif; font-size: 15px; padding: 12px 14px;
+    }
+    .reserve-form input:focus { outline: none; border-color: var(--gold); }
+    .reserve-form input::placeholder { color: #777; }
+    .reserve-note { color: #777; font-size: 12px; letter-spacing: 1px; margin-top: 14px; }
+    .reserve-done { display: none; color: var(--gold); letter-spacing: 1px; margin-top: 18px; font-size: 15px; }
+
+    /* ===================== NEW: Shows section ===================== */
+    #shows { background: #0a0a0a; }
+    .shows-empty { max-width: 620px; margin: 0 auto; text-align: center; }
+    .shows-empty p { opacity: 0.7; line-height: 1.7; font-size: 16px; margin-bottom: 26px; }
+    .show-row {
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+      flex-wrap: wrap; max-width: 760px; margin: 0 auto; border-bottom: 1px solid #1a1a1a; padding: 18px 0;
+    }
+    .show-date { color: var(--gold); font-size: 15px; letter-spacing: 1px; min-width: 120px; }
+    .show-place { flex: 1; min-width: 200px; }
+    .show-city { opacity: 0.6; font-size: 14px; }
+
     @media(max-width: 768px) {
       header { flex-direction: column; gap: 15px; padding: 15px 20px; }
       .header-controls { flex-direction: column; gap: 15px; }
@@ -121,10 +245,27 @@
       .buttons { justify-content: center; }
       .story-heading { font-size: 40px; }
       .category-heading { font-size: 32px; }
+      #scr-announce-bar { flex-direction: column; gap: 8px; padding: 10px 38px; font-size: 12px; }
+      .coming-soon-art { width: 260px; }
+      .lyrics-inner, .lyrics-soon { padding-left: 12px; }
     }
   </style>
 </head>
 <body>
+
+<div id="top-stack">
+  <!-- NEW: Announcement bar. Edit/remove this block to change or retire the announcement. -->
+  <div id="scr-announce-bar">
+    <span class="ab-dot"></span>
+    <span class="ab-text">
+      <span class="lang-en">New single coming soon &mdash; <b>&ldquo;Boots On&rdquo;</b></span>
+      <span class="lang-es">Nuevo sencillo muy pronto &mdash; <b>&ldquo;Boots On&rdquo;</b></span>
+    </span>
+    <a href="#boots-on" class="ab-cta">
+      <span class="lang-en">Notify me</span><span class="lang-es">Avísame</span>
+    </a>
+    <button class="ab-close" aria-label="Close" onclick="document.getElementById('scr-announce-bar').classList.add('hidden')">&times;</button>
+  </div>
 
 <header>
   <a href="#" class="logo-small">SCR</a>
@@ -132,12 +273,14 @@
     <nav>
       <a href="#about"><span class="lang-en">OUR STORY</span><span class="lang-es">NUESTRA HISTORIA</span></a>
       <a href="#music"><span class="lang-en">MUSIC</span><span class="lang-es">MÚSICA</span></a>
+      <a href="#shows"><span class="lang-en">SHOWS</span><span class="lang-es">CONCIERTOS</span></a>
       <a href="#musicians"><span class="lang-en">MUSICIANS</span><span class="lang-es">MÚSICOS</span></a>
       <a href="#follow"><span class="lang-en">FOLLOW</span><span class="lang-es">SÍGUENOS</span></a>
     </nav>
     <button id="lang-switch" class="btn btn-secondary lang-btn">ESPAÑOL</button>
   </div>
 </header>
+</div>
 
 <main>
   <section class="hero">
@@ -168,6 +311,30 @@
           <span class="lang-en">Singles</span><span class="lang-es">Sencillos</span>
         </h3>
         
+        <!-- NEW: Boots On — next single (coming soon). Convert to a normal .music-item with
+             real cover, audio snippet and streaming links once it's released. -->
+        <div class="music-item" id="boots-on">
+          <div class="coming-soon-art">
+            <span class="cs-badge"><span class="lang-en">Next single</span><span class="lang-es">Próximo sencillo</span></span>
+            <div class="cs-title">Boots&nbsp;On</div>
+          </div>
+          <div class="music-info">
+            <span class="next-single-tag">
+              <span class="lang-en">Coming soon · 2026</span><span class="lang-es">Muy pronto · 2026</span>
+            </span>
+            <h3>Boots On (2026)</h3>
+            <p>
+              <span class="lang-en">Our next single. An outlaw anthem for anyone who never fit the mold — grab your hat and put your boots on. Breaking the chains of the Nashville sound, bringing back the grit.</span>
+              <span class="lang-es">Nuestro próximo sencillo. Un himno outlaw para quien nunca encajó en el molde — agarrá el sombrero y ponete las botas. Rompiendo las cadenas del sonido de Nashville, trayendo de vuelta el filo.</span>
+            </p>
+            <div style="display:flex;gap:15px;flex-wrap:wrap;justify-content:inherit;margin-top:20px;">
+              <a href="#album-reserve" class="btn btn-primary">
+                <span class="lang-en">NOTIFY ME</span><span class="lang-es">AVÍSAME</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
         <div class="music-item">
           <img class="album-art" src="album-cover.jpg" alt="Livin' in an old country song - Cassette Cover">
           <div class="music-info">
@@ -203,7 +370,7 @@
         </div>
         
         <div class="music-item">
-          <img class="album-art" src="When death single cover.jpg" alt="When death calls your name - Single Cover">
+          <img class="album-art" src="When-death-single-cover.jpg" alt="When death calls your name - Single Cover">
           <div class="music-info">
             <h3>When death calls your name (2025)</h3>
             <p>
@@ -235,7 +402,7 @@
         </div>
 
         <div class="music-item">
-          <img class="album-art" src="Uncle Martin single cover.jpg" alt="Uncle Martin - Single Cover">
+          <img class="album-art" src="Uncle-Martin-single-cover.jpg" alt="Uncle Martin - Single Cover">
           <div class="music-info">
             <h3>Uncle Martin (2024)</h3>
             <p>
@@ -282,8 +449,238 @@
             </p>
           </div>
         </div>
+
+        <!-- NEW: Tracklist with expandable lyrics.
+             Released tracks show full lyrics. Unreleased show a "coming soon" note.
+             TO RELEASE A SONG: paste its ready-made lyrics block (see the companion
+             file campfire-stories-lyrics-ready.html) into that track's .lyrics div,
+             and change data-released / .track-tag from "soon" to released. -->
+        <div class="tracklist">
+          <h4 class="tracklist-title">
+            <span class="lang-en">Tracklist</span><span class="lang-es">Lista de Canciones</span>
+          </h4>
+
+          <!-- 1. Boots On (unreleased / next single) -->
+          <div class="track">
+            <button class="track-head" onclick="toggleTrack(this)">
+              <span class="track-num">01</span>
+              <span class="track-name">Boots On</span>
+              <span class="track-tag soon"><span class="lang-en">Soon</span><span class="lang-es">Pronto</span></span>
+              <span class="track-toggle">+</span>
+            </button>
+            <div class="lyrics"><div class="lyrics-soon"><span class="lang-en">Lyrics drop with the single. Stay tuned.</span><span class="lang-es">La letra llega con el sencillo. Pendiente.</span></div></div>
+          </div>
+
+          <!-- 2. Southern Colored Rooster (unreleased) -->
+          <div class="track">
+            <button class="track-head" onclick="toggleTrack(this)">
+              <span class="track-num">02</span>
+              <span class="track-name">Southern Colored Rooster</span>
+              <span class="track-tag soon"><span class="lang-en">Soon</span><span class="lang-es">Pronto</span></span>
+              <span class="track-toggle">+</span>
+            </button>
+            <div class="lyrics"><div class="lyrics-soon"><span class="lang-en">Lyrics available with the album release.</span><span class="lang-es">Letra disponible con el lanzamiento del disco.</span></div></div>
+          </div>
+
+          <!-- 3. Livin' in an old country song (RELEASED) -->
+          <div class="track">
+            <button class="track-head" onclick="toggleTrack(this)">
+              <span class="track-num">03</span>
+              <span class="track-name">Livin' in an old country song</span>
+              <span class="track-tag"><span class="lang-en">Out now</span><span class="lang-es">Ya salió</span></span>
+              <span class="track-toggle">+</span>
+            </button>
+            <div class="lyrics"><div class="lyrics-inner"><span class="tag">Verse 1</span>The jukebox hums like an old friend tonight
+It knows every wrong I've tried to make right
+From the barstool confessions to lonesome refrains
+This six-string's my witness to joy and to pain
+<span class="tag">Pre-Chorus</span>I've walked the line between sinner and saint
+Wrote down my struggles with whiskey and faith
+<span class="tag">Chorus</span>I'm living in an old country song
+Every heartbreak and loss keeps me hangin' on
+With a melody made of the nights I was strong
+And the verses that tell me where I went wrong
+Yeah, I'm living in an old country song
+<span class="tag">Verse 2</span>The neon lights shine like stars on my stage
+But the spotlight can't cover the cracks in my cage
+I've traded the high life for stories to tell
+Of the loves that I've lost and the wars with myself
+<span class="tag">Pre-Chorus</span>I've walked the line between sinner and saint
+Wrote down my struggles with whiskey and faith
+<span class="tag">Chorus</span>I'm living in an old country song
+Every heartbreak and loss keeps me hangin' on
+With a melody made of the nights I was strong
+And the verses that tell me where I went wrong
+I'm living in an old country song
+<span class="tag">Bridge</span>Some call it sorrow, some call it grace
+I call it home when I'm lost in this place
+<span class="tag">Chorus</span>I'm living in an old country song
+Every heartbreak and loss keeps me hangin' on
+With a melody made of the nights I was strong
+And the verses that tell me where I went wrong
+I'm living in an old country song</div></div>
+          </div>
+
+          <!-- 4. Me again (unreleased) -->
+          <div class="track">
+            <button class="track-head" onclick="toggleTrack(this)">
+              <span class="track-num">04</span>
+              <span class="track-name">Me again</span>
+              <span class="track-tag soon"><span class="lang-en">Soon</span><span class="lang-es">Pronto</span></span>
+              <span class="track-toggle">+</span>
+            </button>
+            <div class="lyrics"><div class="lyrics-soon"><span class="lang-en">Lyrics available with the album release.</span><span class="lang-es">Letra disponible con el lanzamiento del disco.</span></div></div>
+          </div>
+
+          <!-- 5. Break these chains (unreleased) -->
+          <div class="track">
+            <button class="track-head" onclick="toggleTrack(this)">
+              <span class="track-num">05</span>
+              <span class="track-name">Break these chains</span>
+              <span class="track-tag soon"><span class="lang-en">Soon</span><span class="lang-es">Pronto</span></span>
+              <span class="track-toggle">+</span>
+            </button>
+            <div class="lyrics"><div class="lyrics-soon"><span class="lang-en">Lyrics available with the album release.</span><span class="lang-es">Letra disponible con el lanzamiento del disco.</span></div></div>
+          </div>
+
+          <!-- 6. When death calls your name (RELEASED) -->
+          <div class="track">
+            <button class="track-head" onclick="toggleTrack(this)">
+              <span class="track-num">06</span>
+              <span class="track-name">When death calls your name</span>
+              <span class="track-tag"><span class="lang-en">Out now</span><span class="lang-es">Ya salió</span></span>
+              <span class="track-toggle">+</span>
+            </button>
+            <div class="lyrics"><div class="lyrics-inner"><span class="tag">Verse 1</span>In the dead of night, where shadows lay their claim,
+A lonesome cowboy rides, with nothing left to gain.
+He's faced a thousand demons, in the desert's cruel embrace,
+But now the final showdown, when death calls his name.
+<span class="tag">Chorus</span>When death calls your name, will you stand and fight?
+In the valley of darkness, will you shine your light?
+The devil's on your trail, with his fiery flame,
+But the righteous never falter, when death calls your name.
+<span class="tag">Verse 2</span>He's got a six-gun loaded, with the weight of every sin,
+Each bullet forged in anger, but his heart was caving in.
+He's walked the line of justice, on a path of burning shame,
+But redemption's in his holster, when death calls his name.
+<span class="tag">Chorus</span>When death calls your name, will you stand and fight?
+In the valley of darkness, will you shine your light?
+The devil's on your trail, with his fiery flame,
+But the righteous never falter, when death calls your name.
+<span class="tag">Bridge</span>In the dust and the blood, where the wicked fall,
+A cowboy's prayer echoes, through the canyon's call.
+He's ready for the reckoning, no fear in his veins,
+For he'll ride with the angels, when death calls his name.
+<span class="tag">Chorus</span>When death calls your name, will you stand and fight?
+In the valley of darkness, will you shine your light?
+The devil's on your trail, with his fiery flame,
+But the righteous never falter, when death calls your name.</div></div>
+          </div>
+
+          <!-- 7. Uncle Martin (RELEASED) -->
+          <div class="track">
+            <button class="track-head" onclick="toggleTrack(this)">
+              <span class="track-num">07</span>
+              <span class="track-name">Uncle Martin</span>
+              <span class="track-tag"><span class="lang-en">Out now</span><span class="lang-es">Ya salió</span></span>
+              <span class="track-toggle">+</span>
+            </button>
+            <div class="lyrics"><div class="lyrics-inner"><span class="tag">Verse 1</span>In a rusty old house, lived an old friend of mine
+He lived plain and simple, didn't chase no fame,
+He is not my mother's brother, but I call him family
+To me he is my Uncle, we're close as we could be
+<span class="tag">Verse 2</span>We'd sit on the porch, 'neath the southern sun,
+With a glass of iced tea, trying to learn new songs,
+Spinning tales of the past, with a smile wide and wise,
+We'd hang on each word, laughter mixed with sighs.
+<span class="tag">Chorus</span>Oh, help me Uncle Martin, help me write this song
+People think I'm crazy, but I'll prove them wrong
+I'm hanging on your strings waiting for the world to hear
+How easy it can be, between Uncle Martin and me
+<span class="tag">Verse 3</span>During hard times, you'd find him lending me a hand,
+Patchin' up my broken pieces, like a rock he'd stand
+Never spoke much of troubles, never looked for praise,
+Just the kind of good soul, with a heart full of grace.
+<span class="tag">Chorus</span>Oh, help me Uncle Martin, help me write this song
+People think I'm crazy, but I'll prove them wrong
+I'm hanging on your strings waiting for the world to hear
+How easy it can be, between Uncle Martin and me
+<span class="tag">Bridge</span>Seasons have come, and seasons have passed,
+But the lessons he taught us, forever will last,
+I hold 'em close, like a cherished song,
+In my heart, Uncle Martin will forever belong.
+<span class="tag">Chorus</span>Oh, help me Uncle Martin, help me write this song
+People think I'm crazy, but I'll prove them wrong
+I'm hanging on your strings waiting for the world to hear
+How easy it can be, between Uncle Martin and me</div></div>
+          </div>
+
+          <!-- 8. Where the thunder rolls (unreleased) -->
+          <div class="track">
+            <button class="track-head" onclick="toggleTrack(this)">
+              <span class="track-num">08</span>
+              <span class="track-name">Where the thunder rolls</span>
+              <span class="track-tag soon"><span class="lang-en">Soon</span><span class="lang-es">Pronto</span></span>
+              <span class="track-toggle">+</span>
+            </button>
+            <div class="lyrics"><div class="lyrics-soon"><span class="lang-en">Lyrics available with the album release.</span><span class="lang-es">Letra disponible con el lanzamiento del disco.</span></div></div>
+          </div>
+        </div>
+
+        <!-- NEW: Album campaign — reserve / notify. Front-end only.
+             Wire reserveSpot() to your mailing-list provider (see comment in the script). -->
+        <div class="album-cta" id="album-reserve">
+          <p style="opacity:.85;font-size:16px;line-height:1.6;">
+            <span class="lang-en">Reserve your spot by the fire. Be the first to know when "Campfire Stories" — and the next single "Boots On" — drop.</span>
+            <span class="lang-es">Reservá tu lugar junto a la fogata. Sé el primero en enterarte cuando salgan "Campfire Stories" y el próximo sencillo "Boots On".</span>
+          </p>
+          <div class="reserve-form" id="reserveForm">
+            <input type="email" id="reserveEmail" placeholder="you@email.com" aria-label="Email">
+            <button class="btn btn-primary" onclick="reserveSpot()">
+              <span class="lang-en">RESERVE MY SPOT</span><span class="lang-es">RESERVAR MI LUGAR</span>
+            </button>
+          </div>
+          <p class="reserve-note">
+            <span class="lang-en">No spam — just new music &amp; campfire stories.</span>
+            <span class="lang-es">Sin spam — solo música nueva e historias de fogata.</span>
+          </p>
+          <p class="reserve-done" id="reserveDone">
+            <span class="lang-en">You're on the list. We'll holler when it drops. 🤠</span>
+            <span class="lang-es">Quedaste en la lista. Te avisamos cuando salga. 🤠</span>
+          </p>
+        </div>
+
       </div>
 
+    </div>
+  </section>
+
+  <!-- NEW: Shows section. Replace the .shows-empty block with .show-row items when you have dates. -->
+  <section id="shows">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="lang-en">Shows</span><span class="lang-es">Conciertos</span>
+      </h2>
+
+      <div class="shows-empty">
+        <p>
+          <span class="lang-en">No shows on the calendar right now — but the rooster's getting ready to ride. Join the list to be the first to know when we hit the stage.</span>
+          <span class="lang-es">No hay conciertos en el calendario por ahora — pero el gallo se está preparando para montar. Unite a la lista para enterarte primero cuando subamos al escenario.</span>
+        </p>
+        <a href="#follow" class="btn btn-primary">
+          <span class="lang-en">GET NOTIFIED</span><span class="lang-es">QUIERO ENTERARME</span>
+        </a>
+      </div>
+
+      <!-- WHEN YOU HAVE DATES: delete .shows-empty above and use rows like this one:
+      <div class="show-row">
+        <div class="show-date">12 SEP 2026</div>
+        <div class="show-place">Venue Name<div class="show-city">San José, CR</div></div>
+        <a href="https://tickets-link" target="_blank" class="btn btn-secondary btn-small">
+          <span class="lang-en">TICKETS</span><span class="lang-es">ENTRADAS</span>
+        </a>
+      </div>
+      -->
     </div>
   </section>
 
@@ -345,8 +742,8 @@
           <div class="musician-info">
             <div class="musician-name">Charlie Parra</div>
             <div class="musician-role">
-              <span class="lang-en">Bass guitar & acoustic guitar</span>
-              <span class="lang-es">Bajo y guitarra acústica</span>
+              <span class="lang-en">Bass guitar </span>
+              <span class="lang-es">Bajo </span>
             </div>
           </div>
           <a href="#" target="_blank" class="btn btn-secondary btn-small">
@@ -490,11 +887,25 @@
         <iframe src="https://show.co/social-unlock/1nfjhpsPybxEmoKJTHi4Wn/widget" width="300" height="300" frameborder="0" style="border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);"></iframe>
       </div>
       
-      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px; margin-bottom: 70px;">
+      <!-- NEW: Listen On — streaming platforms -->
+      <h4 class="listen-on-heading" style="text-align:center; margin-top:40px;">
+        <span class="lang-en">Listen On</span><span class="lang-es">Escuchar En</span>
+      </h4>
+      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 12px; margin-bottom: 45px;">
+        <a href="https://open.spotify.com/artist/6DmC1YYXIWndaude1eqIu9" target="_blank" class="btn btn-secondary">SPOTIFY</a>
+        <a href="https://music.apple.com/cr/artist/southern-colored-rooster/1883805126" target="_blank" class="btn btn-secondary">APPLE MUSIC</a>
+        <a href="https://music.amazon.com/artists/B0GRWH4SJS" target="_blank" class="btn btn-secondary">AMAZON MUSIC</a>
+        <a href="https://music.youtube.com/channel/UClj3vwTsxolvTN--9FHd51Q" target="_blank" class="btn btn-secondary">YOUTUBE MUSIC</a>
+      </div>
+
+      <!-- Social channels -->
+      <h4 class="listen-on-heading" style="text-align:center; margin-top:0;">
+        <span class="lang-en">Follow</span><span class="lang-es">Síguenos</span>
+      </h4>
+      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 12px; margin-bottom: 70px;">
         <a href="https://instagram.com/southern_colored_rooster" target="_blank" class="btn btn-secondary">INSTAGRAM</a>
         <a href="https://tiktok.com/@charlie.parra" target="_blank" class="btn btn-secondary">TIKTOK</a>
         <a href="https://youtube.com/@cparra79" target="_blank" class="btn btn-secondary">YOUTUBE</a>
-        <a href="#" target="_blank" class="btn btn-secondary">SPOTIFY</a>
       </div>
 
       <img src="logo-no-background.png" alt="Southern Colored Rooster Logo" style="width: 140px; filter: brightness(0) saturate(100%) invert(67%) sepia(61%) saturate(464%) hue-rotate(5deg) brightness(96%) contrast(89%); opacity: 0.8; margin: 0 auto; display: block;">
@@ -523,6 +934,27 @@
       document.documentElement.lang = 'en';
     }
   });
+
+  // NEW: expand/collapse a track's lyrics
+  function toggleTrack(el) {
+    el.closest('.track').classList.toggle('open');
+  }
+
+  // NEW: album reserve / notify form (front-end only).
+  // TODO: send `email` to your mailing-list provider (Mailchimp, Beehiiv, MailerLite, etc.).
+  // Most providers give you an embed form or an API endpoint to POST to here.
+  function reserveSpot() {
+    var input = document.getElementById('reserveEmail');
+    var email = input.value.trim();
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+      input.focus();
+      input.style.borderColor = '#c0392b';
+      return;
+    }
+    /* >>> Connect your mailing list here with the captured `email` <<< */
+    document.getElementById('reserveForm').style.display = 'none';
+    document.getElementById('reserveDone').style.display = 'block';
+  }
 </script>
 
 </body>
