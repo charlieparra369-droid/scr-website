@@ -74,15 +74,15 @@
     .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
     .btn-small { padding: 8px 16px; font-size: 11px; } 
     
-    section { padding: 90px 20px; }
+    section { padding: 64px 20px; }
     .container { max-width: 1100px; margin: 0 auto; }
-    .section-title { text-align: center; color: var(--gold); letter-spacing: 4px; margin-bottom: 55px; font-size: 18px; text-transform: uppercase; }
+    .section-title { text-align: center; color: var(--gold); letter-spacing: 4px; margin-bottom: 40px; font-size: 18px; text-transform: uppercase; }
     
     /* Music Section Styles */
     #music { background: #0a0a0a; }
-    .music-category { margin-bottom: 90px; }
+    .music-category { margin-bottom: 55px; }
     .category-heading { text-align: center; color: #fff; font-family: 'Playfair Display', serif; font-size: 40px; margin-bottom: 50px; border-bottom: 1px solid #1a1a1a; padding-bottom: 20px; }
-    .music-item { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 60px; margin-bottom: 80px; }
+    .music-item { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 60px; margin-bottom: 60px; }
     .music-item:last-child { margin-bottom: 0; }
     
     .album-art { 
@@ -273,7 +273,6 @@
     <nav>
       <a href="#about"><span class="lang-en">OUR STORY</span><span class="lang-es">NUESTRA HISTORIA</span></a>
       <a href="#music"><span class="lang-en">MUSIC</span><span class="lang-es">MÚSICA</span></a>
-      <a href="#shows"><span class="lang-en">SHOWS</span><span class="lang-es">CONCIERTOS</span></a>
       <a href="#musicians"><span class="lang-en">MUSICIANS</span><span class="lang-es">MÚSICOS</span></a>
       <a href="#follow"><span class="lang-en">FOLLOW</span><span class="lang-es">SÍGUENOS</span></a>
     </nav>
@@ -320,8 +319,8 @@
             </span>
             <h3>Boots On (2026)</h3>
             <p>
-              <span class="lang-en">Boots On is a defiant outlaw anthem about claiming country music on your own terms. A a stand against the polished Nashville sound and a call to bring back the grit.</span>
-              <span class="lang-es">Boots On es un himno outlaw desafiante sobre reclamar la música country en tus propios términos. Una postura contra el sonido pulido de Nashville y un llamado a traer de vuelta el sonido clasico.</span>
+              <span class="lang-en">Boots On is a defiant outlaw anthem about claiming country music on your own terms. With no southern drawl and no dirt road in his past, the narrator carries the genre's true spirit anyway — a stand against the polished Nashville sound and a call to bring back the grit.</span>
+              <span class="lang-es">Boots On es un himno outlaw desafiante sobre reclamar la música country en tus propios términos. Sin acento sureño ni caminos de tierra en su pasado, el narrador lleva el espíritu verdadero del género de todas formas: una postura contra el sonido pulido de Nashville y un llamado a traer de vuelta el filo.</span>
             </p>
 
             <h4 class="listen-on-heading">
@@ -335,7 +334,7 @@
             </div>
 
             <div style="display:flex;gap:15px;flex-wrap:wrap;justify-content:inherit;">
-              <a href="#album-reserve" class="btn btn-primary">
+              <a href="#follow" class="btn btn-primary">
                 <span class="lang-en">NOTIFY ME</span><span class="lang-es">AVÍSAME</span>
               </a>
             </div>
@@ -659,60 +658,8 @@ How easy it can be, between Uncle Martin and me</div></div>
           </div>
         </div>
 
-        <!-- NEW: Album campaign — reserve / notify. Front-end only.
-             Wire reserveSpot() to your mailing-list provider (see comment in the script). -->
-        <div class="album-cta" id="album-reserve">
-          <p style="opacity:.85;font-size:16px;line-height:1.6;">
-            <span class="lang-en">Reserve your spot by the fire. Be the first to know when "Campfire Stories" — and the next single "Boots On" — drop.</span>
-            <span class="lang-es">Reservá tu lugar junto a la fogata. Sé el primero en enterarte cuando salgan "Campfire Stories" y el próximo sencillo "Boots On".</span>
-          </p>
-          <div class="reserve-form" id="reserveForm">
-            <input type="email" id="reserveEmail" placeholder="you@email.com" aria-label="Email">
-            <button class="btn btn-primary" onclick="reserveSpot()">
-              <span class="lang-en">RESERVE MY SPOT</span><span class="lang-es">RESERVAR MI LUGAR</span>
-            </button>
-          </div>
-          <p class="reserve-note">
-            <span class="lang-en">No spam — just new music &amp; campfire stories.</span>
-            <span class="lang-es">Sin spam — solo música nueva e historias de fogata.</span>
-          </p>
-          <p class="reserve-done" id="reserveDone">
-            <span class="lang-en">You're on the list. We'll holler when it drops. 🤠</span>
-            <span class="lang-es">Quedaste en la lista. Te avisamos cuando salga. 🤠</span>
-          </p>
-        </div>
-
       </div>
 
-    </div>
-  </section>
-
-  <!-- NEW: Shows section. Replace the .shows-empty block with .show-row items when you have dates. -->
-  <section id="shows">
-    <div class="container">
-      <h2 class="section-title">
-        <span class="lang-en">Shows</span><span class="lang-es">Conciertos</span>
-      </h2>
-
-      <div class="shows-empty">
-        <p>
-          <span class="lang-en">No shows on the calendar right now — but the rooster's getting ready to ride. Join the list to be the first to know when we hit the stage.</span>
-          <span class="lang-es">No hay conciertos en el calendario por ahora — pero el gallo se está preparando para montar. Unite a la lista para enterarte primero cuando subamos al escenario.</span>
-        </p>
-        <a href="#follow" class="btn btn-primary">
-          <span class="lang-en">GET NOTIFIED</span><span class="lang-es">QUIERO ENTERARME</span>
-        </a>
-      </div>
-
-      <!-- WHEN YOU HAVE DATES: delete .shows-empty above and use rows like this one:
-      <div class="show-row">
-        <div class="show-date">12 SEP 2026</div>
-        <div class="show-place">Venue Name<div class="show-city">San José, CR</div></div>
-        <a href="https://tickets-link" target="_blank" class="btn btn-secondary btn-small">
-          <span class="lang-en">TICKETS</span><span class="lang-es">ENTRADAS</span>
-        </a>
-      </div>
-      -->
     </div>
   </section>
 
