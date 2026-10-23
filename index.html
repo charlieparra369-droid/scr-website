@@ -1,957 +1,1854 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <meta name="description" content="Official website of Southern Colored Rooster. Southern grit and country storytelling. Listen to our latest music and view tour dates." />
 
+
+
   <!-- Open Graph / Twitter: controls how the link looks when shared. -->
+
   <!-- Social preview image = album cover. Update when you have a new release to feature. -->
+
   <meta property="og:type" content="music.band" />
+
   <meta property="og:title" content="Southern Colored Rooster" />
+
   <meta property="og:description" content="Country rock from Costa Rica to Nashville. Southern grit and country storytelling — where I found the songs I thought had died." />
+
   <meta property="og:image" content="https://scrband.com/Portada_CampfireStories.jpg" />
+
   <meta property="og:url" content="https://scrband.com/" />
+
   <meta name="twitter:card" content="summary_large_image" />
+
   <meta name="twitter:title" content="Southern Colored Rooster" />
-  <meta name="twitter:description" content="Country rock from Costa Rica to Nashville. Debut album 'Campfire Stories' coming soon." />
+
+  <meta name="twitter:description" content="Country rock from Costa Rica to Nashville. Debut album 'Campfire Stories' out November 27, 2026." />
+
   <meta name="twitter:image" content="https://scrband.com/Portada_CampfireStories.jpg" />
 
+
+
   <title>Southern Colored Rooster</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+
   <style>
+
     :root {
+
       --gold: #c9793f;          /* fuego (acento) */
+
       --gold-bright: #e0904a;   /* hover cálido */
+
       --night: #0a0e17;         /* base noche */
+
       --panel: #0c111c;         /* secciones */
+
       --panel-2: #080b12;       /* secciones alternas */
+
       --line: #1a2130;          /* bordes */
+
     }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     html { scroll-behavior: smooth; scroll-padding-top: 130px; }
+
     body { font-family: 'Oswald', sans-serif; background: var(--night); color: #fff; }
-    
+
     #top-stack { position: fixed; top: 0; left: 0; right: 0; z-index: 100; }
+
     header {
+
       display: flex; justify-content: space-between; align-items: center;
+
       padding: 18px 40px; background: rgba(9,13,20,0.92); border-bottom: 1px solid var(--line);
+
     }
+
     header .logo-small { color: var(--gold); font-weight: 600; letter-spacing: 2px; font-size: 16px; text-decoration: none; }
-    
+
     .header-controls { display: flex; align-items: center; gap: 20px; }
+
     nav a { color: #fff; text-decoration: none; margin-left: 20px; font-size: 13px; letter-spacing: 2px; transition: color .2s; }
+
     nav a:hover { color: var(--gold); }
-    
+
     /* Language Switcher Styles */
+
     .lang-btn { padding: 6px 12px !important; font-size: 11px !important; margin-left: 10px; }
+
     .lang-es { display: none; }
+
     body.spanish-active .lang-en { display: none; }
+
     body.spanish-active .lang-es { display: inline; }
-    
+
     .hero {
+
       display: flex; flex-direction: column; align-items: center; justify-content: center;
+
       text-align: center; padding: 150px 20px 60px; min-height: 100vh;
+
       background:
+
         radial-gradient(ellipse at 50% 82%, rgba(201,121,63,0.30) 0%, rgba(59,22,5,0.55) 26%, transparent 60%),
+
         linear-gradient(180deg, #0a1324 0%, #0b1019 52%, #150b06 100%);
+
     }
+
     .hero-label {
+
       color: var(--gold); letter-spacing: 4px; font-size: 13px; margin-bottom: 16px;
+
       display: flex; align-items: center; gap: 14px;
+
     }
+
     .hero-label::before, .hero-label::after { content: ''; display: inline-block; width: 36px; height: 1px; background: var(--gold); opacity: .7; }
-    
+
     .hero img { 
+
       width: 280px; 
+
       margin: 10px 0 20px; 
+
       filter: brightness(0) saturate(100%) invert(67%) sepia(61%) saturate(464%) hue-rotate(5deg) brightness(96%) contrast(89%);
+
     }
-    
+
     .tagline { font-style: italic; opacity: 0.75; margin-bottom: 30px; font-size: 16px; letter-spacing: 1px; }
-    
+
     .buttons { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
-    
+
     .btn { 
+
       display: inline-block; padding: 12px 28px; border: none; cursor: pointer; 
+
       font-size: 13px; letter-spacing: 2px; font-family: 'Oswald', sans-serif; 
+
       text-transform: uppercase; text-decoration: none; transition: all .2s; 
+
     }
+
     .btn-primary { background: var(--gold); color: #000; }
+
     .btn-primary:hover { background: var(--gold-bright); }
+
     .btn-secondary { background: transparent; border: 1px solid rgba(255,255,255,0.5); color: #fff; }
+
     .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
     .btn-small { padding: 8px 16px; font-size: 11px; } 
-    
+
     section { padding: 64px 20px; }
+
     .container { max-width: 1100px; margin: 0 auto; }
+
     .section-title { text-align: center; color: var(--gold); letter-spacing: 4px; margin-bottom: 40px; font-size: 18px; text-transform: uppercase; }
-    
+
     /* Music Section Styles */
+
     #music { background: var(--panel); }
+
     .music-category { margin-bottom: 55px; }
+
     .category-heading { text-align: center; color: #fff; font-family: 'Playfair Display', serif; font-size: 40px; margin-bottom: 50px; border-bottom: 1px solid var(--line); padding-bottom: 20px; }
+
     .music-item { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 60px; margin-bottom: 60px; }
+
     .music-item:last-child { margin-bottom: 0; }
-    
+
     .album-art { 
+
       width: 320px; max-width: 90%; aspect-ratio: 1; object-fit: cover;
+
       box-shadow: 0 10px 40px rgba(0,0,0,0.8); border: 1px solid #1f2735; 
+
     }
-    
+
     .music-info { max-width: 480px; text-align: left; }
+
     .music-info h3 { font-size: 30px; margin-bottom: 15px; line-height: 1.2; }
+
     .music-info p { opacity: 0.7; margin-bottom: 20px; line-height: 1.6; font-weight: 400; font-size: 15px; }
-    
+
     .listen-on-heading { color: var(--gold); font-size: 12px; letter-spacing: 2px; margin-bottom: 12px; text-transform: uppercase; margin-top: 25px; }
-    
+
     /* Our Story Section Styles */
+
     #about { background: var(--panel-2); }
+
     .story-container { max-width: 750px; margin: 0 auto; text-align: left; }
+
     .story-kicker { color: var(--gold); font-size: 12px; letter-spacing: 3px; text-transform: uppercase; display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+
     .story-kicker::after { content: ''; display: inline-block; width: 60px; height: 1px; background: var(--gold); opacity: 0.6; }
+
     .story-heading { font-family: 'Playfair Display', serif; font-size: 54px; font-weight: 700; line-height: 1.1; margin-bottom: 40px; color: #f4f4f0; }
-    
+
     #about p { margin-bottom: 25px; line-height: 1.8; opacity: 0.8; font-size: 17px; font-weight: 400; }
-    
+
     /* Musicians Section Styles */
+
     #musicians { background: var(--panel); }
+
     .musician-list { max-width: 700px; margin: 0 auto; }
+
     .musician-item { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); padding: 15px 0; gap: 15px; flex-wrap: wrap; }
+
     .musician-info { flex: 1; min-width: 250px; }
+
     .musician-name { color: #fff; font-size: 18px; font-weight: 600; letter-spacing: 1px; margin-bottom: 4px; }
+
     .musician-role { color: var(--gold); font-size: 14px; font-weight: 400; letter-spacing: 1px; }
+
     .musician-subheading { color: #fff; margin: 45px 0 15px; text-transform: uppercase; font-size: 16px; letter-spacing: 2px; border-bottom: 1px solid var(--gold); padding-bottom: 10px; display: inline-block; }
+
     .production-credits { text-align: center; margin-top: 60px; opacity: 0.6; font-size: 14px; letter-spacing: 1px; display: flex; flex-direction: column; align-items: center; gap: 15px; }
 
+
+
     #follow { background: var(--panel-2); text-align: center; }
+
     #follow p { margin-bottom: 30px; opacity: 0.7; letter-spacing: 1px; font-size: 15px; }
-    
+
     .social-links { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+
     .social-links a { color: var(--gold); text-decoration: none; letter-spacing: 2px; font-size: 14px; padding-bottom: 2px; border-bottom: 1px solid transparent; transition: border-color .2s; }
+
     .social-links a:hover { border-color: var(--gold); }
-    
+
     footer { text-align: center; padding: 30px 20px; background: var(--panel); border-top: 1px solid var(--line); font-size: 13px; opacity: 0.4; letter-spacing: 1px; }
-    
+
     /* ===================== NEW: Announcement bar ===================== */
+
     #scr-announce-bar {
+
       position: relative; display: flex; align-items: center; justify-content: center;
+
       gap: 14px; padding: 10px 44px 10px 16px;
+
       background: linear-gradient(90deg, #1a1208, #2a1d0c 50%, #1a1208);
+
       border-bottom: 1px solid rgba(212,160,23,0.3);
+
       font-size: 13px; letter-spacing: 1px;
+
     }
+
     #scr-announce-bar.hidden { display: none; }
+
     .ab-dot {
+
       width: 8px; height: 8px; border-radius: 50%; background: var(--gold); flex: none;
+
       box-shadow: 0 0 0 0 rgba(212,160,23,0.6); animation: abpulse 1.9s infinite;
+
     }
+
     @keyframes abpulse {
+
       0%   { box-shadow: 0 0 0 0 rgba(212,160,23,0.55); }
+
       70%  { box-shadow: 0 0 0 10px rgba(212,160,23,0); }
+
       100% { box-shadow: 0 0 0 0 rgba(212,160,23,0); }
+
     }
+
     .ab-text { text-transform: uppercase; color: #f4f4f0; text-align: center; }
+
     .ab-text b { color: var(--gold); }
+
     .ab-cta {
+
       background: var(--gold); color: #000; text-decoration: none; white-space: nowrap;
+
       font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600;
+
       padding: 6px 14px; transition: background .2s, transform .15s;
+
     }
+
     .ab-cta:hover { background: var(--gold-bright); transform: translateY(-1px); }
+
     .ab-close {
+
       position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+
       background: none; border: none; color: #888; font-size: 20px; line-height: 1; cursor: pointer;
+
     }
+
     .ab-close:hover { color: #fff; }
 
+
+
     /* ===================== NEW: Coming-soon single card ===================== */
+
     .coming-soon-art {
+
       position: relative; display: flex; align-items: center; justify-content: center;
+
       width: 320px; max-width: 90%; aspect-ratio: 1; border: 1px solid #2a2a2a;
+
       background: radial-gradient(circle at 50% 40%, #341f07, var(--night) 72%);
+
       box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+
     }
+
     .coming-soon-art .cs-title {
+
       font-family: 'Playfair Display', serif; color: var(--gold);
+
       font-size: 36px; text-align: center; padding: 20px; line-height: 1.15;
+
     }
+
     .cs-badge {
+
       position: absolute; top: 14px; left: 14px; background: var(--gold); color: #000;
+
       font-size: 10px; letter-spacing: 2px; padding: 5px 10px; text-transform: uppercase; font-weight: 600;
+
     }
+
     .next-single-tag {
+
       color: var(--gold); font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+
       margin-bottom: 10px; display: block;
+
     }
+
+
 
     /* ===================== NEW: Tracklist + lyrics ===================== */
+
     .tracklist { max-width: 760px; margin: 55px auto 0; }
+
     .tracklist-title {
+
       text-align: center; color: #fff; font-size: 16px; letter-spacing: 2px;
+
       text-transform: uppercase; margin-bottom: 25px;
+
     }
+
     .track { border-bottom: 1px solid var(--line); }
+
     .track-head {
+
       display: flex; align-items: center; gap: 16px; width: 100%;
+
       background: none; border: none; color: #fff; font-family: 'Oswald', sans-serif;
+
       text-align: left; padding: 16px 4px; cursor: pointer; font-size: 16px;
+
       letter-spacing: 1px; transition: color .2s;
+
     }
+
     .track-head:hover { color: var(--gold); }
+
     .track-num { color: var(--gold); font-size: 14px; width: 22px; flex: none; }
+
     .track-name { flex: 1; }
+
     .track-tag {
+
       font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #000;
+
       background: var(--gold); padding: 3px 8px; flex: none;
+
     }
+
     .track-tag.soon { background: transparent; color: #888; border: 1px solid #333; }
+
     .track-toggle { color: var(--gold); font-size: 18px; flex: none; transition: transform .3s; }
+
     .track.open .track-toggle { transform: rotate(45deg); }
+
     .lyrics { max-height: 0; overflow: hidden; transition: max-height .5s ease; }
+
     .track.open .lyrics { max-height: 4000px; }
+
     .lyrics-inner {
+
       padding: 6px 4px 26px 42px; color: #cfcabf; font-size: 15px;
+
       line-height: 1.85; white-space: pre-line;
+
     }
+
     .lyrics-inner .tag {
+
       color: var(--gold); font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+
       display: block; margin: 18px 0 4px;
+
     }
+
     .lyrics-soon { padding: 6px 4px 22px 42px; color: #888; font-size: 14px; font-style: italic; }
 
+
+
     /* ===================== NEW: Album campaign / reserve ===================== */
+
     .album-cta { max-width: 620px; margin: 55px auto 0; text-align: center; }
+
     .reserve-form { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 18px; }
+
     .reserve-form input {
+
       flex: 1; min-width: 220px; max-width: 340px; background: #0e0e0e; border: 1px solid #2a2a2a;
+
       color: #fff; font-family: 'Oswald', sans-serif; font-size: 15px; padding: 12px 14px;
+
     }
+
     .reserve-form input:focus { outline: none; border-color: var(--gold); }
+
     .reserve-form input::placeholder { color: #777; }
+
     .reserve-note { color: #777; font-size: 12px; letter-spacing: 1px; margin-top: 14px; }
+
     .reserve-done { display: none; color: var(--gold); letter-spacing: 1px; margin-top: 18px; font-size: 15px; }
 
+
+
     /* ===================== NEW: Shows section ===================== */
+
     #shows { background: var(--panel); }
+
     .shows-empty { max-width: 620px; margin: 0 auto; text-align: center; }
+
     .shows-empty p { opacity: 0.7; line-height: 1.7; font-size: 16px; margin-bottom: 26px; }
+
     .show-row {
+
       display: flex; justify-content: space-between; align-items: center; gap: 16px;
+
       flex-wrap: wrap; max-width: 760px; margin: 0 auto; border-bottom: 1px solid var(--line); padding: 18px 0;
+
     }
+
     .show-date { color: var(--gold); font-size: 15px; letter-spacing: 1px; min-width: 120px; }
+
     .show-place { flex: 1; min-width: 200px; }
+
     .show-city { opacity: 0.6; font-size: 14px; }
 
+
+
     @media(max-width: 768px) {
+
       header { flex-direction: column; gap: 15px; padding: 15px 20px; }
+
       .header-controls { flex-direction: column; gap: 15px; }
+
       nav a { margin: 0 10px; font-size: 11px; }
+
       .lang-btn { margin-left: 0; }
+
       .hero img { width: 210px; }
+
       .music-info { text-align: center; }
+
       .buttons { justify-content: center; }
+
       .story-heading { font-size: 40px; }
+
       .category-heading { font-size: 32px; }
+
       #scr-announce-bar { flex-direction: column; gap: 8px; padding: 10px 38px; font-size: 12px; }
+
       .coming-soon-art { width: 260px; }
+
       .lyrics-inner, .lyrics-soon { padding-left: 12px; }
+
     }
+
   </style>
+
 </head>
+
 <body>
 
+
+
 <div id="top-stack">
+
   <!-- NEW: Announcement bar. Edit/remove this block to change or retire the announcement. -->
+
   <div id="scr-announce-bar">
+
     <span class="ab-dot"></span>
+
     <span class="ab-text">
-      <span class="lang-en">Debut album coming soon &mdash; <b>&ldquo;Campfire Stories&rdquo;</b></span>
-      <span class="lang-es">Álbum debut muy pronto &mdash; <b>&ldquo;Campfire Stories&rdquo;</b></span>
+
+      <span class="lang-en">Debut album <b>“Campfire Stories”</b> — November 27th, 2026</span>
+
+      <span class="lang-es">Álbum debut <b>“Campfire Stories”</b> — 27 de noviembre de 2026</span>
+
     </span>
+
     <a href="#album" class="ab-cta">
+
       <span class="lang-en">See tracklist</span><span class="lang-es">Ver tracklist</span>
+
     </a>
-    <button class="ab-close" aria-label="Close" onclick="document.getElementById('scr-announce-bar').classList.add('hidden')">&times;</button>
+
+    <button class="ab-close" aria-label="Close" onclick="document.getElementById('scr-announce-bar').classList.add('hidden')">×</button>
+
   </div>
+
+
 
 <header>
+
   <a href="#" class="logo-small">SCR</a>
+
   <div class="header-controls">
+
     <nav>
+
       <a href="#about"><span class="lang-en">OUR STORY</span><span class="lang-es">NUESTRA HISTORIA</span></a>
+
       <a href="#music"><span class="lang-en">MUSIC</span><span class="lang-es">MÚSICA</span></a>
+
       <a href="#musicians"><span class="lang-en">MEMBERS</span><span class="lang-es">MIEMBROS</span></a>
+
       <a href="#follow"><span class="lang-en">FOLLOW</span><span class="lang-es">SÍGUENOS</span></a>
+
     </nav>
+
     <button id="lang-switch" class="btn btn-secondary lang-btn">ESPAÑOL</button>
+
   </div>
+
 </header>
+
 </div>
 
+
+
 <main>
+
   <section class="hero">
+
     <div class="hero-label">COUNTRY ROCK</div>
+
     <img src="logo-no-background.png" alt="Southern Colored Rooster Logo">
+
     <div class="tagline">
+
       <span class="lang-en">Where I found the songs I thought had died</span>
+
       <span class="lang-es">Donde encontré las canciones que creí habían muerto</span>
+
     </div>
+
     <div class="buttons">
+
       <a href="#music" class="btn btn-primary">
+
         <span class="lang-en">LISTEN NOW</span><span class="lang-es">ESCUCHAR AHORA</span>
+
       </a>
+
       <a href="#about" class="btn btn-secondary">
+
         <span class="lang-en">OUR STORY</span><span class="lang-es">NUESTRA HISTORIA</span>
+
       </a>
+
     </div>
+
   </section>
+
+
 
   <section id="music">
+
     <div class="container">
+
       <h2 class="section-title">
+
         <span class="lang-en">Music</span><span class="lang-es">Música</span>
+
       </h2>
-      
+
       <div class="music-category">
+
         <h3 class="category-heading">
+
           <span class="lang-en">Singles</span><span class="lang-es">Sencillos</span>
+
         </h3>
-        
+
         <!-- Boots On — next single. Cover + 30s preview live; add streaming links once it's released. -->
+
         <div class="music-item" id="boots-on">
+
           <img class="album-art" src="boots-on-cover.png" alt="Boots On - Single Cover">
+
           <div class="music-info">
+
             <h3>Boots On (2026)</h3>
+
             <p>
+
               <span class="lang-en">Boots On is a defiant outlaw anthem about claiming country music on your own terms. With no southern drawl and no dirt road in his past, the narrator carries the genre's true spirit anyway — a stand against the polished Nashville sound and a call to bring back the grit.</span>
+
               <span class="lang-es">Boots On es un himno outlaw desafiante sobre reclamar la música country en tus propios términos. Sin acento sureño ni caminos de tierra en su pasado, el narrador lleva el espíritu verdadero del género de todas formas: una postura contra el sonido pulido de Nashville y un llamado a traer de vuelta el filo.</span>
+
             </p>
 
+
+
             <div style="margin-top: 15px; margin-bottom: 25px;">
+
               <audio controls style="width: 100%; height: 40px; border-radius: 4px;">
+
                 <source src="Boots-on-sippet.MP3" type="audio/mpeg">
+
                 Your browser does not support the audio element.
+
               </audio>
+
             </div>
 
+
+
             <h4 class="listen-on-heading">
+
               <span class="lang-en">Listen On</span><span class="lang-es">Escuchar En</span>
+
             </h4>
+
             <div style="display:flex;gap:15px;flex-wrap:wrap;justify-content:inherit;">
+
               <a href="https://open.spotify.com/track/3VCuUb3gnYvDM9saT37WyG" target="_blank" class="btn btn-secondary btn-small">SPOTIFY</a>
+
               <a href="https://music.apple.com/cr/song/boots-on/6790273844" target="_blank" class="btn btn-secondary btn-small">APPLE MUSIC</a>
+
               <a href="https://music.amazon.com/albums/B0H8N6CFD7?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&trackAsin=B0H8NC7DQ1" target="_blank" class="btn btn-secondary btn-small">AMAZON MUSIC</a>
+
               <a href="https://music.youtube.com/watch?v=yZ1nFOvgoMU" target="_blank" class="btn btn-secondary btn-small">YOUTUBE MUSIC</a>
+
               <a href="https://soundcloud.com/charlie-parra-654551741/boots-on-single-version" target="_blank" class="btn btn-secondary btn-small">SOUNDCLOUD</a>
+
             </div>
+
           </div>
+
         </div>
 
+
+
         <div class="music-item">
+
           <img class="album-art" src="album-cover.jpg" alt="Livin' in an old country song - Cassette Cover">
+
           <div class="music-info">
+
             <h3>Livin' in an old country song (2026)</h3>
+
             <p>
+
               <span class="lang-en">Livin' in an old country song tells the story of a man who sees his life through the lens of country music, full of mistakes, heartbreak, and second chances.</span>
+
               <span class="lang-es">Livin' in an old country song cuenta la historia de un hombre que ve su vida a través del lente de la música country, llena de errores, desamores y segundas oportunidades.</span>
+
             </p>
-            
+
             <div style="margin-top: 15px; margin-bottom: 25px;">
+
               <audio controls style="width: 100%; height: 40px; border-radius: 4px;">
+
                 <source src="livin-snippet.mp3" type="audio/mpeg">
+
                 Your browser does not support the audio element.
+
               </audio>
+
             </div>
 
+
+
             <h4 class="listen-on-heading">
+
               <span class="lang-en">Listen On</span><span class="lang-es">Escuchar En</span>
+
             </h4>
+
             <div style="display:flex;gap:15px;flex-wrap:wrap;justify-content:inherit;">
+
               <a href="https://open.spotify.com/track/6wEqdXk7gxZzUtichgrDbT?si=5f77e3526e7d4f64" target="_blank" class="btn btn-secondary btn-small">SPOTIFY</a>
+
               <a href="https://music.apple.com/cr/song/livin-in-an-old-country-song/1883805397" target="_blank" class="btn btn-secondary btn-small">APPLE MUSIC</a>
+
               <a href="https://music.amazon.com/tracks/B0GRWMVVGD?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_EvpCfE3CxUqwQDEPgbgrApASb" target="_blank" class="btn btn-secondary btn-small">AMAZON MUSIC</a>
+
               <a href="https://on.soundcloud.com/T0EqUvJc9qZ8Ove7y9" target="_blank" class="btn btn-secondary btn-small">SOUNDCLOUD</a>
+
             </div>
+
           </div>
+
         </div>
-        
+
         <div class="music-item">
+
           <img class="album-art" src="When-death-single-cover.jpg" alt="When death calls your name - Single Cover">
+
           <div class="music-info">
+
             <h3>When death calls your name (2025)</h3>
+
             <p>
+
               <span class="lang-en">When death calls your name tells a darker story inspired by the spirit of outlaw country. The song follows a lone character who chooses to face evil head-on, fully aware that the price may be his own life.</span>
+
               <span class="lang-es">When death calls your name cuenta una historia más oscura inspirada en el espíritu del outlaw country. La canción sigue a un personaje solitario que elige enfrentar el mal cara a cara, plenamente consciente de que el precio puede ser su propia vida.</span>
+
             </p>
+
             <p>
+
               <span class="lang-en">The song explores the internal battle between good and evil, the courage to stand your ground, and the moment when a person must confront their fate.</span>
+
               <span class="lang-es">La canción explora la batalla interna entre el bien y el mal, el valor de mantener tu posición y el momento en que una persona debe confrontar su destino.</span>
+
             </p>
 
+
+
             <div style="margin-top: 15px; margin-bottom: 25px;">
+
               <audio controls style="width: 100%; height: 40px; border-radius: 4px;">
+
                 <source src="when-death-snippet.mp3" type="audio/mpeg">
+
                 Your browser does not support the audio element.
+
               </audio>
+
             </div>
-            
+
             <h4 class="listen-on-heading">
+
               <span class="lang-en">Listen On</span><span class="lang-es">Escuchar En</span>
+
             </h4>
+
             <div style="display:flex;gap:15px;flex-wrap:wrap;justify-content:inherit;">
+
               <a href="https://open.spotify.com/track/7yv6GRaKuT17ozL6lqpNTh?si=55840dd42e674040" target="_blank" class="btn btn-secondary btn-small">SPOTIFY</a>
+
               <a href="https://music.apple.com/cr/song/when-death-calls-your-name-feat-manu-barrantes/1883805819" target="_blank" class="btn btn-secondary btn-small">APPLE MUSIC</a>
+
               <a href="https://music.amazon.com/tracks/B0GRWY8H3W?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_uqVlpYFoQBQiPr0DJpnLEFeZp" target="_blank" class="btn btn-secondary btn-small">AMAZON MUSIC</a>
+
               <a href="https://soundcloud.com/charlie-parra-654551741/when-death-calls-your-name" target="_blank" class="btn btn-secondary btn-small">SOUNDCLOUD</a>
+
             </div>
+
           </div>
+
         </div>
 
+
+
         <div class="music-item">
+
           <img class="album-art" src="Uncle-Martin-single-cover.jpg" alt="Uncle Martin - Single Cover">
+
           <div class="music-info">
+
             <h3>Uncle Martin (2024)</h3>
+
             <p>
+
               <span class="lang-en">Uncle Martin was our debut single under the name C. Parra. Is a personal story about family, memory, and the roots that shape who we become.</span>
+
               <span class="lang-es">Uncle Martin fue nuestro sencillo debut bajo el nombre de C. Parra. Es una historia personal sobre la familia, la memoria y las raíces que moldean en quién nos convertimos.</span>
+
             </p>
+
+
 
             <div style="margin-top: 15px; margin-bottom: 25px;">
+
               <audio controls style="width: 100%; height: 40px; border-radius: 4px;">
+
                 <source src="uncle-martin-snippet.mp3" type="audio/mpeg">
+
                 Your browser does not support the audio element.
+
               </audio>
+
             </div>
-            
+
             <h4 class="listen-on-heading">
+
               <span class="lang-en">Listen On</span><span class="lang-es">Escuchar En</span>
+
             </h4>
+
             <div style="display:flex;gap:15px;flex-wrap:wrap;justify-content:inherit;">
+
               <a href="https://open.spotify.com/track/16YjjcZ5xHiIMaZS3DaU1H?si=cd399c7b2dcf46c8" target="_blank" class="btn btn-secondary btn-small">SPOTIFY</a>
+
               <a href="https://music.apple.com/cr/song/uncle-martin/1883805818" target="_blank" class="btn btn-secondary btn-small">APPLE MUSIC</a>
+
               <a href="https://music.amazon.com/tracks/B0GRWDFSHN?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_Zf6pQourWiYVt6C4DLJjkFxJ8" target="_blank" class="btn btn-secondary btn-small">AMAZON MUSIC</a>
+
               <a href="https://soundcloud.com/charlie-parra-654551741/uncle-martin" target="_blank" class="btn btn-secondary btn-small">SOUNDCLOUD</a>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
-      
+
       <div class="music-category" id="album">
+
         <h3 class="category-heading">
+
           <span class="lang-en">Albums</span><span class="lang-es">Álbumes</span>
+
         </h3>
-        
+
         <div class="music-item">
+
           <img class="album-art" src="Portada_CampfireStories.jpg" alt="Campfire Stories - Album Cover">
+
           <div class="music-info">
+
             <h3>Campfire Stories</h3>
+
             <p>
+
               <span class="lang-en">“Campfire Stories” will be our debut album. It is an album built around one of the oldest traditions in country music. Telling stories with a guitar in your hands. Each song feels like a tale that could be shared around a campfire, among friends, under the open sky.</span>
+
               <span class="lang-es">"Campfire Stories" será nuestro álbum debut. Es un álbum construido alrededor de una de las tradiciones más antiguas de la música country. Contar historias con una guitarra en las manos. Cada canción se siente como un cuento que podría compartirse alrededor de una fogata, entre amigos, bajo el cielo abierto.</span>
+
             </p>
+
             <p>
+
               <span class="lang-en">The record brings together stories of life, characters, loss, redemption, and second chances. Blending country and southern rock with the spirit of classic rock, “Campfire Stories” aims to capture songs that feel lived in, the kind of stories that sound true the moment you hear them.</span>
+
               <span class="lang-es">El disco reúne historias de vida, personajes, pérdida, redención y segundas oportunidades. Mezclando el country y el rock sureño con el espíritu del rock clásico, "Campfire Stories" busca capturar canciones que se sienten vividas, el tipo de historias que suenan ciertas en el momento en que las escuchas.</span>
+
             </p>
+
           </div>
+
         </div>
+
+
 
         <!-- NEW: Tracklist with expandable lyrics.
+
              Released tracks show full lyrics. Unreleased show a "coming soon" note.
+
              TO RELEASE A SONG: paste its ready-made lyrics block (see the companion
+
              file campfire-stories-lyrics-ready.html) into that track's .lyrics div,
+
              and change data-released / .track-tag from "soon" to released. -->
+
         <div class="tracklist">
+
           <h4 class="tracklist-title">
+
             <span class="lang-en">Tracklist</span><span class="lang-es">Lista de Canciones</span>
+
           </h4>
 
-          <!-- 1. Boots On (next single — lyrics live, not yet on streaming) -->
-          <div class="track">
-            <button class="track-head" onclick="toggleTrack(this)">
-              <span class="track-num">01</span>
-              <span class="track-name">Boots On</span>
-              <span class="track-tag"><span class="lang-en">Out now</span><span class="lang-es">Ya salió</span></span>
-              <span class="track-toggle">+</span>
-            </button>
-            <div class="lyrics"><div class="lyrics-inner"><span class="tag">Verse 1</span>I wasn't born in the land of the free,
-But I've got the soul of a man who roams wild and free,
-No southern drawl, no dirt road in my past,
-But I've got a fire that's meant to last.
-<span class="tag">Chorus</span>I am not your typical country boy,
-But I have the heart of a cowboy.
-It's time to grab my hat and put my boots on (boots on!),
-I'll stand tall, an outlaw at dawn.
-I'm breaking the chains of the Nashville sound,
-Bringing back the grit, where real men are found.
-<span class="tag">Verse 2</span>Country ain't about the boots you wear,
-Or the way you tip your hat with flair,
-It's about the struggle, the blood, the tears,
-The songs that echo through the years.
-<span class="tag">Verse 3</span>Where's the rebel spirit, where's the fight?
-Country used to be the sound of the night,
-Now it's all shine and no dirt in the gears,
-But I'll bring back the truth, and silence these fears.
-<span class="tag">Chorus</span>I am not your typical country boy,
-But I have the heart of a cowboy.
-It's time to grab my hat and put my boots on (boots on!),
-I'll stand tall, an outlaw at dawn.
-I'm breaking the chains of the Nashville sound,
-Bringing back the grit, where real men are found.
-<span class="tag">Guitar Solo</span><span class="tag">Chorus</span>I am not your typical country boy,
-But I have the heart of a cowboy.
-It's time to grab my hat and put my boots on (boots on!),
-I'll stand tall, an outlaw at dawn.
-I'm breaking the chains of the Nashville sound,
-Bringing back the grit, where real men are found.
-<span class="tag">Outro</span>Where real men are found!
-I'm putting my boots on!</div></div>
-          </div>
 
-          <!-- 2. Southern Colored Rooster (unreleased) -->
-          <div class="track">
-            <button class="track-head" onclick="toggleTrack(this)">
-              <span class="track-num">02</span>
-              <span class="track-name">Southern Colored Rooster</span>
-              <span class="track-tag soon"><span class="lang-en">Soon</span><span class="lang-es">Pronto</span></span>
-              <span class="track-toggle">+</span>
-            </button>
-            <div class="lyrics"><div class="lyrics-soon"><span class="lang-en">Lyrics available with the album release.</span><span class="lang-es">Letra disponible con el lanzamiento del disco.</span></div></div>
-          </div>
 
-          <!-- 3. Livin' in an old country song (RELEASED) -->
-          <div class="track">
-            <button class="track-head" onclick="toggleTrack(this)">
-              <span class="track-num">03</span>
-              <span class="track-name">Livin' in an old country song</span>
-              <span class="track-tag"><span class="lang-en">Out now</span><span class="lang-es">Ya salió</span></span>
-              <span class="track-toggle">+</span>
-            </button>
-            <div class="lyrics"><div class="lyrics-inner"><span class="tag">Verse 1</span>The jukebox hums like an old friend tonight
-It knows every wrong I've tried to make right
-From the barstool confessions to lonesome refrains
-This six-string's my witness to joy and to pain
-<span class="tag">Pre-Chorus</span>I've walked the line between sinner and saint
-Wrote down my struggles with whiskey and faith
-<span class="tag">Chorus</span>I'm living in an old country song
-Every heartbreak and loss keeps me hangin' on
-With a melody made of the nights I was strong
-And the verses that tell me where I went wrong
-Yeah, I'm living in an old country song
-<span class="tag">Verse 2</span>The neon lights shine like stars on my stage
-But the spotlight can't cover the cracks in my cage
-I've traded the high life for stories to tell
-Of the loves that I've lost and the wars with myself
-<span class="tag">Pre-Chorus</span>I've walked the line between sinner and saint
-Wrote down my struggles with whiskey and faith
-<span class="tag">Chorus</span>I'm living in an old country song
-Every heartbreak and loss keeps me hangin' on
-With a melody made of the nights I was strong
-And the verses that tell me where I went wrong
-I'm living in an old country song
-<span class="tag">Bridge</span>Some call it sorrow, some call it grace
-I call it home when I'm lost in this place
-<span class="tag">Chorus</span>I'm living in an old country song
-Every heartbreak and loss keeps me hangin' on
-With a melody made of the nights I was strong
-And the verses that tell me where I went wrong
-I'm living in an old country song</div></div>
-          </div>
-
-          <!-- 4. Me again (unreleased) -->
-          <div class="track">
-            <button class="track-head" onclick="toggleTrack(this)">
-              <span class="track-num">04</span>
-              <span class="track-name">Me again</span>
-              <span class="track-tag soon"><span class="lang-en">Soon</span><span class="lang-es">Pronto</span></span>
-              <span class="track-toggle">+</span>
-            </button>
-            <div class="lyrics"><div class="lyrics-soon"><span class="lang-en">Lyrics available with the album release.</span><span class="lang-es">Letra disponible con el lanzamiento del disco.</span></div></div>
-          </div>
-
-          <!-- 5. Uncle Martin (RELEASED) -->
-          <div class="track">
-            <button class="track-head" onclick="toggleTrack(this)">
-              <span class="track-num">05</span>
-              <span class="track-name">Uncle Martin</span>
-              <span class="track-tag"><span class="lang-en">Out now</span><span class="lang-es">Ya salió</span></span>
-              <span class="track-toggle">+</span>
-            </button>
-            <div class="lyrics"><div class="lyrics-inner"><span class="tag">Verse 1</span>In a rusty old house, lived an old friend of mine
-He lived plain and simple, didn't chase no fame,
-He is not my mother's brother, but I call him family
-To me he is my Uncle, we're close as we could be
-<span class="tag">Verse 2</span>We'd sit on the porch, 'neath the southern sun,
-With a glass of iced tea, trying to learn new songs,
-Spinning tales of the past, with a smile wide and wise,
-We'd hang on each word, laughter mixed with sighs.
-<span class="tag">Chorus</span>Oh, help me Uncle Martin, help me write this song
-People think I'm crazy, but I'll prove them wrong
-I'm hanging on your strings waiting for the world to hear
-How easy it can be, between Uncle Martin and me
-<span class="tag">Verse 3</span>During hard times, you'd find him lending me a hand,
-Patchin' up my broken pieces, like a rock he'd stand
-Never spoke much of troubles, never looked for praise,
-Just the kind of good soul, with a heart full of grace.
-<span class="tag">Chorus</span>Oh, help me Uncle Martin, help me write this song
-People think I'm crazy, but I'll prove them wrong
-I'm hanging on your strings waiting for the world to hear
-How easy it can be, between Uncle Martin and me
-<span class="tag">Bridge</span>Seasons have come, and seasons have passed,
-But the lessons he taught us, forever will last,
-I hold 'em close, like a cherished song,
-In my heart, Uncle Martin will forever belong.
-<span class="tag">Chorus</span>Oh, help me Uncle Martin, help me write this song
-People think I'm crazy, but I'll prove them wrong
-I'm hanging on your strings waiting for the world to hear
-How easy it can be, between Uncle Martin and me</div></div>
-          </div>
-
-          <!-- 6. Break these chains (unreleased) -->
-          <div class="track">
-            <button class="track-head" onclick="toggleTrack(this)">
-              <span class="track-num">06</span>
-              <span class="track-name">Break these chains</span>
-              <span class="track-tag soon"><span class="lang-en">Soon</span><span class="lang-es">Pronto</span></span>
-              <span class="track-toggle">+</span>
-            </button>
-            <div class="lyrics"><div class="lyrics-soon"><span class="lang-en">Lyrics available with the album release.</span><span class="lang-es">Letra disponible con el lanzamiento del disco.</span></div></div>
-          </div>
-
-          <!-- 7. Where the thunder rolls (unreleased) -->
-          <div class="track">
-            <button class="track-head" onclick="toggleTrack(this)">
-              <span class="track-num">07</span>
-              <span class="track-name">Where the thunder rolls</span>
-              <span class="track-tag soon"><span class="lang-en">Soon</span><span class="lang-es">Pronto</span></span>
-              <span class="track-toggle">+</span>
-            </button>
-            <div class="lyrics"><div class="lyrics-soon"><span class="lang-en">Lyrics available with the album release.</span><span class="lang-es">Letra disponible con el lanzamiento del disco.</span></div></div>
-          </div>
-
-          <!-- Bonus Track: When death calls your name (feat. Manuel Barrantes) (RELEASED) -->
-          <div class="track">
-            <button class="track-head" onclick="toggleTrack(this)">
-              <span class="track-num"></span>
-              <span class="track-name">Bonus Track: When death calls your name (feat. Manuel Barrantes)</span>
-              <span class="track-tag"><span class="lang-en">Out now</span><span class="lang-es">Ya salió</span></span>
-              <span class="track-toggle">+</span>
-            </button>
-            <div class="lyrics"><div class="lyrics-inner"><span class="tag">Verse 1</span>In the dead of night, where shadows lay their claim,
-A lonesome cowboy rides, with nothing left to gain.
-He's faced a thousand demons, in the desert's cruel embrace,
-But now the final showdown, when death calls his name.
-<span class="tag">Chorus</span>When death calls your name, will you stand and fight?
-In the valley of darkness, will you shine your light?
-The devil's on your trail, with his fiery flame,
-But the righteous never falter, when death calls your name.
-<span class="tag">Verse 2</span>He's got a six-gun loaded, with the weight of every sin,
-Each bullet forged in anger, but his heart was caving in.
-He's walked the line of justice, on a path of burning shame,
-But redemption's in his holster, when death calls his name.
-<span class="tag">Chorus</span>When death calls your name, will you stand and fight?
-In the valley of darkness, will you shine your light?
-The devil's on your trail, with his fiery flame,
-But the righteous never falter, when death calls your name.
-<span class="tag">Bridge</span>In the dust and the blood, where the wicked fall,
-A cowboy's prayer echoes, through the canyon's call.
-He's ready for the reckoning, no fear in his veins,
-For he'll ride with the angels, when death calls his name.
-<span class="tag">Chorus</span>When death calls your name, will you stand and fight?
-In the valley of darkness, will you shine your light?
-The devil's on your trail, with his fiery flame,
-But the righteous never falter, when death calls your name.</div></div>
-          </div>
+          <!-- 1. Campfire Stories (unreleased) -->
+        <div class="track">
+          <button class="track-head" onclick="toggleTrack(this)">
+            <span class="track-num">01</span>
+            <span class="track-name">Campfire Stories</span>
+            <span class="track-tag soon"><span class="lang-en">Soon</span><span class="lang-es">Pronto</span></span>
+            <span class="track-toggle">+</span>
+          </button>
+          <div class="lyrics"><div class="lyrics-soon"><span class="lang-en">Lyrics available November 27, 2026.</span><span class="lang-es">Letra disponible el 27 de noviembre de 2026.</span></div></div>
         </div>
+
+        <!-- 2. Boots On (next single — lyrics live, not yet on streaming) -->
+
+          <div class="track">
+
+            <button class="track-head" onclick="toggleTrack(this)">
+
+              <span class="track-num">02</span>
+
+              <span class="track-name">Boots On</span>
+
+              <span class="track-tag"><span class="lang-en">Out now</span><span class="lang-es">Ya salió</span></span>
+
+              <span class="track-toggle">+</span>
+
+            </button>
+
+            <div class="lyrics"><div class="lyrics-inner"><span class="tag">Verse 1</span>I wasn't born in the land of the free,
+
+But I've got the soul of a man who roams wild and free,
+
+No southern drawl, no dirt road in my past,
+
+But I've got a fire that's meant to last.
+
+<span class="tag">Chorus</span>I am not your typical country boy,
+
+But I have the heart of a cowboy.
+
+It's time to grab my hat and put my boots on (boots on!),
+
+I'll stand tall, an outlaw at dawn.
+
+I'm breaking the chains of the Nashville sound,
+
+Bringing back the grit, where real men are found.
+
+<span class="tag">Verse 2</span>Country ain't about the boots you wear,
+
+Or the way you tip your hat with flair,
+
+It's about the struggle, the blood, the tears,
+
+The songs that echo through the years.
+
+<span class="tag">Verse 3</span>Where's the rebel spirit, where's the fight?
+
+Country used to be the sound of the night,
+
+Now it's all shine and no dirt in the gears,
+
+But I'll bring back the truth, and silence these fears.
+
+<span class="tag">Chorus</span>I am not your typical country boy,
+
+But I have the heart of a cowboy.
+
+It's time to grab my hat and put my boots on (boots on!),
+
+I'll stand tall, an outlaw at dawn.
+
+I'm breaking the chains of the Nashville sound,
+
+Bringing back the grit, where real men are found.
+
+<span class="tag">Guitar Solo</span><span class="tag">Chorus</span>I am not your typical country boy,
+
+But I have the heart of a cowboy.
+
+It's time to grab my hat and put my boots on (boots on!),
+
+I'll stand tall, an outlaw at dawn.
+
+I'm breaking the chains of the Nashville sound,
+
+Bringing back the grit, where real men are found.
+
+<span class="tag">Outro</span>Where real men are found!
+
+I'm putting my boots on!</div></div>
+
+          </div>
+
+
+
+          <!-- 3. Southern Colored Rooster (unreleased) -->
+
+          <div class="track">
+
+            <button class="track-head" onclick="toggleTrack(this)">
+
+              <span class="track-num">03</span>
+
+              <span class="track-name">Southern Colored Rooster</span>
+
+              <span class="track-tag soon"><span class="lang-en">Soon</span><span class="lang-es">Pronto</span></span>
+
+              <span class="track-toggle">+</span>
+
+            </button>
+
+            <div class="lyrics"><div class="lyrics-soon"><span class="lang-en">Lyrics available with the album release.</span><span class="lang-es">Letra disponible con el lanzamiento del disco.</span></div></div>
+
+          </div>
+
+
+
+          <!-- 4. Livin' in an old country song (RELEASED) -->
+
+          <div class="track">
+
+            <button class="track-head" onclick="toggleTrack(this)">
+
+              <span class="track-num">04</span>
+
+              <span class="track-name">Livin' in an old country song</span>
+
+              <span class="track-tag"><span class="lang-en">Out now</span><span class="lang-es">Ya salió</span></span>
+
+              <span class="track-toggle">+</span>
+
+            </button>
+
+            <div class="lyrics"><div class="lyrics-inner"><span class="tag">Verse 1</span>The jukebox hums like an old friend tonight
+
+It knows every wrong I've tried to make right
+
+From the barstool confessions to lonesome refrains
+
+This six-string's my witness to joy and to pain
+
+<span class="tag">Pre-Chorus</span>I've walked the line between sinner and saint
+
+Wrote down my struggles with whiskey and faith
+
+<span class="tag">Chorus</span>I'm living in an old country song
+
+Every heartbreak and loss keeps me hangin' on
+
+With a melody made of the nights I was strong
+
+And the verses that tell me where I went wrong
+
+Yeah, I'm living in an old country song
+
+<span class="tag">Verse 2</span>The neon lights shine like stars on my stage
+
+But the spotlight can't cover the cracks in my cage
+
+I've traded the high life for stories to tell
+
+Of the loves that I've lost and the wars with myself
+
+<span class="tag">Pre-Chorus</span>I've walked the line between sinner and saint
+
+Wrote down my struggles with whiskey and faith
+
+<span class="tag">Chorus</span>I'm living in an old country song
+
+Every heartbreak and loss keeps me hangin' on
+
+With a melody made of the nights I was strong
+
+And the verses that tell me where I went wrong
+
+I'm living in an old country song
+
+<span class="tag">Bridge</span>Some call it sorrow, some call it grace
+
+I call it home when I'm lost in this place
+
+<span class="tag">Chorus</span>I'm living in an old country song
+
+Every heartbreak and loss keeps me hangin' on
+
+With a melody made of the nights I was strong
+
+And the verses that tell me where I went wrong
+
+I'm living in an old country song</div></div>
+
+          </div>
+
+
+
+          <!-- 5. Me again (unreleased) -->
+
+          <div class="track">
+
+            <button class="track-head" onclick="toggleTrack(this)">
+
+              <span class="track-num">05</span>
+
+              <span class="track-name">Me again</span>
+
+              <span class="track-tag soon"><span class="lang-en">Soon</span><span class="lang-es">Pronto</span></span>
+
+              <span class="track-toggle">+</span>
+
+            </button>
+
+            <div class="lyrics"><div class="lyrics-soon"><span class="lang-en">Lyrics available with the album release.</span><span class="lang-es">Letra disponible con el lanzamiento del disco.</span></div></div>
+
+          </div>
+
+
+
+          <!-- 6. Uncle Martin (RELEASED) -->
+
+          <div class="track">
+
+            <button class="track-head" onclick="toggleTrack(this)">
+
+              <span class="track-num">06</span>
+
+              <span class="track-name">Uncle Martin</span>
+
+              <span class="track-tag"><span class="lang-en">Out now</span><span class="lang-es">Ya salió</span></span>
+
+              <span class="track-toggle">+</span>
+
+            </button>
+
+            <div class="lyrics"><div class="lyrics-inner"><span class="tag">Verse 1</span>In a rusty old house, lived an old friend of mine
+
+He lived plain and simple, didn't chase no fame,
+
+He is not my mother's brother, but I call him family
+
+To me he is my Uncle, we're close as we could be
+
+<span class="tag">Verse 2</span>We'd sit on the porch, 'neath the southern sun,
+
+With a glass of iced tea, trying to learn new songs,
+
+Spinning tales of the past, with a smile wide and wise,
+
+We'd hang on each word, laughter mixed with sighs.
+
+<span class="tag">Chorus</span>Oh, help me Uncle Martin, help me write this song
+
+People think I'm crazy, but I'll prove them wrong
+
+I'm hanging on your strings waiting for the world to hear
+
+How easy it can be, between Uncle Martin and me
+
+<span class="tag">Verse 3</span>During hard times, you'd find him lending me a hand,
+
+Patchin' up my broken pieces, like a rock he'd stand
+
+Never spoke much of troubles, never looked for praise,
+
+Just the kind of good soul, with a heart full of grace.
+
+<span class="tag">Chorus</span>Oh, help me Uncle Martin, help me write this song
+
+People think I'm crazy, but I'll prove them wrong
+
+I'm hanging on your strings waiting for the world to hear
+
+How easy it can be, between Uncle Martin and me
+
+<span class="tag">Bridge</span>Seasons have come, and seasons have passed,
+
+But the lessons he taught us, forever will last,
+
+I hold 'em close, like a cherished song,
+
+In my heart, Uncle Martin will forever belong.
+
+<span class="tag">Chorus</span>Oh, help me Uncle Martin, help me write this song
+
+People think I'm crazy, but I'll prove them wrong
+
+I'm hanging on your strings waiting for the world to hear
+
+How easy it can be, between Uncle Martin and me</div></div>
+
+          </div>
+
+
+
+          <!-- 7. Break these chains (unreleased) -->
+
+          <div class="track">
+
+            <button class="track-head" onclick="toggleTrack(this)">
+
+              <span class="track-num">07</span>
+
+              <span class="track-name">Break these chains</span>
+
+              <span class="track-tag soon"><span class="lang-en">Soon</span><span class="lang-es">Pronto</span></span>
+
+              <span class="track-toggle">+</span>
+
+            </button>
+
+            <div class="lyrics"><div class="lyrics-soon"><span class="lang-en">Lyrics available with the album release.</span><span class="lang-es">Letra disponible con el lanzamiento del disco.</span></div></div>
+
+          </div>
+
+
+
+          <!-- 8. Where the thunder rolls (unreleased) -->
+
+          <div class="track">
+
+            <button class="track-head" onclick="toggleTrack(this)">
+
+              <span class="track-num">08</span>
+
+              <span class="track-name">Where the thunder rolls</span>
+
+              <span class="track-tag soon"><span class="lang-en">Soon</span><span class="lang-es">Pronto</span></span>
+
+              <span class="track-toggle">+</span>
+
+            </button>
+
+            <div class="lyrics"><div class="lyrics-soon"><span class="lang-en">Lyrics available with the album release.</span><span class="lang-es">Letra disponible con el lanzamiento del disco.</span></div></div>
+
+          </div>
+
+
+
+          <!-- 9. When death calls your name (feat. Manuel Barrantes) (RELEASED) -->
+
+          <div class="track">
+
+            <button class="track-head" onclick="toggleTrack(this)">
+
+              <span class="track-num">09</span>
+
+              <span class="track-name">When death calls your name (feat. Manuel Barrantes)</span>
+
+              <span class="track-tag"><span class="lang-en">Out now</span><span class="lang-es">Ya salió</span></span>
+
+              <span class="track-toggle">+</span>
+
+            </button>
+
+            <div class="lyrics"><div class="lyrics-inner"><span class="tag">Verse 1</span>In the dead of night, where shadows lay their claim,
+
+A lonesome cowboy rides, with nothing left to gain.
+
+He's faced a thousand demons, in the desert's cruel embrace,
+
+But now the final showdown, when death calls his name.
+
+<span class="tag">Chorus</span>When death calls your name, will you stand and fight?
+
+In the valley of darkness, will you shine your light?
+
+The devil's on your trail, with his fiery flame,
+
+But the righteous never falter, when death calls your name.
+
+<span class="tag">Verse 2</span>He's got a six-gun loaded, with the weight of every sin,
+
+Each bullet forged in anger, but his heart was caving in.
+
+He's walked the line of justice, on a path of burning shame,
+
+But redemption's in his holster, when death calls his name.
+
+<span class="tag">Chorus</span>When death calls your name, will you stand and fight?
+
+In the valley of darkness, will you shine your light?
+
+The devil's on your trail, with his fiery flame,
+
+But the righteous never falter, when death calls your name.
+
+<span class="tag">Bridge</span>In the dust and the blood, where the wicked fall,
+
+A cowboy's prayer echoes, through the canyon's call.
+
+He's ready for the reckoning, no fear in his veins,
+
+For he'll ride with the angels, when death calls his name.
+
+<span class="tag">Chorus</span>When death calls your name, will you stand and fight?
+
+In the valley of darkness, will you shine your light?
+
+The devil's on your trail, with his fiery flame,
+
+But the righteous never falter, when death calls your name.</div></div>
+
+          </div>
+
+        </div>
+
+
 
       </div>
 
+
+
     </div>
+
   </section>
+
+
 
   <section id="about">
+
     <div class="container story-container">
-      
+
       <div class="story-kicker">
+
         <span class="lang-en">Our Story</span><span class="lang-es">Nuestra Historia</span>
+
       </div>
-      
+
       <h2 class="story-heading">
+
         <span class="lang-en">Calls me home</span>
+
         <span class="lang-es">Sentirse en casa</span>
+
       </h2>
-      
+
       <p>
+
         <span class="lang-en">Southern Colored Rooster was born from a life surrounded by music. We grew up in a home where singing was part of everyday life and a guitar was always within reach. Music was never a phase. It was the language we learned to feel in.</span>
+
         <span class="lang-es">Southern Colored Rooster nació de una vida rodeada de música. Crecimos en un hogar donde cantar era parte del día a día y siempre había una guitarra a la mano. La música nunca fue una fase. Fue el idioma en el que aprendimos a sentir.</span>
-      </p>
-      <p>
-        <span class="lang-en">For years, I stepped away from that path. Life took me in different directions. Still, I kept writing. Notebooks filled with lyrics that had no sound yet. Stories waiting for their time.</span>
-        <span class="lang-es">Durante años, me alejé de ese camino. La vida me llevó en diferentes direcciones. Aún así, seguí escribiendo. Cuadernos llenos de letras que aún no tenían sonido. Historias esperando su momento.</span>
-      </p>
-      <p>
-        <span class="lang-en">In 2024, I wrote “Uncle Martin” and everything shifted. I remembered who I am when I hold a guitar. Then came “When Death Calls Your Name” and more songs that needed to be heard.</span>
-        <span class="lang-es">En 2024, escribí "Uncle Martin" y todo cambió. Recordé quién soy cuando sostengo una guitarra. Luego vino "When Death Calls Your Name" y más canciones que necesitaban ser escuchadas.</span>
-      </p>
-      <p>
-        <span class="lang-en">The project started under my own name, C. Parra. It was the right beginning. But what I was building needed a stronger identity.</span>
-        <span class="lang-es">El proyecto comenzó bajo mi propio nombre, C. Parra. Fue el comienzo correcto. Pero lo que estaba construyendo necesitaba una identidad más fuerte.</span>
-      </p>
-      <p>
-        <span class="lang-en">Southern Colored Rooster blends country and southern rock with the metal influence that shaped my teenage years. It is Costa Rica and Nashville in the same song. It is tradition with edge. Honest lyrics. Strong guitars. Stories that feel lived.</span>
-        <span class="lang-es">Southern Colored Rooster mezcla el country y el rock sureño con la influencia del metal que formó mis años de adolescencia. Es Costa Rica y Nashville en la misma canción. Es tradición con filo. Letras honestas. Guitarras fuertes. Historias que se sienten vividas.</span>
-      </p>
-      <p>
-        <span class="lang-en">This is more than a new name. It is a commitment to who I am as a songwriter. It is about bringing the songs out of the drawer and into the firelight.</span>
-        <span class="lang-es">Esto es más que un nombre nuevo. Es un compromiso con quien soy como cantautor. Se trata de sacar las canciones del cajón y llevarlas a la luz del fuego.</span>
-      </p>
-      <p style="font-family: 'Playfair Display', serif; font-style: italic; color: var(--gold); font-size: 22px; margin-top: 40px; margin-bottom: 5px;">
-        <span class="lang-en">It's time to grab my hat and put my boots on!</span>
-        <span class="lang-es">¡Es hora de agarrar mi sombrero y ponerme las botas!</span>
-      </p>
-      <p style="font-family: 'Playfair Display', serif; color: #fff; opacity: 0.9; font-size: 20px;">
-        — Charlie Parra
+
       </p>
 
+      <p>
+
+        <span class="lang-en">For years, I stepped away from that path. Life took me in different directions. Still, I kept writing. Notebooks filled with lyrics that had no sound yet. Stories waiting for their time.</span>
+
+        <span class="lang-es">Durante años, me alejé de ese camino. La vida me llevó en diferentes direcciones. Aún así, seguí escribiendo. Cuadernos llenos de letras que aún no tenían sonido. Historias esperando su momento.</span>
+
+      </p>
+
+      <p>
+
+        <span class="lang-en">In 2024, I wrote “Uncle Martin” and everything shifted. I remembered who I am when I hold a guitar. Then came “When Death Calls Your Name” and more songs that needed to be heard.</span>
+
+        <span class="lang-es">En 2024, escribí "Uncle Martin" y todo cambió. Recordé quién soy cuando sostengo una guitarra. Luego vino "When Death Calls Your Name" y más canciones que necesitaban ser escuchadas.</span>
+
+      </p>
+
+      <p>
+
+        <span class="lang-en">The project started under my own name, C. Parra. It was the right beginning. But what I was building needed a stronger identity.</span>
+
+        <span class="lang-es">El proyecto comenzó bajo mi propio nombre, C. Parra. Fue el comienzo correcto. Pero lo que estaba construyendo necesitaba una identidad más fuerte.</span>
+
+      </p>
+
+      <p>
+
+        <span class="lang-en">Southern Colored Rooster blends country and southern rock with the metal influence that shaped my teenage years. It is Costa Rica and Nashville in the same song. It is tradition with edge. Honest lyrics. Strong guitars. Stories that feel lived.</span>
+
+        <span class="lang-es">Southern Colored Rooster mezcla el country y el rock sureño con la influencia del metal que formó mis años de adolescencia. Es Costa Rica y Nashville en la misma canción. Es tradición con filo. Letras honestas. Guitarras fuertes. Historias que se sienten vividas.</span>
+
+      </p>
+
+      <p>
+
+        <span class="lang-en">This is more than a new name. It is a commitment to who I am as a songwriter. It is about bringing the songs out of the drawer and into the firelight.</span>
+
+        <span class="lang-es">Esto es más que un nombre nuevo. Es un compromiso con quien soy como cantautor. Se trata de sacar las canciones del cajón y llevarlas a la luz del fuego.</span>
+
+      </p>
+
+      <p style="font-family: 'Playfair Display', serif; font-style: italic; color: var(--gold); font-size: 22px; margin-top: 40px; margin-bottom: 5px;">
+
+        <span class="lang-en">It's time to grab my hat and put my boots on!</span>
+
+        <span class="lang-es">¡Es hora de agarrar mi sombrero y ponerme las botas!</span>
+
+      </p>
+
+      <p style="font-family: 'Playfair Display', serif; color: #fff; opacity: 0.9; font-size: 20px;">
+
+        — Charlie Parra
+
+      </p>
+
+
+
     </div>
+
   </section>
+
+
 
   <section id="musicians">
+
     <div class="container">
+
       <h2 class="section-title">
+
         <span class="lang-en">Members</span><span class="lang-es">Miembros</span>
+
       </h2>
-      
+
       <div class="musician-list">
+
         <div class="musician-item">
+
           <div class="musician-info">
+
             <div class="musician-name">Charlie Parra</div>
+
             <div class="musician-role">
+
               <span class="lang-en">Bass Guitar</span>
+
               <span class="lang-es">Bajo</span>
+
             </div>
+
           </div>
+
           <a href="https://www.instagram.com/charlie.parra?igsh=ankxbXdpMDY1ajdp" target="_blank" class="btn btn-secondary btn-small">
+
             <span class="lang-en">PROFILE</span><span class="lang-es">PERFIL</span>
+
           </a>
+
         </div>
 
+
+
         <div class="musician-item">
+
           <div class="musician-info">
+
             <div class="musician-name">Jason Parra</div>
+
             <div class="musician-role">
+
               <span class="lang-en">Electric and Acoustic Guitars</span>
+
               <span class="lang-es">Guitarras eléctrica y acústica</span>
+
             </div>
+
           </div>
+
           <a href="https://open.spotify.com/artist/1PW1V7bDI082MkTZpvcYQl?si=J9G_QMQbT3SlXBbZTRGbxQ" target="_blank" class="btn btn-secondary btn-small">
+
             <span class="lang-en">PROFILE</span><span class="lang-es">PERFIL</span>
+
           </a>
+
         </div>
 
+
+
         <div class="musician-item">
+
           <div class="musician-info">
+
             <div class="musician-name">Andres Corrales</div>
+
             <div class="musician-role">
+
               <span class="lang-en">Keyboard arrangements, production, mix and mastering</span>
+
               <span class="lang-es">Arreglos de teclado, producción, mezcla y masterización</span>
+
             </div>
+
           </div>
+
           <a href="https://www.instagram.com/andrescorralesg?igsh=Z3dnNHR4OGJqNGNn" target="_blank" class="btn btn-secondary btn-small">
+
             <span class="lang-en">PROFILE</span><span class="lang-es">PERFIL</span>
+
           </a>
+
         </div>
+
+
 
         <h3 class="musician-subheading">
+
           <span class="lang-en">Additional Musicians</span><span class="lang-es">Músicos Adicionales</span>
+
         </h3>
 
+
+
         <div class="musician-item">
+
           <div class="musician-info">
+
             <div class="musician-name">Mauricio Delgado</div>
+
             <div class="musician-role">
+
               <span class="lang-en">Drums in "Boots On, Southern Colored Rooster, Me Again, Break these chains, Where the thunder rolls"</span>
+
               <span class="lang-es">Batería en "Boots On, Southern Colored Rooster, Me Again, Break these chains, Where the thunder rolls"</span>
+
             </div>
+
           </div>
+
           <a href="https://open.spotify.com/artist/264h7VTTzrRWlbnthZIfcj?si=KUcpKkQAQYKoI7WDQk4sCw" target="_blank" class="btn btn-secondary btn-small">
+
             <span class="lang-en">PROFILE</span><span class="lang-es">PERFIL</span>
+
           </a>
+
         </div>
 
+
+
         <div class="musician-item">
+
           <div class="musician-info">
+
             <div class="musician-name">Marvin Picado</div>
+
             <div class="musician-role">
+
               <span class="lang-en">Bass guitar in "Uncle Martin"</span>
+
               <span class="lang-es">Bajo en "Uncle Martin"</span>
+
             </div>
+
           </div>
+
           <a href="https://open.spotify.com/artist/7BWkaLupbnwwo35WMobMPL?si=_hr8xaFwToGrvv62yWkrUQ" target="_blank" class="btn btn-secondary btn-small">
+
             <span class="lang-en">PROFILE</span><span class="lang-es">PERFIL</span>
+
           </a>
+
         </div>
 
+
+
         <div class="musician-item">
+
           <div class="musician-info">
+
             <div class="musician-name">Victor Ramirez</div>
+
             <div class="musician-role">
+
               <span class="lang-en">Drums in "Uncle Martin"</span>
+
               <span class="lang-es">Batería en "Uncle Martin"</span>
+
             </div>
+
           </div>
+
           <a href="#" target="_blank" class="btn btn-secondary btn-small">
+
             <span class="lang-en">PROFILE</span><span class="lang-es">PERFIL</span>
+
           </a>
+
         </div>
 
+
+
         <div class="musician-item">
+
           <div class="musician-info">
+
             <div class="musician-name">Andrea Núñez</div>
+
             <div class="musician-role">
+
               <span class="lang-en">Drums in "Livin' in an old country song"</span>
+
               <span class="lang-es">Batería en "Livin' in an old country song"</span>
+
             </div>
+
           </div>
+
           <a href="https://www.instagram.com/andrenunezch?igsh=bXNrajA1bDAycm5i" target="_blank" class="btn btn-secondary btn-small">
+
             <span class="lang-en">PROFILE</span><span class="lang-es">PERFIL</span>
+
           </a>
+
         </div>
 
+
+
         <div class="musician-item">
+
           <div class="musician-info">
+
             <div class="musician-name">Manu Barrantes</div>
+
             <div class="musician-role">
+
               <span class="lang-en">Vocals in "When Death Calls your name"</span>
+
               <span class="lang-es">Voz en "When Death Calls your name"</span>
+
             </div>
+
           </div>
+
           <a href="https://open.spotify.com/artist/45IIPVSE4zwS1Pe6nH2kId?si=LRdI9WMAT8eq8HpQwpsV8w" target="_blank" class="btn btn-secondary btn-small">
+
             <span class="lang-en">PROFILE</span><span class="lang-es">PERFIL</span>
+
           </a>
+
         </div>
+
+
 
          <div class="musician-item">
+
           <div class="musician-info">
+
             <div class="musician-name">Pablo Mejia</div>
+
             <div class="musician-role">
+
               <span class="lang-en">Bass in "Southern Colored Rooster"</span>
+
               <span class="lang-es">Bajo en "Southern Colored Rooster"</span>
+
             </div>
+
           </div>
+
           <a href="https://www.instagram.com/pabmejia?igsh=MTBqdXB6dXE1aGFrcg==" target="_blank" class="btn btn-secondary btn-small">
+
             <span class="lang-en">PROFILE</span><span class="lang-es">PERFIL</span>
+
           </a>
+
         </div>
+
+
 
         <div class="musician-item">
+
           <div class="musician-info">
+
             <div class="musician-name">Matt Dame</div>
+
             <div class="musician-role">
+
               <span class="lang-en">Vocals</span>
+
               <span class="lang-es">Voz</span>
+
             </div>
+
           </div>
+
           <a href="https://open.spotify.com/artist/7of0vnMaz1adYGirSv1DfP?si=cPVqysb0TB6hoAQ9v3sSWw" target="_blank" class="btn btn-secondary btn-small">
+
             <span class="lang-en">PROFILE</span><span class="lang-es">PERFIL</span>
+
           </a>
+
         </div>
+
+
 
         <div class="production-credits">
+
           <div>
+
             <span class="lang-en">All songs produced by Andres Corrales and recorded at 3/4 Studios.</span>
+
             <span class="lang-es">Todas las canciones producidas por Andrés Corrales y grabadas en 3/4 Studios.</span>
+
           </div>
+
           <a href="https://www.instagram.com/trescuartos_estudio?igsh=MWh3Y2FhOTU4MzJzdA==" target="_blank" class="btn btn-secondary btn-small">
+
             <span class="lang-en">3/4 STUDIOS INSTAGRAM</span><span class="lang-es">INSTAGRAM 3/4 STUDIOS</span>
+
           </a>
+
         </div>
 
+
+
       </div>
+
     </div>
+
   </section>
+
+
 
 <section id="follow">
+
     <div class="container">
+
       <h2 class="section-title">
+
         <span class="lang-en">Follow the Rooster</span><span class="lang-es">Sigue al Gallo</span>
+
       </h2>
+
       <p>
+
         <span class="lang-en">Stay connected. New music and stories are on the way.</span>
+
         <span class="lang-es">Mantente conectado. Nueva música e historias vienen en camino.</span>
+
       </p>
-      
+
       <!-- NEW: Listen On — streaming platforms -->
+
       <h4 class="listen-on-heading" style="text-align:center; margin-top:40px;">
+
         <span class="lang-en">Listen On</span><span class="lang-es">Escuchar En</span>
+
       </h4>
+
       <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 12px; margin-bottom: 45px;">
+
         <a href="https://open.spotify.com/artist/6DmC1YYXIWndaude1eqIu9" target="_blank" class="btn btn-secondary">SPOTIFY</a>
+
         <a href="https://music.apple.com/cr/artist/southern-colored-rooster/1883805126" target="_blank" class="btn btn-secondary">APPLE MUSIC</a>
+
         <a href="https://music.amazon.com/artists/B0GRWH4SJS" target="_blank" class="btn btn-secondary">AMAZON MUSIC</a>
+
         <a href="https://music.youtube.com/channel/UClj3vwTsxolvTN--9FHd51Q" target="_blank" class="btn btn-secondary">YOUTUBE MUSIC</a>
+
       </div>
+
+
 
       <!-- Social channels -->
+
       <h4 class="listen-on-heading" style="text-align:center; margin-top:0;">
+
         <span class="lang-en">Follow</span><span class="lang-es">Síguenos</span>
+
       </h4>
+
       <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 12px; margin-bottom: 70px;">
+
         <a href="https://instagram.com/southern_colored_rooster" target="_blank" class="btn btn-secondary">INSTAGRAM</a>
+
         <a href="https://tiktok.com/@charlie.parra" target="_blank" class="btn btn-secondary">TIKTOK</a>
+
         <a href="https://youtube.com/@cparra79" target="_blank" class="btn btn-secondary">YOUTUBE</a>
+
       </div>
 
+
+
       <img src="logo-no-background.png" alt="Southern Colored Rooster Logo" style="width: 140px; filter: brightness(0) saturate(100%) invert(67%) sepia(61%) saturate(464%) hue-rotate(5deg) brightness(96%) contrast(89%); opacity: 0.8; margin: 0 auto; display: block;">
-      
+
     </div>
+
   </section>
+
 </main>
 
+
+
 <footer>
+
   © 2026 Southern Colored Rooster. 
+
   <span class="lang-en">All rights reserved.</span>
+
   <span class="lang-es">Todos los derechos reservados.</span>
+
 </footer>
 
+
+
 <script>
+
   const langSwitch = document.getElementById('lang-switch');
-  
+
   langSwitch.addEventListener('click', () => {
+
     document.body.classList.toggle('spanish-active');
-    
+
     if (document.body.classList.contains('spanish-active')) {
+
       langSwitch.textContent = 'ENGLISH';
+
       document.documentElement.lang = 'es';
+
     } else {
+
       langSwitch.textContent = 'ESPAÑOL';
+
       document.documentElement.lang = 'en';
+
     }
+
   });
 
+
+
   // NEW: expand/collapse a track's lyrics
+
   function toggleTrack(el) {
+
     el.closest('.track').classList.toggle('open');
+
   }
+
+
 
   // NEW: album reserve / notify form (front-end only).
+
   // TODO: send `email` to your mailing-list provider (Mailchimp, Beehiiv, MailerLite, etc.).
+
   // Most providers give you an embed form or an API endpoint to POST to here.
+
   function reserveSpot() {
+
     var input = document.getElementById('reserveEmail');
+
     var email = input.value.trim();
+
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+
       input.focus();
+
       input.style.borderColor = '#c0392b';
+
       return;
+
     }
+
     /* >>> Connect your mailing list here with the captured `email` <<< */
+
     document.getElementById('reserveForm').style.display = 'none';
+
     document.getElementById('reserveDone').style.display = 'block';
+
   }
+
 </script>
 
+
+
 </body>
+
 </html>
