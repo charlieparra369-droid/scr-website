@@ -82,7 +82,7 @@ Objetivo: que la gente lo siga escuchando, convertir oyentes en seguidores y ali
 ---
 
 ## Pendientes para Charlie
-- [ ] Link de pre-save o pre-order (si existe). Si no, se usa "seguinos en Spotify".
+- [x] Pre-save: no hay. Antes del 27, la llamada a la acción es "seguinos en Spotify"; después, "escuchá y guardá el disco".
 - [ ] Fragmentos de audio de las canciones inéditas para los teasers (16, 18, 23 y 25 nov).
 - [ ] Confirmar que TikTok (@charlie.parra) y YouTube (@cparra79) siguen siendo las cuentas que vamos a usar.
 - [ ] Fotos y videos marcados con 🎬.

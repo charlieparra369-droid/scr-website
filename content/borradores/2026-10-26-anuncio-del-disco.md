@@ -29,6 +29,8 @@
 > Producción de Andrés Corrales en @trescuartos_estudio.
 > Con la voz de Matt Dame y una familia de músicos alrededor.
 
+*Etiquetas en la foto de esta slide:* @charlie.parra, @jason.parra.56, @andrescorralesg y @trescuartos_estudio.
+
 **Slide 6, portada de nuevo**
 > *Campfire Stories*
 > Viernes 27 de noviembre de 2026
@@ -42,13 +44,13 @@
 
 ## Caption
 
-Diay mae, acercá la silla. 🔥 Las canciones de Charlie pasaron años dormidas en cuadernos, y ahora tienen guitarras, polvo y carretera. *Campfire Stories*, nuestro disco debut, sale el viernes 27 de noviembre: nueve historias hechas en Costa Rica para contar con el fuego prendido. Letras de Charlie, música de Charlie y Jason, producción de Andrés Corrales en @trescuartos_estudio y la voz de Matt Dame.
+Diay mae, acercá la silla. 🔥 Las canciones de Charlie pasaron años dormidas en cuadernos, y ahora tienen guitarras, polvo y carretera. *Campfire Stories*, nuestro disco debut, sale el viernes 27 de noviembre: nueve historias hechas en Costa Rica para contar con el fuego prendido. Letras de Charlie (@charlie.parra), música de Charlie y Jason (@jason.parra.56), producción de Andrés Corrales (@andrescorralesg) en @trescuartos_estudio y la voz de Matt Dame.
 
 Seguí a @scrband y activá las notificaciones: de aquí al 27 vamos a ir soltando las historias una por una.
 
 —
 
-Gather 'round, y'all. 🔥 For years these songs lived in notebooks, waiting for a sound. Now they've got loud guitars, road dust and a whole lot of night ahead. *Campfire Stories*, our debut album, drops Friday, November 27: nine stories out of Costa Rica, meant to be told around a fire. Lyrics by Charlie, music by Charlie and Jason, produced by Andrés Corrales at @trescuartos_estudio, with Matt Dame on vocals.
+Gather 'round, y'all. 🔥 For years these songs lived in notebooks, waiting for a sound. Now they've got loud guitars, road dust and a whole lot of night ahead. *Campfire Stories*, our debut album, drops Friday, November 27: nine stories out of Costa Rica, meant to be told around a fire. Lyrics by Charlie (@charlie.parra), music by Charlie and Jason (@jason.parra.56), produced by Andrés Corrales (@andrescorralesg) at @trescuartos_estudio, with Matt Dame on vocals.
 
 Follow @scrband and turn on notifications. We'll be telling these stories one at a time until the 27th.
 
@@ -57,5 +59,4 @@ Follow @scrband and turn on notifications. We'll be telling these stories one at
 ---
 
 ## Notas para Charlie
-- En la slide 5 y en el caption faltan los @ de Jason, Andrés y Matt Dame (la marca pide etiquetarlos). Pasámelos y los agrego.
 - Es el primer post de feed con el handle @scrband: si la story del domingo 25 todavía no salió, conviene subirla antes que este carrusel.

@@ -12,7 +12,7 @@
 | **Influencias** | Blackberry Smoke (la principal), The Eagles, Brad Paisley |
 | **Álbum debut** | *Campfire Stories*, sale el **viernes 27 de noviembre de 2026** |
 | **Web** | scrband.com |
-| **Red principal** | Instagram **@scrband** (antes @southern_colored_rooster) |
+| **Red principal** | Instagram **@scrband** (antes @southern_colored_rooster). Charlie también publica desde su cuenta personal @charlie.parra |
 | **Redes secundarias** | TikTok y YouTube Shorts (se reutilizan los reels) |
 | **Streaming** | Spotify, Apple Music, Amazon Music, YouTube Music, SoundCloud |
 | **Grabado en** | 3/4 Studios (@trescuartos_estudio) |
@@ -23,7 +23,7 @@ SCR es el proyecto de **Charlie Parra**, con músicos invitados. Jason y Andrés
 
 | Persona | Rol | Cómo nombrarlo |
 |---|---|---|
-| **Charlie Parra** | Autor de todas las letras, compositor, bajo, fundador | "Charlie", el que escribe las historias |
+| **Charlie Parra** | Autor de todas las letras, compositor, fundador. Toca el bajo en todo el disco excepto "Uncle Martin" y "Southern Colored Rooster" | "Charlie", el que escribe las historias |
 | **Jason Parra** | Hermano de Charlie, compositor y **arreglista principal**, guitarras eléctrica y acústica | "Jason", el que les da forma a las historias |
 | **Andrés Corrales** | Producción, arreglos de teclado, mezcla y masterización (3/4 Studios) | "Andrés", el productor |
 | **Matt Dame** | **Voz principal** del disco (excepto "When Death Calls Your Name") | "la voz de Matt Dame" |
@@ -85,7 +85,13 @@ Cada post lleva los dos idiomas en el mismo texto, **con el español arriba y el
 
 - Abrir con un gancho narrativo ("Había una vez un mae que…", "Esta historia empieza en una casa vieja y oxidada…").
 - Hablarle al **rockero**: contar el puente entre el metal o el rock y el country, las guitarras fuertes y los riffs. Nuestro público escucha rock, no necesariamente country.
-- Mencionar a la gente con su @ cuando se habla de ella: Jason, Andrés, Matt Dame, Manu Barrantes, @trescuartos_estudio y los músicos invitados.
+- **Etiquetar SIEMPRE** (en el caption o como etiqueta en la foto o el carrusel) a estas cuatro cuentas en todo post de feed y reel:
+  - @charlie.parra (Charlie)
+  - @jason.parra.56 (Jason)
+  - @andrescorralesg (Andrés)
+  - @trescuartos_estudio (3/4 Studios)
+
+  A los demás músicos (Matt Dame, Manu Barrantes e invitados) se los nombra sin @ hasta que tengamos sus cuentas. Andrea Núñez (@andrenunezch) y Pablo Mejía (@pabmejia) solo se etiquetan cuando se habla de su canción.
 - Cerrar con **una sola** llamada a la acción clara: seguir @scrband, escuchar o guardar en Spotify, comentar o compartir.
 - Hacer preguntas que inviten a contar historias. La comunidad también es parte de la fogata.
 - Usar letras reales de las canciones (textuales, en inglés) como gancho.
@@ -145,11 +151,12 @@ Combinación base: `#SouthernColoredRooster #CampfireStories #SouthernRock #Coun
 - **Vie 27 nov 2026:** sale *Campfire Stories*. Ojo: el día antes es Thanksgiving en EE. UU. y el 27 es Black Friday.
 - **Video musical:** en planes, sin canción ni fecha definidas.
 - **Concierto:** en planes para 2027, sin fecha.
-- **Pre-save:** `[LINK PRE-SAVE — pendiente, Charlie lo pasa]`. Mientras tanto, la llamada a la acción es "seguinos en Spotify".
+- **Pre-save:** **no hay.** Antes del 27 de noviembre, la llamada a la acción es "seguinos en Spotify" o "activá las notificaciones". Desde el 27, "escuchá y guardá el disco" con link en la bio. Nunca se menciona un pre-save.
 
 ## Links
 
 - Web: https://scrband.com
+- Link de la bio (para escuchar): https://listen.scrband.com
 - Instagram: https://instagram.com/scrband
 - TikTok: https://tiktok.com/@charlie.parra
 - YouTube: https://youtube.com/@cparra79

@@ -36,5 +36,5 @@ Usalo para **todo lo que sea contenido de redes**:
 
 - **Nada se publica sin la aprobación de Charlie.** El subagente solo deja borradores con el estado `PENDIENTE DE APROBACIÓN`. Cuando Charlie diga explícitamente que aprueba un borrador, la conversación principal cambia el estado a `Aprobado` en el borrador y en el calendario. Charlie publica a mano y después se marca como `Publicado`.
 - No hay integraciones con redes sociales en este proyecto, y no se deben agregar sin que Charlie lo pida.
-- La web todavía enlaza al handle viejo de Instagram (`southern_colored_rooster`). El handle actual es **@scrband**.
+- El handle de Instagram de la banda es **@scrband** (el viejo, `southern_colored_rooster`, ya no se usa en ningún lado).
 - Los textos de la web son bilingües: cada bloque tiene su versión `class="lang-en"` y `class="lang-es"`. Si cambiás uno, cambiá los dos.
