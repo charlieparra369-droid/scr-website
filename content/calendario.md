@@ -53,12 +53,11 @@ Objetivo: tráilers de las 5 canciones inéditas, cuenta regresiva y ganas de qu
 
 ## Fase 3 — 🔥 Día del lanzamiento: viernes 27 nov
 
-| Hora (CR) | Formato | Contenido | Llamada a la acción | Estado |
+**Ese día solo hay un post:** el anuncio del lanzamiento, con el agradecimiento a todos los que participaron.
+
+| Formato | Contenido | Etiquetas | Llamada a la acción | Estado |
 |---|---|---|---|---|
-| 12:00 a. m. | Stories | "Ya salió." Portada con sticker de link a Spotify. | Escuchar | Pendiente |
-| 9:00 a. m. | **Carrusel** | **El post principal:** portada, "9 historias", tracklist, créditos (Charlie, Jason, Andrés, Matt Dame, Manu Barrantes, invitados, 3/4 Studios) y una slide final con "Acercá la silla". | Escuchar y guardar el disco | Borrador |
-| 7:00 p. m. | **Reel** | Fogata + intro + corte a "Boots On". Se sube también a TikTok y Shorts. | Escuchar | Pendiente |
-| Todo el día | Stories | Repost de menciones, "¿cuál fue tu primera favorita?" (sticker de pregunta) y links a cada plataforma. | Compartir | Pendiente |
+| **Carrusel** | **Ya salió + gracias:** portada, tracklist y créditos de todos los que participaron. | Las 4 cuentas de siempre + Andrea (@andrenunezch), Pablo (@pabmejia), Marvin Picado, Víctor Ramírez y Mauricio Delgado | Escuchar y guardar el disco (link en la bio) | Borrador |
 
 **Nota:** es Black Friday en EE. UU. En el texto en inglés podemos jugar con eso ("Skip the lines. Pull up a chair."), sin sonar a venta.
 

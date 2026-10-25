@@ -56,6 +56,6 @@ So tell us, friend: which rock band brought you to country? Drop it in the comme
 ---
 
 ## Notas para Charlie
-- Revisá si las frases de cada influencia (slides 3 a 5) te representan, sobre todo lo de la Telecaster de Brad Paisley: si preferís algo más general, lo cambio por "Para el rockero que necesitaba ver un solo de guitarra en clave country".
-- No etiqueté a Blackberry Smoke, The Eagles ni Brad Paisley para no parecer que buscamos su atención. ¿Querés etiquetarlos?
+- Revisá si las frases de cada influencia (slides 3 a 5) te representan.
+- Blackberry Smoke, The Eagles y Brad Paisley se nombran sin @, como dice la guía de marca.
 - Voy a responder los comentarios en el idioma de cada persona y con el mismo tono, cuando me pases las respuestas para revisar.

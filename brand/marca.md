@@ -91,7 +91,8 @@ Cada post lleva los dos idiomas en el mismo texto, **con el español arriba y el
   - @andrescorralesg (Andrés)
   - @trescuartos_estudio (3/4 Studios)
 
-  A los demás músicos (Matt Dame, Manu Barrantes e invitados) se los nombra sin @ hasta que tengamos sus cuentas. Andrea Núñez (@andrenunezch) y Pablo Mejía (@pabmejia) solo se etiquetan cuando se habla de su canción.
+  Los músicos invitados (Andrea Núñez @andrenunezch, Pablo Mejía @pabmejia, Marvin Picado, Víctor Ramírez y Mauricio Delgado) se etiquetan **en el post de agradecimiento del lanzamiento (27 nov)** y cuando se habla de su canción. Matt Dame y Manu Barrantes se nombran sin @ hasta que tengamos sus cuentas.
+- **No etiquetar a Blackberry Smoke, The Eagles, Brad Paisley ni a ninguna otra banda.** Son solo referencias de nuestro sonido: se pueden nombrar, pero sin @.
 - Cerrar con **una sola** llamada a la acción clara: seguir @scrband, escuchar o guardar en Spotify, comentar o compartir.
 - Hacer preguntas que inviten a contar historias. La comunidad también es parte de la fogata.
 - Usar letras reales de las canciones (textuales, en inglés) como gancho.
