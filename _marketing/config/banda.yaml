@@ -1,0 +1,77 @@
+# Configuración de la banda — único archivo específico de cada banda.
+# Los agentes del catálogo (.claude/agents/*) leen este archivo y no
+# contienen nada propio de ninguna banda. Para otra banda: copiar y editar.
+# Convención: null = dato desconocido o pendiente (los agentes no deben inventarlo).
+
+banda:
+  nombre: Southern Colored Rooster
+  abreviatura: SCR
+  origen:
+    ciudad: San José
+    pais: Costa Rica
+
+musica:
+  genero_principal: Southern Rock
+  subgeneros:
+    - Country rock
+    - Country moderno
+  idioma_letras: inglés
+
+bandas_similares:
+  # Referentes para observar qué contenido les funciona.
+  - Blackberry Smoke
+  - Whiskey Myers
+  - The Steel Woods
+
+mercados:
+  # Orden = prioridad
+  - pais: Estados Unidos
+    idioma_posts: inglés
+  - pais: Costa Rica
+    idioma_posts: español
+
+idiomas_redes:
+  actual: [español]
+  objetivo: [español, inglés]   # posts bilingües
+
+redes:
+  instagram:
+    principal: true
+    cuentas:
+      - handle: "@scrband"
+        rol: cuenta oficial de la banda
+      - handle: "@charlie.parra"
+        rol: Charlie Parra (miembro); se agrega como colaborador en todos los posts de la banda
+  tiktok: null
+  youtube: null
+  facebook: null
+  spotify: null        # URL del perfil de artista — pendiente
+  web: null
+
+tono:
+  descripcion: Amigable, cercano, con identidad costarricense (ajustable más adelante).
+  temas_prohibidos:
+    - política
+    - religión
+
+discografia:
+  - titulo: Boots On
+    tipo: EP
+    fecha: null        # "hace unos meses" — fecha exacta pendiente
+    canciones:
+      - Boots On
+      - Livin' in an Old Country Song
+      - Uncle Martin
+      - When Death Calls Your Name
+    notas: Las 4 canciones salieron antes como singles.
+
+lanzamiento_proximo:
+  titulo: Campfire Stories
+  tipo: álbum (disco debut)
+  fecha: 2026-11-27
+  single_focal: null   # pendiente
+
+objetivos:
+  # Orden = prioridad
+  - Crecer en Instagram
+  - Aumentar streams en plataformas de streaming, principalmente Spotify
