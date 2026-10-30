@@ -151,8 +151,30 @@ metricas:
     oyentes_mensuales_activos: 15  # -28,6 %
     nuevos_oyentes_activos: 3      # -57,1 %
     super_listeners: 0
-  instagram: null                  # seguidores pendientes
+  instagram:
+    cuenta: "@scrband"
+    seguidores: 133
+    fecha: 2026-10-30
+    fuente: dato de la banda (Charlie Parra)
+  spotify_seguidores: null         # seguidores del perfil (distinto de oyentes mensuales) — pendiente
   amazon_music: null               # fans pendientes
+
+presupuesto_promocion:
+  disponible: true                 # "si fuera necesario"
+  monto: null                      # pendiente; no asumir cifras
+
+historias_canciones:
+  # Lo que inspiró cada canción y cómo se escribió. Lo cuenta la banda; los agentes no lo inventan.
+  # Charlie destaca especialmente las de Uncle Martin y Boots On.
+  Campfire Stories: null
+  Boots On: null
+  Southern Colored Rooster: null
+  "Livin' in an Old Country Song": null
+  Me Again: null
+  Uncle Martin: null
+  Break These Chains: null
+  Where the Thunder Rolls: null
+  When Death Calls Your Name: null
 
 objetivos:
   # Orden = prioridad
