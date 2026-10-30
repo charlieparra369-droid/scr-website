@@ -31,7 +31,12 @@ Se convirtió en mi primera canción, y en la que me hizo creer que podría escr
 - **El verso original:** el borrador decía "People think I'm *mediocre*" y el coro final quedó en "People think I'm *crazy*".
 - **El origen del proyecto:** fue la primera canción de Charlie y la que lo convenció de que podía escribir más (coincide con la bio de scrband.com).
 
-**Uso público:** PENDIENTE de confirmar con la banda si se puede decir que el comentario lo hizo un tío. Mientras tanto, contarlo como "alguien en la mesa".
+**Orden de los hechos:** primero el comentario y esa misma noche la primera línea (todavía sin tener la guitarra). Unos dos meses después, Charlie compró la Martin en la fábrica de Nazareth, Pensilvania.
+
+**Uso público (confirmado por Charlie, 2026-10-30):**
+- El tío nunca supo que su comentario inspiró la canción. **No decir ni insinuar que fue un tío ni un familiar.** Contarlo de forma general: "someone told me…" / "alguien me dijo…".
+- **No explicar por qué la canción se llama "Uncle".** Esa explicación delataría quién fue. Sí se puede contar que "Martin" es la guitarra.
+- Sí se puede contar el verso original ("mediocre" → "crazy"), la compra en la fábrica y que fue su primera canción.
 
 **Material visual disponible** (fotos de la banda, 2026-10-30; no están en el repo):
 - Charlie tiene la guitarra Martin de la canción (dreadnought de 6 cuerdas).
