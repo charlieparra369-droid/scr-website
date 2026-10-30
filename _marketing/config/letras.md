@@ -3,12 +3,12 @@
 Fuente: PDF de letras entregado por la banda (Charlie Parra), 2026-10-30.
 Las letras son material de la banda. Los agentes pueden citar versos en ideas de posts, pero no deben inventar versos ni significados: lo que la canción "quiere decir" lo cuenta la banda.
 
-> El orden del tracklist en el PDF no coincide con el de scrband.com (pistas 6-9). Ver `lanzamiento_proximo.tracklist` en banda.yaml.
+> Orden según el tracklist oficial (scrband.com y banda.yaml). El PDF tenía un orden anterior en las pistas 6-9.
 
 ## Campfire Stories
 We've got a long night ahead, and a lot of stories to share. Let's start with a fella who never  
 quite fit in the mold... not your typical country boy maybe. But he has the heart of a cowboy.  
-It's time to grab my hat and PUT MY BOOTS ON.  
+It's time to grab my hat and PUT MY BOOTS ON.
 
 ## Boots On
 
@@ -52,7 +52,8 @@ But I have the heart of a cowboy.
 It’s time to grab my hat and put my boots on (boots on!),  
 I’ll stand tall, an outlaw at dawn.  
 I’m breaking the chains of the Nashville sound,  
-Bringing back the grit, where real men are found  
+Bringing back the grit, where real men are found
+
 ## Southern Colored Rooster
 
 **[Verse 1]**
@@ -102,7 +103,8 @@ I pulled him from the wreckage, gave him a soul
 From the scraps and the pieces, I’ll make him whole  
 Let his music rise and speak to my soul  
 The southern colored rooster buried deep inside  
-That’s where I found the songs I thought had died  
+That’s where I found the songs I thought had died
+
 ## Livin’ In An Old Country Song
 
 **[Verse 1]**
@@ -152,7 +154,8 @@ I’m living in an old country song
 
 **[Bridge reprise]**
 Some call it sorrow, some call it grace  
-I call it home when I’m lost in this place  
+I call it home when I’m lost in this place
+
 ## Me Again
 
 **[Verse 1]**
@@ -195,7 +198,52 @@ Got my fire back, yeah, I'm done with hopin'
 No more second-guessin', no more yes-ma’am  
 Took my life back, now I don’t give a damn  
 Ain't lookin' back, don't miss the pain  
-Hell yeah, it's good to be me again  
+Hell yeah, it's good to be me again
+
+## Uncle Martin
+
+**[Verse 1]**
+In a rusty old house, lived an old friend of mine  
+He lived plain and simple, didn't chase no fame,  
+He is not my mother’s brother, but I call him family  
+To me he is my Uncle, we’re close as we could be  
+
+**[Verse 2]**
+We’d sit on the porch, 'neath the southern sun,  
+With a glass of iced tea, trying to learn new songs,  
+Spinning tales of the past, with a smile wide and wise,  
+We'd hang on each word, laughter mixed with sighs.  
+
+**[Chorus]**
+Oh, help me Uncle Martin, help me write this song  
+People think I’m crazy, but I'll prove them wrong  
+I'm hanging on your strings waiting for the world to hear  
+How easy it can be, between Uncle Martin and me  
+
+**[Verse 3]**
+During hard times, you'd find him lending me a hand,  
+Patchin' up my broken pieces, like a rock he’d stand  
+Never spoke much of troubles, never looked for praise,  
+Just the kind of good soul, with a heart full of grace.  
+
+**[Chorus]**
+Oh, help me Uncle Martin, help me write this song  
+People think I’m crazy, but I'll prove them wrong  
+I'm hanging on your strings waiting for the world to hear  
+How easy it can be, between Uncle Martin and me  
+
+**[Bridge]**
+Seasons have come, and seasons have passed,  
+But the lessons he taught us, forever will last,  
+I hold ’em close, like a cherished song,  
+In my heart, Uncle Martin will forever belong.  
+
+**[Chorus]**
+Oh, help me Uncle Martin, help me write this song  
+People think I’m crazy, but I'll prove them wrong  
+I'm hanging on your strings waiting for the world to hear  
+How easy it can be, between Uncle Martin and me
+
 ## Break These Chains
 
 **[Verse 1]**
@@ -254,87 +302,8 @@ Just shadows that don’t know my name
 Somebody save me  
 From this constant pain  
 I’m so damn tired of dragging  
-These rusted chains  
-## When Death Calls Your Name
+These rusted chains
 
-**[Verse 1]**
-In the dead of night, where shadows lay their claim,  
-A lonesome cowboy rides, with nothing left to gain.  
-He’s faced a thousand demons, in the desert’s cruel embrace,  
-But now the final showdown, when death calls his name.  
-
-**[Chorus]**
-When death calls your name, will you stand and fight?  
-In the valley of darkness, will you shine your light?  
-The devil’s on your trail, with his fiery flame,  
-But the righteous never falter, when death calls your name.  
-
-**[Verse 2]**
-He’s got a six-gun loaded, with the weight of every sin,  
-Each bullet forged in anger, but his heart was caving in.  
-He’s walked the line of justice, on a path of burning shame,  
-But redemption’s in his holster, when death calls his name.  
-
-**[Chorus]**
-When death calls your name, will you stand and fight?  
-In the valley of darkness, will you shine your light?  
-The devil’s on your trail, with his fiery flame,  
-But the righteous never falter, when death calls your name.  
-
-**[Bridge]**
-In the dust and the blood, where the wicked fall,  
-A cowboy’s prayer echoes, through the canyon’s call.  
-He’s ready for the reckoning, no fear in his veins,  
-For he’ll ride with the angels, when death calls his name.  
-
-**[Chorus]**
-When death calls your name, will you stand and fight?  
-In the valley of darkness, will you shine your light?  
-The devil’s on your trail, with his fiery flame,  
-But the righteous never falter, when death calls your name.  
-## Uncle Martin
-
-**[Verse 1]**
-In a rusty old house, lived an old friend of mine  
-He lived plain and simple, didn't chase no fame,  
-He is not my mother’s brother, but I call him family  
-To me he is my Uncle, we’re close as we could be  
-
-**[Verse 2]**
-We’d sit on the porch, 'neath the southern sun,  
-With a glass of iced tea, trying to learn new songs,  
-Spinning tales of the past, with a smile wide and wise,  
-We'd hang on each word, laughter mixed with sighs.  
-
-**[Chorus]**
-Oh, help me Uncle Martin, help me write this song  
-People think I’m crazy, but I'll prove them wrong  
-I'm hanging on your strings waiting for the world to hear  
-How easy it can be, between Uncle Martin and me  
-
-**[Verse 3]**
-During hard times, you'd find him lending me a hand,  
-Patchin' up my broken pieces, like a rock he’d stand  
-Never spoke much of troubles, never looked for praise,  
-Just the kind of good soul, with a heart full of grace.  
-
-**[Chorus]**
-Oh, help me Uncle Martin, help me write this song  
-People think I’m crazy, but I'll prove them wrong  
-I'm hanging on your strings waiting for the world to hear  
-How easy it can be, between Uncle Martin and me  
-
-**[Bridge]**
-Seasons have come, and seasons have passed,  
-But the lessons he taught us, forever will last,  
-I hold ’em close, like a cherished song,  
-In my heart, Uncle Martin will forever belong.  
-
-**[Chorus]**
-Oh, help me Uncle Martin, help me write this song  
-People think I’m crazy, but I'll prove them wrong  
-I'm hanging on your strings waiting for the world to hear  
-How easy it can be, between Uncle Martin and me  
 ## Where The Thunder Rolls
 
 **[Verse 1]**
@@ -386,4 +355,42 @@ Where the thunder rolls, yeah, that’s where I’ll be
 
 **[Outro]**
 Where the thunder rolls, yeah, that’s where I’ll be  
-Where the thunder rolls, keep on rollin’ with me  
+Where the thunder rolls, keep on rollin’ with me
+
+## When Death Calls Your Name
+
+**[Verse 1]**
+In the dead of night, where shadows lay their claim,  
+A lonesome cowboy rides, with nothing left to gain.  
+He’s faced a thousand demons, in the desert’s cruel embrace,  
+But now the final showdown, when death calls his name.  
+
+**[Chorus]**
+When death calls your name, will you stand and fight?  
+In the valley of darkness, will you shine your light?  
+The devil’s on your trail, with his fiery flame,  
+But the righteous never falter, when death calls your name.  
+
+**[Verse 2]**
+He’s got a six-gun loaded, with the weight of every sin,  
+Each bullet forged in anger, but his heart was caving in.  
+He’s walked the line of justice, on a path of burning shame,  
+But redemption’s in his holster, when death calls his name.  
+
+**[Chorus]**
+When death calls your name, will you stand and fight?  
+In the valley of darkness, will you shine your light?  
+The devil’s on your trail, with his fiery flame,  
+But the righteous never falter, when death calls your name.  
+
+**[Bridge]**
+In the dust and the blood, where the wicked fall,  
+A cowboy’s prayer echoes, through the canyon’s call.  
+He’s ready for the reckoning, no fear in his veins,  
+For he’ll ride with the angels, when death calls his name.  
+
+**[Chorus]**
+When death calls your name, will you stand and fight?  
+In the valley of darkness, will you shine your light?  
+The devil’s on your trail, with his fiery flame,  
+But the righteous never falter, when death calls your name.
