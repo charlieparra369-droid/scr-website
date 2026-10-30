@@ -6,22 +6,54 @@
 banda:
   nombre: Southern Colored Rooster
   abreviatura: SCR
+  nombre_anterior: C. Parra      # el proyecto empezó con el nombre de Charlie Parra
   origen:
     ciudad: San José
     pais: Costa Rica
+  web: https://scrband.com/
+  tagline: "Where I found the songs I thought had died"
+  bio_corta: >
+    Country y southern rock con influencia del metal y el espíritu del rock clásico.
+    "Costa Rica y Nashville en la misma canción": tradición con filo, letras honestas,
+    guitarras fuertes, historias que se sienten vividas.
+  fuente: https://scrband.com/
+
+miembros:
+  - nombre: Charlie Parra
+    rol: bajo; fundador y compositor
+    instagram: "@charlie.parra"
+  - nombre: Jason Parra
+    rol: guitarras eléctrica y acústica
+  - nombre: Andrés Corrales
+    rol: teclados, producción, mezcla y masterización
+    instagram: "@andrescorralesg"
+  - nombre: Matt Dame
+    rol: voz
+musicos_adicionales:
+  - {nombre: Mauricio Delgado, rol: batería, temas: [Boots On, Southern Colored Rooster, Me Again, Break These Chains, Where the Thunder Rolls]}
+  - {nombre: Marvin Picado, rol: bajo, temas: [Uncle Martin]}
+  - {nombre: Victor Ramírez, rol: batería, temas: [Uncle Martin]}
+  - {nombre: Andrea Núñez, rol: batería, temas: ["Livin' in an Old Country Song"], instagram: "@andrenunezch"}
+  - {nombre: Manu Barrantes, rol: voz invitada, temas: [When Death Calls Your Name]}
+  - {nombre: Pablo Mejía, rol: bajo, temas: [Southern Colored Rooster], instagram: "@pabmejia"}
+estudio:
+  nombre: 3/4 Studios
+  instagram: "@trescuartos_estudio"
 
 musica:
   genero_principal: Southern Rock
   subgeneros:
     - Country rock
     - Country moderno
+  influencias_declaradas: [metal, rock clásico, outlaw country]
   idioma_letras: inglés
+  temas_liricos: [historias de vida, personajes, pérdida, redención, segundas oportunidades, identidad country fuera del Sur de EE. UU.]
 
 bandas_similares:
   # Referentes para observar qué contenido les funciona.
   - Blackberry Smoke
   - Whiskey Myers
-  - The Steel Woods
+  - The Cadillac Three   # reemplaza a The Steel Woods (separados en 2024)
 
 mercados:
   # Orden = prioridad
@@ -32,7 +64,7 @@ mercados:
 
 idiomas_redes:
   actual: [español]
-  objetivo: [español, inglés]   # posts bilingües
+  objetivo: [español, inglés]   # posts bilingües (la web ya es bilingüe EN/ES)
 
 redes:
   instagram:
@@ -42,34 +74,65 @@ redes:
         rol: cuenta oficial de la banda
       - handle: "@charlie.parra"
         rol: Charlie Parra (miembro); se agrega como colaborador en todos los posts de la banda
-  tiktok: null
-  youtube: null
+  tiktok: "@charlie.parra"       # cuenta personal enlazada desde la web; no es de la banda
+  youtube: https://youtube.com/@cparra79
   facebook: null
-  spotify: null        # URL del perfil de artista — pendiente
-  web: null
+  spotify: https://open.spotify.com/artist/6DmC1YYXIWndaude1eqIu9
+  apple_music: https://music.apple.com/cr/artist/southern-colored-rooster/1883805126
+  amazon_music: https://music.amazon.com/artists/B0GRWH4SJS
+  youtube_music: https://music.youtube.com/channel/UClj3vwTsxolvTN--9FHd51Q
+  soundcloud: https://soundcloud.com/charlie-parra-654551741
+  web: https://scrband.com/
 
 tono:
   descripcion: Amigable, cercano, con identidad costarricense (ajustable más adelante).
   temas_prohibidos:
     - política
     - religión
+  nota: >
+    Algunas letras usan imágenes de fe y pecado (p. ej. "When Death Calls Your Name",
+    "Livin' in an Old Country Song"). Al citarlas en posts, no convertirlas en mensaje religioso.
 
 discografia:
-  - titulo: Boots On
-    tipo: EP
-    fecha: null        # "hace unos meses" — fecha exacta pendiente
-    canciones:
-      - Boots On
-      - Livin' in an Old Country Song
-      - Uncle Martin
-      - When Death Calls Your Name
-    notas: Las 4 canciones salieron antes como singles.
+  singles:
+    - {titulo: Uncle Martin, anio: 2024, notas: "Primer single, publicado como C. Parra"}
+    - {titulo: When Death Calls Your Name (feat. Manu Barrantes), anio: 2025}
+    - {titulo: "Livin' in an Old Country Song", anio: 2026}
+    - {titulo: Boots On, anio: 2026}
+  eps:
+    - titulo: Boots On
+      fecha: null        # año 2026 según la web; día exacto pendiente
+      canciones:
+        - Boots On
+        - Livin' in an Old Country Song
+        - Uncle Martin
+        - When Death Calls Your Name
+      enlace: https://open.spotify.com/album/6zGwVPI3k9F6UCd0ANz3uG
+  fuente: https://scrband.com/
 
 lanzamiento_proximo:
   titulo: Campfire Stories
   tipo: álbum (disco debut)
   fecha: 2026-11-27
-  single_focal: null   # pendiente
+  concepto: >
+    Disco construido alrededor de contar historias con una guitarra en la mano:
+    cada canción es un cuento para compartir alrededor de una fogata.
+  portada: Portada_CampfireStories.jpg   # en la raíz del repo; fogata en un campo de noche, humo con forma de gallo, tormenta eléctrica
+  tracklist:
+    - {n: 1, titulo: Campfire Stories, estado: inédita}        # intro hablada
+    - {n: 2, titulo: Boots On, estado: publicada}
+    - {n: 3, titulo: Southern Colored Rooster, estado: inédita}
+    - {n: 4, titulo: "Livin' in an Old Country Song", estado: publicada}
+    - {n: 5, titulo: Me Again, estado: inédita}
+    - {n: 6, titulo: Uncle Martin, estado: publicada}
+    - {n: 7, titulo: Break These Chains, estado: inédita}
+    - {n: 8, titulo: Where the Thunder Rolls, estado: inédita}
+    - {n: 9, titulo: When Death Calls Your Name (feat. Manuel Barrantes), estado: publicada}
+  single_focal: Me Again
+  pitch:
+    spotify: enviado (Release Radar)
+    amazon_music: enviado
+  fuente: https://scrband.com/
 
 objetivos:
   # Orden = prioridad
