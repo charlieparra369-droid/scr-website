@@ -42,6 +42,7 @@ Se convirtió en mi primera canción, y en la que me hizo creer que podría escr
 - Charlie tiene la guitarra Martin de la canción (dreadnought de 6 cuerdas).
 - Selfie de Charlie en su casa con el clavijero "C.F. Martin & Co. Est. 1833" tapándole medio rostro.
 - Fotos en la fábrica de Martin en Nazareth, Pensilvania, **donde Charlie compró la guitarra**, con las guitarras en la pared. En una, Charlie aparece con una camiseta de Blackberry Smoke (referente de banda similar) y una dreadnought en las manos; en otra aparece con su primo. **Regla: usar solo recortes donde salga Charlie; el primo no aparece en redes.**
+- **Foto de la página del cuaderno** con la línea original escrita a mano: "help me Martin help me write this song, people think I'm mediocre but I'll prove them wrong". Es la prueba visual del verso original y se puede usar completa (no muestra a nadie).
 - Foto de "The Maple Tree Custom Milestone Guitar" (2000, serie #800000) en una vitrina.
 
 ## Boots On
