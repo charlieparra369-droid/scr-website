@@ -156,7 +156,10 @@ metricas:
     seguidores: 133
     fecha: 2026-10-30
     fuente: dato de la banda (Charlie Parra)
-  spotify_seguidores: null         # seguidores del perfil (distinto de oyentes mensuales) — pendiente
+  spotify_seguidores:
+    total: 26                      # seguidores del perfil (distinto de oyentes mensuales)
+    fecha: 2026-10-30
+    fuente: Spotify for Artists → Audience, dato de la banda
   amazon_music: null               # fans pendientes
 
 presupuesto_promocion:
