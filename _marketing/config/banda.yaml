@@ -27,9 +27,8 @@ miembros:
   - nombre: Andrés Corrales
     rol: teclados, producción, mezcla y masterización
     instagram: "@andrescorralesg"
-  - nombre: Matt Dame
-    rol: voz
 musicos_adicionales:
+  - {nombre: Matt Dame, rol: voz}
   - {nombre: Mauricio Delgado, rol: batería, temas: [Boots On, Southern Colored Rooster, Me Again, Break These Chains, Where the Thunder Rolls]}
   - {nombre: Marvin Picado, rol: bajo, temas: [Uncle Martin]}
   - {nombre: Victor Ramírez, rol: batería, temas: [Uncle Martin]}
