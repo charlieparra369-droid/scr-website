@@ -33,7 +33,7 @@ musicos_adicionales:
   - {nombre: Marvin Picado, rol: bajo, temas: [Uncle Martin]}
   - {nombre: Victor Ramírez, rol: batería, temas: [Uncle Martin]}
   - {nombre: Andrea Núñez, rol: batería, temas: ["Livin' in an Old Country Song"], instagram: "@andrenunezch"}
-  - {nombre: Manu Barrantes, rol: voz invitada, temas: [When Death Calls Your Name]}
+  - {nombre: Manuel Barrantes, rol: voz invitada, temas: [When Death Calls Your Name]}
   - {nombre: Pablo Mejía, rol: bajo, temas: [Southern Colored Rooster], instagram: "@pabmejia"}
 estudio:
   nombre: 3/4 Studios
@@ -73,6 +73,10 @@ redes:
         rol: cuenta oficial de la banda
       - handle: "@charlie.parra"
         rol: Charlie Parra (miembro); se agrega como colaborador en todos los posts de la banda
+  colaboradores_instagram:
+    # Regla de la banda: en los posts SOLO se agrega como colaborador a @charlie.parra.
+    # No proponer otras cuentas como colaboradoras (músicos, estudio, medios, venues).
+    permitidos: ["@charlie.parra"]
   tiktok: "@charlie.parra"       # cuenta personal enlazada desde la web; no es de la banda
   youtube: https://youtube.com/@cparra79
   facebook: null
@@ -95,7 +99,7 @@ tono:
 discografia:
   singles:
     - {titulo: Uncle Martin, anio: 2024, notas: "Primer single, publicado como C. Parra"}
-    - {titulo: When Death Calls Your Name (feat. Manu Barrantes), anio: 2025}
+    - {titulo: When Death Calls Your Name (feat. Manuel Barrantes), anio: 2025}
     - {titulo: "Livin' in an Old Country Song", anio: 2026}
     - {titulo: Boots On, anio: 2026}
   eps:
@@ -113,6 +117,7 @@ lanzamiento_proximo:
   titulo: Campfire Stories
   tipo: álbum (disco debut)
   fecha: 2026-11-27
+  letras: letras.md   # en la misma carpeta config/; fuente: PDF de la banda
   concepto: >
     Disco construido alrededor de contar historias con una guitarra en la mano:
     cada canción es un cuento para compartir alrededor de una fogata.
@@ -132,6 +137,22 @@ lanzamiento_proximo:
     spotify: enviado (Release Radar)
     amazon_music: enviado
   fuente: https://scrband.com/
+
+metricas:
+  # Datos reales aportados por la banda. Los agentes los usan tal cual y citan la fuente.
+  spotify:
+    periodo: 2026-10-01 a 2026-10-28
+    fuente: Captura de Spotify for Artists enviada por la banda el 2026-10-30
+    oyentes_mensuales: 18          # -25 % vs. periodo anterior
+    streams: 47                    # -13 %
+    streams_por_oyente: 2.611
+    playlist_adds: 1
+    saves: 6
+    oyentes_mensuales_activos: 15  # -28,6 %
+    nuevos_oyentes_activos: 3      # -57,1 %
+    super_listeners: 0
+  instagram: null                  # seguidores pendientes
+  amazon_music: null               # fans pendientes
 
 objetivos:
   # Orden = prioridad
