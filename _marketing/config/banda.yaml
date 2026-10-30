@@ -168,16 +168,9 @@ presupuesto_promocion:
 
 historias_canciones:
   # Lo que inspiró cada canción y cómo se escribió. Lo cuenta la banda; los agentes no lo inventan.
-  # Charlie destaca especialmente las de Uncle Martin y Boots On.
-  Campfire Stories: null
-  Boots On: null
-  Southern Colored Rooster: null
-  "Livin' in an Old Country Song": null
-  Me Again: null
-  Uncle Martin: null
-  Break These Chains: null
-  Where the Thunder Rolls: null
-  When Death Calls Your Name: null
+  archivo: historias.md   # en la misma carpeta config/
+  completas: [Uncle Martin]
+  pendientes_prioritarias: [Boots On]   # Charlie destaca la historia de Boots On
 
 objetivos:
   # Orden = prioridad
