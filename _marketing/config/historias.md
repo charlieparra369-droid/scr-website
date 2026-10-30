@@ -33,6 +33,12 @@ Se convirtió en mi primera canción, y en la que me hizo creer que podría escr
 
 **Uso público:** PENDIENTE de confirmar con la banda si se puede decir que el comentario lo hizo un tío. Mientras tanto, contarlo como "alguien en la mesa".
 
+**Material visual disponible** (fotos de la banda, 2026-10-30; no están en el repo):
+- Charlie tiene la guitarra Martin de la canción (dreadnought de 6 cuerdas).
+- Selfie de Charlie con el clavijero "C.F. Martin & Co. Est. 1833" tapándole medio rostro.
+- Fotos en una sala de exhibición de Martin, con las guitarras en la pared. En una, Charlie aparece con una camiseta de Blackberry Smoke (referente de banda similar) y una dreadnought en las manos; en otra, posa con otra persona, cada uno con su Martin.
+- Foto de "The Maple Tree Custom Milestone Guitar" (2000, serie #800000) en una vitrina. Lugar de la visita: pendiente de confirmar con la banda.
+
 ## Boots On
 *Pendiente.*
 
