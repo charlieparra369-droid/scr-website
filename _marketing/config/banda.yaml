@@ -168,6 +168,8 @@ presupuesto_promocion:
   disponible: true                 # "si fuera necesario"
   monto: null                      # pendiente; no asumir cifras
 
+publicaciones: publicaciones.md   # registro de lo ya publicado (misma carpeta config/)
+
 historias_canciones:
   # Lo que inspiró cada canción y cómo se escribió. Lo cuenta la banda; los agentes no lo inventan.
   archivo: historias.md   # en la misma carpeta config/
