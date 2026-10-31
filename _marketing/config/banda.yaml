@@ -65,6 +65,7 @@ idiomas_redes:
   actual: [español]
   objetivo: [español, inglés]   # posts bilingües (la web ya es bilingüe EN/ES)
   orden_caption: español primero, luego inglés   # preferencia de la banda (2026-10-31)
+  texto_en_imagenes: español como texto principal; inglés en tamaño pequeño debajo   # preferencia de la banda (2026-10-31)
 
 redes:
   instagram:
