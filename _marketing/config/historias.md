@@ -64,7 +64,26 @@ Charlie iba camino a Estados Unidos, a un concierto de country, con su sombrero 
 *Pendiente.*
 
 ## Livin' in an Old Country Song
-*Pendiente.*
+
+*Contada por Charlie Parra, 2026-11-04.*
+
+La canción está inspirada en una línea de "Lonesome for a Livin'" de Blackberry Smoke. Charlie la había escuchado muchas veces, pero un día la línea **"I live the life of an old country song"** lo dejó con una pregunta en la cabeza: *¿qué se sentirá vivir en una canción country?*
+
+Empezó a escribir una letra que cuenta la historia de un personaje que empieza a ver su vida a través de una canción. "Todos hemos imaginado nuestra vida en una canción; esta era la mía."
+
+**Temas (según Charlie):**
+- Las dualidades de la vida y el conflicto interno.
+- La música como refugio: la guitarra y la canción como hogar y testigo; el dolor se convierte en "stories to tell".
+- La resiliencia a través de la pérdida: lo perdido es lo que lo mantiene "hangin' on", y la melodía le recuerda "the nights I was strong".
+
+**Dato de la grabación:** fue el debut en estudio de Andrea Núñez (@andrenunezch) en la batería.
+
+**Contexto verificado de la canción de Blackberry Smoke:** "Lonesome for a Livin'" (con Jamey Johnson) está en el disco *You Hear Georgia*. Charlie Starr la escribió como homenaje a George Jones. Fuentes: [Saving Country Music](https://savingcountrymusic.com/how-george-jones-inspired-blackberry-smokes-lonesome-for-a-livin/), [JamBase](https://www.jambase.com/article/blackberry-smoke-jamey-johnson-george-jones-tribute-lonesome-for-a-livin), [Rolling Stone](https://www.rollingstone.com/music/music-country/blackberry-smoke-jamey-johnson-lonesome-for-a-livin-1175623/).
+
+**Uso público:**
+- De la letra de Blackberry Smoke, citar **solo la línea "I live the life of an old country song"**, atribuida a Blackberry Smoke. No reproducir la estrofa completa: es letra con derechos de autor de otra banda.
+- No usar los versos ni los temas con imágenes religiosas ("sinner and saint", "whiskey and faith", "grace"), por la regla de tono. Hablar de "dualidades" o "conflicto interno" en general.
+- Andrea Núñez se puede **mencionar o etiquetar**, pero no agregar como colaboradora (regla de colaboradores: solo @charlie.parra). Pendiente: confirmar con la banda si se la etiqueta.
 
 ## Me Again
 *Pendiente.*
