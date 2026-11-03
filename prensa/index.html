@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kit de prensa | Southern Colored Rooster</title>
+<meta name="description" content="Kit de prensa de Southern Colored Rooster: bio, datos, historias, fotos y portada del disco debut Campfire Stories (27 de noviembre de 2026).">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Southern Colored Rooster">
+<meta property="og:title" content="Kit de prensa | Southern Colored Rooster">
+<meta property="og:description" content="Bio, fotos y arte del disco debut Campfire Stories. Press kit / EPK.">
+<meta property="og:url" content="https://scrband.com/prensa/">
+<meta property="og:image" content="https://scrband.com/prensa/img/campfire-stories-portada-web.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kit de prensa | Southern Colored Rooster">
+<meta name="twitter:image" content="https://scrband.com/prensa/img/campfire-stories-portada-web.jpg">
+
+<link rel="icon" type="image/jpeg" href="img/campfire-stories-portada-web.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --gold: #c9793f;
+  --gold-bright: #e0904a;
+  --night: #0a0e17;
+  --panel: #0c111c;
+  --panel-2: #080b12;
+  --line: #1a2130;
+  --cream: #f4f4f0;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { font-family: 'Oswald', sans-serif; background: var(--night); color: #fff; }
+a { color: var(--gold); }
+a:hover { color: var(--gold-bright); }
+
+.topbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 40px; background: rgba(9,13,20,0.92); border-bottom: 1px solid var(--line);
+}
+.topbar a { text-decoration: none; letter-spacing: 2px; font-size: 13px; }
+.topbar .home { color: var(--gold); font-weight: 600; font-size: 16px; }
+
+.hero {
+  text-align: center; padding: 70px 20px 60px;
+  background:
+    radial-gradient(ellipse at 50% 100%, rgba(201,121,63,0.28) 0%, rgba(59,22,5,0.5) 28%, transparent 62%),
+    linear-gradient(180deg, #0a1324 0%, #0b1019 55%, #150b06 100%);
+}
+.hero img.logo {
+  width: 190px; margin-bottom: 22px;
+  filter: brightness(0) saturate(100%) invert(67%) sepia(61%) saturate(464%) hue-rotate(5deg) brightness(96%) contrast(89%);
+}
+.kicker {
+  color: var(--gold); letter-spacing: 4px; font-size: 13px; text-transform: uppercase;
+  display: inline-flex; align-items: center; gap: 14px;
+}
+.kicker::before, .kicker::after { content: ''; width: 36px; height: 1px; background: var(--gold); opacity: .7; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 52px; margin: 18px 0 10px; }
+.hero .sub { opacity: .8; font-size: 18px; letter-spacing: 1px; }
+.en { display: block; opacity: .55; font-size: .82em; font-weight: 400; margin-top: 6px; }
+
+section { padding: 60px 20px; }
+section:nth-of-type(odd) { background: var(--panel); }
+section:nth-of-type(even) { background: var(--panel-2); }
+.container { max-width: 900px; margin: 0 auto; }
+h2 {
+  color: var(--gold); letter-spacing: 4px; font-size: 18px; text-transform: uppercase;
+  margin-bottom: 28px; text-align: center; font-weight: 600;
+}
+h2 .en { letter-spacing: 2px; font-size: 13px; }
+h3 { font-family: 'Playfair Display', serif; font-size: 26px; margin-bottom: 10px; }
+p { line-height: 1.75; opacity: .85; font-size: 17px; margin-bottom: 14px; }
+p.en-p { opacity: .55; font-size: 15px; }
+
+.facts { display: grid; grid-template-columns: 200px 1fr; border-top: 1px solid var(--line); }
+.facts div { padding: 13px 0; border-bottom: 1px solid var(--line); font-size: 16px; line-height: 1.5; }
+.facts .k { color: var(--gold); letter-spacing: 1px; font-size: 14px; text-transform: uppercase; padding-right: 16px; }
+
+.album { display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap; }
+.album img { width: 300px; max-width: 100%; aspect-ratio: 1; box-shadow: 0 10px 40px rgba(0,0,0,.8); border: 1px solid #1f2735; }
+.album .info { flex: 1; min-width: 260px; }
+ol.tracks { list-style: none; counter-reset: t; margin-top: 10px; }
+ol.tracks li {
+  counter-increment: t; display: flex; justify-content: space-between; gap: 12px;
+  padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 16px;
+}
+ol.tracks li::before { content: counter(t, decimal-leading-zero); color: var(--gold); width: 34px; flex: none; }
+ol.tracks li span.name { flex: 1; }
+.tag { font-size: 11px; letter-spacing: 2px; padding: 3px 8px; border: 1px solid var(--line); opacity: .7; white-space: nowrap; align-self: center; }
+.tag.out { background: var(--gold); color: #000; border-color: var(--gold); opacity: 1; }
+.tag.focus { border-color: var(--gold); color: var(--gold); opacity: 1; }
+
+.story { border-left: 2px solid var(--gold); padding: 4px 0 4px 24px; margin-bottom: 40px; }
+.story:last-child { margin-bottom: 0; }
+.story blockquote { font-family: 'Playfair Display', serif; font-style: italic; font-size: 21px; color: var(--gold-bright); margin: 10px 0 14px; line-height: 1.5; }
+
+.links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.btn {
+  display: inline-block; padding: 11px 22px; border: 1px solid rgba(255,255,255,.5); color: #fff;
+  text-decoration: none; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; transition: all .2s;
+}
+.btn:hover { border-color: var(--gold); color: var(--gold); }
+.btn.primary { background: var(--gold); border-color: var(--gold); color: #000; }
+.btn.primary:hover { background: var(--gold-bright); color: #000; }
+
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 26px; }
+.gallery figure { background: #0f1520; border: 1px solid var(--line); }
+.gallery img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; background: #1a1f2a; }
+.gallery img.contain { object-fit: contain; padding: 24px; }
+.gallery figcaption { padding: 14px 16px 16px; font-size: 14px; line-height: 1.5; opacity: .9; }
+.gallery figcaption .dl { display: inline-block; margin-top: 8px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; }
+
+.contact { text-align: center; }
+.contact p { margin-bottom: 22px; }
+footer { text-align: center; padding: 30px 20px; font-size: 12px; letter-spacing: 1px; opacity: .5; border-top: 1px solid var(--line); }
+
+@media (max-width: 640px) {
+  .topbar { padding: 16px 16px; }
+  .hero h1 { font-size: 38px; }
+  .facts { grid-template-columns: 1fr; }
+  .facts .k { padding-bottom: 0; border-bottom: none; }
+  section { padding: 48px 16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="home" href="https://scrband.com/">SCR</a>
+  <a href="https://scrband.com/">SCRBAND.COM →</a>
+</div>
+
+<header class="hero">
+  <img class="logo" src="img/scr-logo.png" alt="Southern Colored Rooster">
+  <div class="kicker">Kit de prensa · Press kit</div>
+  <h1>Southern Colored Rooster</h1>
+  <div class="sub">Disco debut <i>Campfire Stories</i> · 27 de noviembre de 2026
+    <span class="en">Debut album <i>Campfire Stories</i> · November 27, 2026</span>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <h2>Bio <span class="en">Short bio</span></h2>
+    <p>Southern Colored Rooster es una banda de San José, Costa Rica, que mezcla el country y el rock sureño con el espíritu del rock clásico y la influencia del metal. Es Costa Rica y Nashville en la misma canción: tradición con filo, letras honestas en inglés, guitarras fuertes e historias que se sienten vividas.</p>
+    <p>El proyecto nació de la mano del compositor Charlie Parra, que durante años llenó cuadernos con letras sin sonido. En 2024 escribió "Uncle Martin" y todo cambió. El 27 de noviembre de 2026 la banda lanza su disco debut, <i>Campfire Stories</i>, producido por Andrés Corrales en 3/4 Studios.</p>
+    <p class="en-p">Southern Colored Rooster is a band from San José, Costa Rica, blending country and Southern rock with the spirit of classic rock and a metal edge. It is Costa Rica and Nashville in the same song: tradition with an edge, honest lyrics in English, strong guitars and stories that feel lived. Their debut album, <i>Campfire Stories</i>, produced by Andrés Corrales at 3/4 Studios, is out November 27, 2026.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Datos <span class="en">Quick facts</span></h2>
+    <div class="facts">
+      <div class="k">Origen</div><div>San José, Costa Rica</div>
+      <div class="k">Género</div><div>Southern rock, country rock, country moderno</div>
+      <div class="k">Idioma</div><div>Letras en inglés</div>
+      <div class="k">Miembros</div><div>Charlie Parra — bajo y composición<br>Jason Parra — guitarras eléctrica y acústica<br>Andrés Corrales — teclados, producción, mezcla y masterización</div>
+      <div class="k">Producción</div><div>Andrés Corrales · 3/4 Studios</div>
+      <div class="k">Para fans de</div><div>Blackberry Smoke, Whiskey Myers, The Cadillac Three</div>
+      <div class="k">Publicado</div><div>EP <i>Boots On</i> (2026) · singles "Uncle Martin" (2024), "When Death Calls Your Name" (2025), "Livin' in an Old Country Song" y "Boots On" (2026)</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>El disco <span class="en">The album</span></h2>
+    <div class="album">
+      <img src="img/campfire-stories-portada-web.jpg" alt="Portada de Campfire Stories">
+      <div class="info">
+        <h3>Campfire Stories</h3>
+        <p>Un disco construido alrededor de una de las tradiciones más antiguas de la música country: contar historias con una guitarra en las manos. Nueve canciones sobre vida, personajes, pérdida, redención y segundas oportunidades, como cuentos para compartir alrededor de una fogata.</p>
+        <p class="en-p">An album built around one of country music's oldest traditions: telling stories with a guitar in your hands. Nine songs about life, characters, loss, redemption and second chances.</p>
+        <ol class="tracks">
+          <li><span class="name">Campfire Stories (intro)</span></li>
+          <li><span class="name">Boots On</span><span class="tag out">YA SALIÓ</span></li>
+          <li><span class="name">Southern Colored Rooster</span></li>
+          <li><span class="name">Livin' in an Old Country Song</span><span class="tag out">YA SALIÓ</span></li>
+          <li><span class="name">Me Again</span><span class="tag focus">SENCILLO FOCAL</span></li>
+          <li><span class="name">Uncle Martin</span><span class="tag out">YA SALIÓ</span></li>
+          <li><span class="name">Break These Chains</span></li>
+          <li><span class="name">Where the Thunder Rolls</span></li>
+          <li><span class="name">When Death Calls Your Name (feat. Manuel Barrantes)</span><span class="tag out">YA SALIÓ</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Las historias <span class="en">The stories</span></h2>
+
+    <div class="story">
+      <h3>Boots On</h3>
+      <p>Camino a un concierto de country en Estados Unidos, un oficial de migración vio el sombrero de Charlie y, entre risas, le dijo:</p>
+      <blockquote>"You're not a typical country boy." — "But I have the heart of a cowboy."</blockquote>
+      <p>Esa noche, entre la multitud, la frase no le salía de la cabeza. De vuelta en Costa Rica, sin acento sureño ni haber nacido en la tierra del country, se convirtió en "Boots On".</p>
+      <p class="en-p">On his way to a country concert in the US, an immigration officer laughed at Charlie's hat: "You're not a typical country boy." He answered: "But I have the heart of a cowboy." Back in Costa Rica, that line became "Boots On".</p>
+    </div>
+
+    <div class="story">
+      <h3>Uncle Martin</h3>
+      <p>Alguien le dijo a Charlie que para qué quería una guitarra Martin "siendo un guitarrista tan mediocre". Todavía no tenía una, pero esa misma noche escribió en un cuaderno:</p>
+      <blockquote>"Help me Martin, help me write this song. People think I'm mediocre, but I'll prove them wrong."</blockquote>
+      <p>Dos meses después compró su Martin en la fábrica, en Nazareth, Pensilvania. "Mediocre" se convirtió en "crazy", la canción en "Uncle Martin", y fue la primera que escribió: la que le hizo creer que podía escribir más.</p>
+      <p class="en-p">Someone told Charlie he was too mediocre for a Martin guitar. He didn't own one yet, but that night he wrote the line above. Two months later he bought his Martin at the factory in Nazareth, Pennsylvania. It became his first song.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Escuchar <span class="en">Listen</span></h2>
+    <div class="links">
+      <a class="btn primary" href="https://open.spotify.com/artist/6DmC1YYXIWndaude1eqIu9" target="_blank" rel="noopener">Spotify</a>
+      <a class="btn" href="https://music.apple.com/cr/artist/southern-colored-rooster/1883805126" target="_blank" rel="noopener">Apple Music</a>
+      <a class="btn" href="https://music.amazon.com/artists/B0GRWH4SJS" target="_blank" rel="noopener">Amazon Music</a>
+      <a class="btn" href="https://music.youtube.com/channel/UClj3vwTsxolvTN--9FHd51Q" target="_blank" rel="noopener">YouTube Music</a>
+      <a class="btn" href="https://open.spotify.com/album/6zGwVPI3k9F6UCd0ANz3uG" target="_blank" rel="noopener">EP Boots On</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Fotos y arte <span class="en">Photos &amp; artwork · free for press use</span></h2>
+    <div class="gallery">
+      <figure>
+        <img class="contain" src="img/campfire-stories-portada-web.jpg" alt="Portada de Campfire Stories">
+        <figcaption>Portada · <i>Campfire Stories</i> (3000×3000)<br><a class="dl" href="img/campfire-stories-portada.jpg" download>Descargar · Download</a></figcaption>
+      </figure>
+      <figure>
+        <img src="img/charlie-parra-fabrica-martin-web.jpg" alt="Charlie Parra con su guitarra Martin en la fábrica de Martin, Nazareth, Pensilvania">
+        <figcaption>Charlie Parra en la fábrica de Martin, Nazareth, Pensilvania (2000×1500)<br><a class="dl" href="img/charlie-parra-fabrica-martin.jpg" download>Descargar · Download</a></figcaption>
+      </figure>
+      <figure>
+        <img src="img/uncle-martin-cuaderno-web.jpg" alt="Cuaderno con la primera línea de Uncle Martin escrita a mano">
+        <figcaption>La primera línea de "Uncle Martin", escrita a mano (1448×1086)<br><a class="dl" href="img/uncle-martin-cuaderno.jpg" download>Descargar · Download</a></figcaption>
+      </figure>
+      <figure>
+        <img class="contain" src="img/boots-on-portada-web.jpg" alt="Portada del EP Boots On">
+        <figcaption>Portada · EP <i>Boots On</i> (2400×2400)<br><a class="dl" href="img/boots-on-portada.jpg" download>Descargar · Download</a></figcaption>
+      </figure>
+      <figure>
+        <img class="contain" src="img/scr-logo.png" alt="Logo de Southern Colored Rooster" style="background:#e9e4d8">
+        <figcaption>Logo · PNG con fondo transparente<br><a class="dl" href="img/scr-logo.png" download>Descargar · Download</a></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="container">
+    <h2>Contacto <span class="en">Press contact</span></h2>
+    <p>Para entrevistas, notas o música para radio, escríbenos por Instagram.<span class="en">For interviews, features or radio, reach us on Instagram.</span></p>
+    <div class="links">
+      <a class="btn primary" href="https://instagram.com/scrband" target="_blank" rel="noopener">Instagram @scrband</a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Southern Colored Rooster · <a href="https://scrband.com/">scrband.com</a></footer>
+
+</body>
+</html>
