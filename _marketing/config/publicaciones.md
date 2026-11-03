@@ -6,6 +6,7 @@ Las métricas las aporta la banda; si no hay dato, queda `pendiente`.
 | Fecha | Red | Formato | Contenido | Canción | Colaborador | Métricas |
 |---|---|---|---|---|---|---|
 | 2026-10-31 | Instagram (@scrband) | Carrusel de 5 slides (español grande, inglés pequeño) | "La historia detrás de Uncle Martin": el comentario de "mediocre", la línea original en el cuaderno, la compra en la fábrica de Nazareth, el cambio "mediocre" → "crazy", la portada del disco | Uncle Martin | @charlie.parra | pendiente |
+| 2026-11-04 (programado) | Instagram (@scrband) | Carrusel de 6 slides, estilo cómic (español grande, inglés pequeño) | "La historia detrás de Boots On": el sombrero en migración, "You're not a typical country boy" / "But I have the heart of a cowboy", la frase en el concierto, la canción escrita en Costa Rica, el coro | Boots On | @charlie.parra | pendiente |
 
 ## Punto de partida (antes de la campaña)
 - Instagram @scrband: 133 seguidores (2026-10-30)

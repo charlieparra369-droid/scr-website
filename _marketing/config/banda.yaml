@@ -173,8 +173,7 @@ publicaciones: publicaciones.md   # registro de lo ya publicado (misma carpeta c
 historias_canciones:
   # Lo que inspiró cada canción y cómo se escribió. Lo cuenta la banda; los agentes no lo inventan.
   archivo: historias.md   # en la misma carpeta config/
-  completas: [Uncle Martin]
-  pendientes_prioritarias: [Boots On]   # Charlie destaca la historia de Boots On
+  completas: [Uncle Martin, Boots On]
 
 objetivos:
   # Orden = prioridad

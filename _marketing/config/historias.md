@@ -46,7 +46,16 @@ Se convirtió en mi primera canción, y en la que me hizo creer que podría escr
 - Foto de "The Maple Tree Custom Milestone Guitar" (2000, serie #800000) en una vitrina.
 
 ## Boots On
-*Pendiente.*
+
+*Tomada del carrusel de cómic que preparó la banda (2026-11-03). Faltan detalles: qué concierto, dónde y cuándo.*
+
+Charlie iba camino a Estados Unidos, a un concierto de country, con su sombrero puesto. En migración, al oficial le pareció gracioso el sombrero y le dijo: "You're not a typical country boy". Charlie le respondió sin pensarlo dos veces: "But I have the heart of a cowboy". Esa noche, entre la multitud del concierto, la frase no le salía de la cabeza. De vuelta en Costa Rica, sin acento sureño ni haber nacido en la tierra del country, esa frase se volvió la canción *Boots On*.
+
+**Claves para contenido:**
+- El coro nace de un diálogo real: "I am not your typical country boy / But I have the heart of a cowboy".
+- Conecta con la identidad de la banda: country hecho desde Costa Rica ("I wasn't born in the land of the free").
+
+**Uso público:** la banda ya la cuenta en redes (carrusel de cómic). No inventar el nombre del concierto, del artista ni la ciudad.
 
 ## Campfire Stories
 *Pendiente.*
