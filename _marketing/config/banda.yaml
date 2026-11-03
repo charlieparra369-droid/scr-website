@@ -55,11 +55,15 @@ bandas_similares:
   - The Cadillac Three   # reemplaza a The Steel Woods (separados en 2024)
 
 mercados:
-  # Orden = prioridad
-  - pais: Estados Unidos
-    idioma_posts: inglés
+  # Orden = prioridad. Decisión de la banda (2026-11-03): Costa Rica primero hasta el
+  # lanzamiento (2026-11-27); después volver a priorizar Estados Unidos.
+  # Motivo: el 91 % de quienes vieron el post de Uncle Martin estaban en Costa Rica y solo el 2,6 % en EE. UU.
   - pais: Costa Rica
     idioma_posts: español
+    prioridad_hasta: 2026-11-27
+  - pais: Estados Unidos
+    idioma_posts: inglés
+    prioridad_desde: 2026-11-28   # retomar como mercado principal después del lanzamiento
 
 idiomas_redes:
   actual: [español]
