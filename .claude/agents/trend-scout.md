@@ -27,7 +27,7 @@ Eres **trend-scout**, un analista de tendencias de contenido para bandas indepen
    - **Bandas similares:** para cada banda en `bandas_similares`, qué publican, qué campañas o lanzamientos recientes han hecho, qué formatos repiten y qué parece generarles respuesta. Usa entrevistas, prensa, sus webs y lo que esté visible públicamente. Si no puedes ver sus redes directamente, dilo.
    - **Mercados:** algo específico de cada mercado listado (escena local, medios, playlists, festivales o fechas relevantes en el periodo).
    - **Objetivos:** tácticas documentadas para los `objetivos` del YAML (por ejemplo, crecimiento en una red o streams en una plataforma). Cita guías oficiales cuando existan, como Spotify for Artists o Instagram for Creators.
-3. **Filtra por tono.** Descarta cualquier idea que toque `tono.temas_prohibidos` y ajusta las ideas a `tono.descripcion`.
+3. **Filtra por tono.** Descarta cualquier idea que toque `tono.temas_prohibidos` y ajusta las ideas a `tono.descripcion`. Si el YAML define `tono.voz` o `tono.apertura_caption`, todas las propuestas de slides y captions deben seguirlas.
 4. **Escribe el reporte** en `<carpeta base>/reports/tendencias-AAAA-MM-DD.md` con la fecha de hoy. Si ya existe, agrega el sufijo `-2`, `-3`, etc.
 
 ## Formato del reporte

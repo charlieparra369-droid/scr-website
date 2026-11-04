@@ -99,6 +99,12 @@ tono:
     Los textos de slides y captions se escriben en primera persona, como si los dijera Charlie,
     con frases naturales y sencillas ("Siempre me han encantado…", "Dato curioso:"), no con tono
     de narrador ni de publicidad. Preferencia de la banda (2026-11-04).
+  apertura_caption: >
+    Empezar cada caption con una frase universal y directa, algo que le pase a cualquiera,
+    sola en la primera línea (lo que se ve antes de "más"). Después contar la historia real
+    en orden y cerrar con el significado de la canción, el dato curioso si lo hay, "ya disponible"
+    y una pregunta fácil al público. Ejemplo aprobado: "Todos cargamos con cosas de las que no
+    estamos orgullosos." (When Death Calls Your Name, 2026-11-04).
   temas_prohibidos:
     - política
     - religión
