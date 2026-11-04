@@ -110,4 +110,5 @@ Charlie es aficionado a las películas de vaqueros de Clint Eastwood. La idea de
 **Datos extra (Charlie, 2026-11-04):**
 - Es la única canción del disco que no canta Matt Dame; la voz es de Manu (Manuel) Barrantes. La banda pidió usar "Manuel Barrantes" en los textos; la portada del single dice "Manu Barrantes".
 - La portada del single la diseñó @motions_craft. Darle crédito (mención) cuando se use.
+- Cuaderno original con la letra a mano (título, acordes Bm E A, primera estrofa y coro). En el borrador decía "shadows **stake** their claim"; en la canción quedó "lay their claim". El coro del cuaderno tiene versos religiosos: en redes usar solo la parte de la estrofa.
 - Material visual: portada del single, el arte sin texto (vaquero bajo la luna), una foto en vivo de Manu con guitarra acústica y una foto de Charlie con el bajo en el estudio.
