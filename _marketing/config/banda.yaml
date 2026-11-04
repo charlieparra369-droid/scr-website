@@ -95,6 +95,10 @@ redes:
 
 tono:
   descripcion: Amigable, cercano, con identidad costarricense (ajustable más adelante).
+  voz: >
+    Los textos de slides y captions se escriben en primera persona, como si los dijera Charlie,
+    con frases naturales y sencillas ("Siempre me han encantado…", "Dato curioso:"), no con tono
+    de narrador ni de publicidad. Preferencia de la banda (2026-11-04).
   temas_prohibidos:
     - política
     - religión
