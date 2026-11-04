@@ -124,6 +124,7 @@ lanzamiento_proximo:
   tipo: álbum (disco debut)
   fecha: 2026-11-27
   letras: letras.md   # en la misma carpeta config/; fuente: PDF de la banda
+  narrativa: narrativa-disco.md   # hilo temático del disco; historias de inspiración = ficción, no hechos
   concepto: >
     Disco construido alrededor de contar historias con una guitarra en la mano:
     cada canción es un cuento para compartir alrededor de una fogata.
