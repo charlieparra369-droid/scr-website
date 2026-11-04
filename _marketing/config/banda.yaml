@@ -178,7 +178,7 @@ publicaciones: publicaciones.md   # registro de lo ya publicado (misma carpeta c
 historias_canciones:
   # Lo que inspiró cada canción y cómo se escribió. Lo cuenta la banda; los agentes no lo inventan.
   archivo: historias.md   # en la misma carpeta config/
-  completas: [Uncle Martin, Boots On, "Livin' in an Old Country Song"]
+  completas: [Uncle Martin, Boots On, "Livin' in an Old Country Song", When Death Calls Your Name]
 
 objetivos:
   # Orden = prioridad

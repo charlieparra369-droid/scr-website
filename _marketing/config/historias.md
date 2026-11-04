@@ -95,4 +95,14 @@ Empezó a escribir una letra que cuenta la historia de un personaje que empieza 
 *Pendiente.*
 
 ## When Death Calls Your Name
-*Pendiente.*
+
+*Contada por Charlie Parra, 2026-11-04.*
+
+Charlie es aficionado a las películas de vaqueros de Clint Eastwood. La idea de la canción nació un día después de ver *Unforgiven* (Clint Eastwood, 1992; Charlie la llamó "The Unforgiven"). Primero fue una historia del viejo oeste: un vaquero solitario que cabalga hacia su enfrentamiento final. Luego Charlie la relacionó con **la dualidad que todos llevamos dentro**: el bien y el mal, y el momento en que hay que enfrentar el pasado.
+
+**Datos:** single publicado en 2025, con la voz de Manuel Barrantes (es la única canción del disco sin Matt Dame). Pista 9: cierra *Campfire Stories*.
+
+**Uso público:**
+- Se puede contar lo de Clint Eastwood y *Unforgiven*. No usar imágenes ni fragmentos de la película (derechos de autor); solo nombrarla.
+- La letra tiene imágenes religiosas ("devil", "angels", "prayer", "righteous"): no citarlas. Hablar de "dualidad", "demonios" o "conciencia" como metáforas.
+- Manuel Barrantes se puede mencionar o etiquetar, no agregar como colaborador.
