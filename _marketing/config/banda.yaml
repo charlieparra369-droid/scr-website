@@ -155,6 +155,17 @@ lanzamiento_proximo:
     amazon_music: enviado
   fuente: https://scrband.com/
 
+proximos_proyectos:
+  segundo_disco:
+    estado: en preparación (sin fecha)
+    canciones_conocidas:
+      - titulo: Country Rockin'
+        nota: >
+          Quedó fuera de Campfire Stories. De ella sale la frase de la bio de Instagram
+          "We ain't country by the rules, we ain't rockin' by the book", que la banda siente
+          que los identifica. Usarla como lema; no anunciar fecha ni detalles del segundo disco
+          sin confirmación de la banda.
+
 metricas:
   # Datos reales aportados por la banda. Los agentes los usan tal cual y citan la fuente.
   spotify:
