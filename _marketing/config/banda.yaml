@@ -170,9 +170,12 @@ metricas:
     super_listeners: 0
   instagram:
     cuenta: "@scrband"
-    seguidores: 133
-    fecha: 2026-10-30
+    seguidores: 445
+    fecha: 2026-11-05
     fuente: dato de la banda (Charlie Parra)
+    historial:
+      - {fecha: 2026-10-30, seguidores: 133}
+      - {fecha: 2026-11-05, seguidores: 445, nota: "subida por un sorteo en un programa: se regaló un libro a cambio de seguir a @scrband"}
   spotify_seguidores:
     total: 26                      # seguidores del perfil (distinto de oyentes mensuales)
     fecha: 2026-10-30
