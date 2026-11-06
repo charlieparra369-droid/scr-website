@@ -23,6 +23,9 @@ miembros:
     rol: bajo; fundador y compositor
     instagram: "@charlie.parra"
   - nombre: Jason Parra
+    spotify: https://open.spotify.com/artist/1PW1V7bDI082MkTZpvcYQl
+    instagram: "@jason.parra.56"
+    otros_proyectos_spotify: [Ezna, Introvisión]   # enlazados desde scrband.com; confirmar rol de Jason en cada uno
     rol: guitarra eléctrica, acústica, arreglos y composición
   - nombre: Andrés Corrales
     rol: teclados, producción, mezcla y masterización
@@ -187,6 +190,8 @@ metricas:
     historial:
       - {fecha: 2026-10-30, seguidores: 133}
       - {fecha: 2026-11-05, seguidores: 445, nota: "subida por un sorteo en un programa: se regaló un libro a cambio de seguir a @scrband"}
+  spotify_publico:
+    - {fecha: 2026-11-06, oyentes_mensuales: 22, fuente: "perfil público open.spotify.com/artist/6DmC1YYXIWndaude1eqIu9"}
   spotify_seguidores:
     total: 26                      # seguidores del perfil (distinto de oyentes mensuales)
     fecha: 2026-10-30
