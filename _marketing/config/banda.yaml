@@ -26,6 +26,13 @@ miembros:
     spotify: https://open.spotify.com/artist/1PW1V7bDI082MkTZpvcYQl
     instagram: "@jason.parra.56"
     otros_proyectos_spotify: [Ezna, Introvisión]   # enlazados desde scrband.com; confirmar rol de Jason en cada uno
+    apodo: Jay
+    bio: >
+      Se dedica por completo a la música desde hace años. Tiene su propio estudio, donde trabaja
+      como productor, arreglista y editor para distintos artistas. Guitarrista de sesión. En
+      Campfire Stories hizo todas las guitarras (eléctricas y acústicas), aportó arreglos y
+      composición, y fue asesor musical de Charlie en todo el proceso. Fue la primera opción de
+      Charlie para la guitarra desde que decidió formar la banda.
     rol: guitarra eléctrica, acústica, arreglos y composición
   - nombre: Andrés Corrales
     rol: teclados, producción, mezcla y masterización
@@ -98,6 +105,7 @@ redes:
 
 tono:
   descripcion: Amigable, cercano, con identidad costarricense (ajustable más adelante).
+  ejemplos_voz: voz-ejemplos.md   # textos escritos por Charlie: imitar este tono (relajado, cálido, voseo tico al agradecer)
   voz: >
     Los textos de slides y captions se escriben en primera persona, como si los dijera Charlie,
     con frases naturales y sencillas ("Siempre me han encantado…", "Dato curioso:"), no con tono
