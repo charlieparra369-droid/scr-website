@@ -333,7 +333,8 @@ const LINKS={listen:[['Spotify','https://open.spotify.com/artist/6DmC1YYXIWndaud
   follow:[['Instagram','https://instagram.com/scrband'],['TikTok','https://tiktok.com/@charlie.parra'],['YouTube','https://youtube.com/@cparra79'],['scrband.com','https://scrband.com']]};
 const WRITTEN=B('Written by Charlie Parra','Escrita por Charlie Parra'),GTR_JP=B('Guitars: Jason Parra','Guitarras: Jason Parra'),
   BASS=n=>B('Bass: '+n,'Bajo: '+n),DRUMS=n=>B('Drums: '+n,'Batería: '+n),DRUMS_MD=DRUMS('Mauricio Delgado');
-const CREDITS=(bass,...rest)=>[WRITTEN,GTR_JP,BASS(bass),...rest];
+const VOX_MD=B('Vocals: Matt Dame','Voz: Matt Dame');
+const CREDITS=(bass,...rest)=>[WRITTEN,VOX_MD,GTR_JP,BASS(bass),...rest];
 const SONGS=[
  {id:'campfire-stories',title:'Campfire Stories',time:B('7:30 pm','7:30 p. m.'),sky:['#1b2444','#0a0e17'],stars:1,
   line:B('A spoken welcome. Sit down, the night is long.','Una bienvenida hablada. Sentate, que la noche es larga.'),
@@ -382,11 +383,11 @@ const SONGS=[
   line:B('When it’s your turn, do you stand?','Cuando te toque a vos, ¿te quedás de pie?'),
   story:[B('The last story is a western. A lone rider carrying every old sin reaches the showdown he has been riding toward all along.','La última historia es un western. Un jinete solitario, cargando todos sus viejos pecados, llega al duelo hacia el que ha cabalgado desde siempre.'),
          B('The song turns and asks everyone at the fire the same question. Its answer is not fear. The darkest track on the record ends on redemption.','La canción se voltea y le hace la misma pregunta a todos los que están junto al fuego. Su respuesta no es el miedo. El tema más oscuro del disco termina en redención.')],
-  credits:CREDITS('Charlie Parra',DRUMS('Killian Cruise'),B('Guest vocals: Manu Barrantes','Voz invitada: Manu Barrantes')),year:2025,snippet:'https://scrband.com/when-death-snippet.mp3',
+  credits:[WRITTEN,B('Vocals: Manu Barrantes','Voz: Manu Barrantes'),GTR_JP,BASS('Charlie Parra'),DRUMS('Killian Cruise')],year:2025,snippet:'https://scrband.com/when-death-snippet.mp3',
   listen:[['Spotify','https://open.spotify.com/track/7yv6GRaKuT17ozL6lqpNTh'],['Apple Music','https://music.apple.com/cr/song/when-death-calls-your-name-feat-manu-barrantes/1883805819']]}
 ];
 const PEOPLE={core:[['Charlie Parra',B('Bass guitar, songwriter','Bajo, compositor'),'https://www.instagram.com/charlie.parra'],['Jason Parra',B('Electric and acoustic guitars','Guitarras eléctrica y acústica'),'https://open.spotify.com/artist/1PW1V7bDI082MkTZpvcYQl'],['Andrés Corrales',B('Production, mix and mastering, keyboard arrangements; keys on “Southern Colored Rooster”','Producción, mezcla y masterización, arreglos de teclado; teclados en “Southern Colored Rooster”'),'https://www.instagram.com/andrescorralesg']],
- guests:[['Mauricio Delgado',B('Drums on “Boots On”, “Southern Colored Rooster”, “Me again”, “Break these chains”, “Where the thunder rolls”','Batería en “Boots On”, “Southern Colored Rooster”, “Me again”, “Break these chains”, “Where the thunder rolls”')],['Andrea Núñez',B('Drums on “Livin’ in an old country song”','Batería en “Livin’ in an old country song”')],['Marvin Picado',B('Bass on “Uncle Martin”','Bajo en “Uncle Martin”')],['Victor Ramirez',B('Drums on “Uncle Martin”','Batería en “Uncle Martin”')],['Killian Cruise',B('Drums on “When death calls your name”','Batería en “When death calls your name”')],['Pablo Mejia',B('Bass on “Southern Colored Rooster”','Bajo en “Southern Colored Rooster”')],['Manu Barrantes',B('Vocals on “When death calls your name”','Voz en “When death calls your name”')],['Matt Dame',B('Vocals','Voz')]]};
+ guests:[['Mauricio Delgado',B('Drums on “Boots On”, “Southern Colored Rooster”, “Me again”, “Break these chains”, “Where the thunder rolls”','Batería en “Boots On”, “Southern Colored Rooster”, “Me again”, “Break these chains”, “Where the thunder rolls”')],['Andrea Núñez',B('Drums on “Livin’ in an old country song”','Batería en “Livin’ in an old country song”')],['Marvin Picado',B('Bass on “Uncle Martin”','Bajo en “Uncle Martin”')],['Victor Ramirez',B('Drums on “Uncle Martin”','Batería en “Uncle Martin”')],['Killian Cruise',B('Drums on “When death calls your name”','Batería en “When death calls your name”')],['Pablo Mejia',B('Bass on “Southern Colored Rooster”','Bajo en “Southern Colored Rooster”')],['Manu Barrantes',B('Vocals on “When death calls your name”','Voz en “When death calls your name”')],['Matt Dame',B('Vocals on every song except “When death calls your name”','Voz en todas las canciones excepto “When death calls your name”')]]};
 
 /* =========================================================
    3. SOUND. Everything here is synthesised in the browser.
@@ -706,7 +707,6 @@ function press(){const P=(en,es)=>h('p',{t:B(en,es)}),H2=(en,es)=>h('h2',{t:B(en
       h('ul',{style:'margin:0;padding-left:1.2rem'},
         pend('Press and booking contact (name, email, phone)','Contacto de prensa y contrataciones (nombre, correo, teléfono)'),
         pend('High-resolution photos with photographer credits','Fotos en alta resolución con crédito de fotógrafo'),
-        pend('Who sings lead on each track, and on which songs Matt Dame appears','Quién canta la voz principal en cada tema, y en cuáles participa Matt Dame'),
         pend('Album running time, label or distributor, and advance listening link','Duración del álbum, sello o distribuidora, y enlace de escucha anticipada'),
         pend('Live availability, lineup on stage and technical rider','Disponibilidad para conciertos, formación en vivo y rider técnico'))),
     h('p',{class:'note',style:'margin-top:1.2rem',t:B('Sources: everything in this kit comes from scrband.com and material supplied by the band, checked in November 2026. Nothing here has been invented to fill a gap.','Fuentes: todo lo que aparece en este kit viene de scrband.com y de material entregado por la banda, revisado en noviembre de 2026. Nada se inventó para rellenar vacíos.')}))}
