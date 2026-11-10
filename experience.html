@@ -334,13 +334,14 @@ const LINKS={listen:[['Spotify','https://open.spotify.com/artist/6DmC1YYXIWndaud
 const WRITTEN=B('Written by Charlie Parra','Escrita por Charlie Parra'),GTR_JP=B('Guitars: Jason Parra','Guitarras: Jason Parra'),
   BASS=n=>B('Bass: '+n,'Bajo: '+n),DRUMS=n=>B('Drums: '+n,'Batería: '+n),DRUMS_MD=DRUMS('Mauricio Delgado');
 const VOX_MD=B('Vocals: Matt Dame','Voz: Matt Dame');
-const CREDITS=(bass,...rest)=>[WRITTEN,VOX_MD,GTR_JP,BASS(bass),...rest];
+const MIX=B('Recorded, mixed and mastered by Andrés Corrales','Grabada, mezclada y masterizada por Andrés Corrales');
+const CREDITS=(bass,...rest)=>[WRITTEN,VOX_MD,GTR_JP,BASS(bass),...rest,MIX];
 const SONGS=[
  {id:'campfire-stories',title:'Campfire Stories',time:B('7:30 pm','7:30 p. m.'),sky:['#1b2444','#0a0e17'],stars:1,
   line:B('A spoken welcome. Sit down, the night is long.','Una bienvenida hablada. Sentate, que la noche es larga.'),
   story:[B('The album doesn’t open with a guitar. It opens with a voice across the fire, promising a long night and plenty of stories, and choosing the first one: a fella who never quite fit the mold.','El disco no abre con una guitarra. Abre con una voz al otro lado del fuego, que promete una noche larga y muchas historias, y elige la primera: un tipo que nunca terminó de calzar en el molde.'),
          B('Then the hat comes off the nail and the boots go on.','Después el sombrero sale del clavo y las botas entran en escena.')],
-  credits:[WRITTEN,B('Voice: Matt Dame','Voz: Matt Dame')]},
+  credits:[WRITTEN,B('Voice: Matt Dame','Voz: Matt Dame'),MIX]},
  {id:'boots-on',title:'Boots On',time:B('8:15 pm','8:15 p. m.'),sky:['#18223f','#0a0e17'],stars:1,
   line:B('You don’t have to be born into country to carry it.','No hace falta nacer en el country para cargarlo por dentro.'),
   story:[B('He wasn’t born where this music comes from, and he doesn’t sound like it either. He has decided that doesn’t matter. Country, the song argues, was never the hat or the accent. It was the struggle behind the songs.','No nació donde nace esta música y tampoco suena como si lo hubiera hecho. Decidió que eso no importa. El country, sostiene la canción, nunca fue el sombrero ni el acento. Fue la lucha que hay detrás de las canciones.'),
@@ -383,7 +384,7 @@ const SONGS=[
   line:B('When it’s your turn, do you stand?','Cuando te toque a vos, ¿te quedás de pie?'),
   story:[B('The last story is a western. A lone rider carrying every old sin reaches the showdown he has been riding toward all along.','La última historia es un western. Un jinete solitario, cargando todos sus viejos pecados, llega al duelo hacia el que ha cabalgado desde siempre.'),
          B('The song turns and asks everyone at the fire the same question. Its answer is not fear. The darkest track on the record ends on redemption.','La canción se voltea y le hace la misma pregunta a todos los que están junto al fuego. Su respuesta no es el miedo. El tema más oscuro del disco termina en redención.')],
-  credits:[WRITTEN,B('Vocals: Manu Barrantes','Voz: Manu Barrantes'),GTR_JP,BASS('Charlie Parra'),DRUMS('Killian Cruise')],year:2025,snippet:'https://scrband.com/when-death-snippet.mp3',
+  credits:[WRITTEN,B('Vocals: Manu Barrantes','Voz: Manu Barrantes'),GTR_JP,BASS('Charlie Parra'),DRUMS('Killian Cruise'),MIX],year:2025,snippet:'https://scrband.com/when-death-snippet.mp3',
   listen:[['Spotify','https://open.spotify.com/track/7yv6GRaKuT17ozL6lqpNTh'],['Apple Music','https://music.apple.com/cr/song/when-death-calls-your-name-feat-manu-barrantes/1883805819']]}
 ];
 const PEOPLE={core:[['Charlie Parra',B('Bass guitar, songwriter','Bajo, compositor'),'https://www.instagram.com/charlie.parra'],['Jason Parra',B('Electric and acoustic guitars','Guitarras eléctrica y acústica'),'https://open.spotify.com/artist/1PW1V7bDI082MkTZpvcYQl'],['Andrés Corrales',B('Production, mix and mastering, keyboard arrangements; keys on “Southern Colored Rooster”','Producción, mezcla y masterización, arreglos de teclado; teclados en “Southern Colored Rooster”'),'https://www.instagram.com/andrescorralesg']],
