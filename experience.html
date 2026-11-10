@@ -387,7 +387,7 @@ const SONGS=[
   credits:[WRITTEN,B('Vocals: Manu Barrantes','Voz: Manu Barrantes'),GTR_JP,BASS('Charlie Parra'),DRUMS('Killian Cruise'),MIX],year:2025,snippet:'https://scrband.com/when-death-snippet.mp3',
   listen:[['Spotify','https://open.spotify.com/track/7yv6GRaKuT17ozL6lqpNTh'],['Apple Music','https://music.apple.com/cr/song/when-death-calls-your-name-feat-manu-barrantes/1883805819']]}
 ];
-const PEOPLE={core:[['Charlie Parra',B('Bass guitar, songwriter','Bajo, compositor'),'https://www.instagram.com/charlie.parra'],['Jason Parra',B('Electric and acoustic guitars','Guitarras eléctrica y acústica'),'https://open.spotify.com/artist/1PW1V7bDI082MkTZpvcYQl'],['Andrés Corrales',B('Production, mix and mastering, keyboard arrangements; keys on “Southern Colored Rooster”','Producción, mezcla y masterización, arreglos de teclado; teclados en “Southern Colored Rooster”'),'https://www.instagram.com/andrescorralesg']],
+const PEOPLE={core:[['Charlie Parra',B('Bass guitar, songwriter, co-producer','Bajo, compositor, co-productor'),'https://www.instagram.com/charlie.parra'],['Jason Parra',B('Electric and acoustic guitars, co-producer','Guitarras eléctrica y acústica, co-productor'),'https://open.spotify.com/artist/1PW1V7bDI082MkTZpvcYQl'],['Andrés Corrales',B('Co-production, recording, mix and mastering, keyboard arrangements; keys on “Southern Colored Rooster”','Co-producción, grabación, mezcla y masterización, arreglos de teclado; teclados en “Southern Colored Rooster”'),'https://www.instagram.com/andrescorralesg']],
  guests:[['Mauricio Delgado',B('Drums on “Boots On”, “Southern Colored Rooster”, “Me again”, “Break these chains”, “Where the thunder rolls”','Batería en “Boots On”, “Southern Colored Rooster”, “Me again”, “Break these chains”, “Where the thunder rolls”')],['Andrea Núñez',B('Drums on “Livin’ in an old country song”','Batería en “Livin’ in an old country song”')],['Marvin Picado',B('Bass on “Uncle Martin”','Bajo en “Uncle Martin”')],['Victor Ramirez',B('Drums on “Uncle Martin”','Batería en “Uncle Martin”')],['Killian Cruise',B('Drums on “When death calls your name”','Batería en “When death calls your name”')],['Pablo Mejia',B('Bass on “Southern Colored Rooster”','Bajo en “Southern Colored Rooster”')],['Pablo Montero',B('Cowbell on “Me again”','Cencerro en “Me again”')],['Manu Barrantes',B('Vocals on “When death calls your name”','Voz en “When death calls your name”')],['Matt Dame',B('Vocals on every track, spoken intro included, except “When death calls your name”','Voz en todas las pistas, incluida la intro hablada, excepto “When death calls your name”')]]};
 
 /* =========================================================
@@ -639,7 +639,7 @@ function dawn(){
       h('h2',{id:'dawn-h',t:B('The fire is low. The rooster isn’t.','El fuego está bajo. El gallo no.')}),days,keptP,
       h('p',{t:B('Nine stories went into the fire tonight: a man who didn’t fit, a rooster pulled from the wreckage, a jukebox, a mirror, an old friend with six strings, a chain, a storm and a showdown. The record that holds them is nearly here.','Nueve historias pasaron por el fuego esta noche: un hombre que no calzaba, un gallo sacado de los escombros, una rocola, un espejo, un viejo amigo de seis cuerdas, una cadena, una tormenta y un duelo. El disco que las guarda ya casi llega.')}),
       h('ul',{class:'links'},LINKS.listen.concat(LINKS.follow).map(l=>h('li',{},ext(l[1],l[0])))),
-      h('p',{class:'credits',t:B('Campfire Stories was produced by Andrés Corrales and recorded at 3/4 Estudios. All songs written by Charlie Parra.','Campfire Stories fue producido por Andrés Corrales y grabado en 3/4 Estudios. Todas las canciones fueron escritas por Charlie Parra.')}),
+      h('p',{class:'credits',t:B('Campfire Stories was co-produced by Andrés Corrales, Jason Parra and Charlie Parra and recorded at 3/4 Estudios. All songs written by Charlie Parra.','Campfire Stories fue co-producido por Andrés Corrales, Jason Parra y Charlie Parra, y grabado en 3/4 Estudios. Todas las canciones fueron escritas por Charlie Parra.')}),
       h('div',{class:'yours'},h('h3',{t:B('Which story was yours?','¿Cuál historia fue la tuya?')}),h('div',{class:'picks'},picks),box),
       h('p',{style:'margin-top:2rem'},h('button',{class:'pill',t:B('Put the fire out and start the night over','Apagar el fuego y empezar la noche de nuevo'),onclick(){state.done={};state.lit=false;save();location.hash='';location.reload()}}))),
     h('div',{},rooWrap,h('div',{style:'margin-top:1.5rem'},cover)));
@@ -650,8 +650,8 @@ function img(src,alt){const i=h('img',{src,loading:'lazy',alt:''});ta(i,'alt',al
    8. PRESS KIT (built from the same data as the night)
    ========================================================= */
 function press(){const P=(en,es)=>h('p',{t:B(en,es)}),H2=(en,es)=>h('h2',{t:B(en,es)});
-  const shortBio=B('Southern Colored Rooster is a country rock and southern rock band from Costa Rica, led by songwriter and bassist Charlie Parra. Its debut album, Campfire Stories, collects nine songs about loss, redemption and second chances, produced by Andrés Corrales at 3/4 Estudios. It is out '+ALBUM.dateText.en+'.',
-    'Southern Colored Rooster es una banda costarricense de country rock y rock sureño, liderada por el compositor y bajista Charlie Parra. Su álbum debut, Campfire Stories, reúne nueve canciones sobre pérdida, redención y segundas oportunidades, producidas por Andrés Corrales en 3/4 Estudios. Sale el '+ALBUM.dateText.es+'.');
+  const shortBio=B('Southern Colored Rooster is a country rock and southern rock band from Costa Rica, led by songwriter and bassist Charlie Parra. Its debut album, Campfire Stories, collects nine songs about loss, redemption and second chances, co-produced by Andrés Corrales, Jason Parra and Charlie Parra and recorded at 3/4 Estudios. It is out '+ALBUM.dateText.en+'.',
+    'Southern Colored Rooster es una banda costarricense de country rock y rock sureño, liderada por el compositor y bajista Charlie Parra. Su álbum debut, Campfire Stories, reúne nueve canciones sobre pérdida, redención y segundas oportunidades, co-producidas por Andrés Corrales, Jason Parra y Charlie Parra, y grabadas en 3/4 Estudios. Sale el '+ALBUM.dateText.es+'.');
   const bioEl=h('p',{class:'lede',t:shortBio}),copied=h('span',{role:'status'});
   const row=(a,b)=>[h('dt',{t:a}),h('dd',{},typeof b==='object'&&b.nodeType?b:h('span',{t:b}))];
   const pend=(en,es)=>h('li',{t:B(en,es)});
@@ -664,7 +664,7 @@ function press(){const P=(en,es)=>h('p',{t:B(en,es)}),H2=(en,es)=>h('h2',{t:B(en
     H2('Fast facts','Datos rápidos'),
     h('dl',{},row(B('Album','Álbum'),'Campfire Stories'),row(B('Release date','Fecha de lanzamiento'),ALBUM.dateText),row(B('Tracks','Pistas'),B('Nine, opening with a spoken introduction','Nueve; abre con una introducción hablada')),
       row(B('Genre','Género'),B('Country rock, southern rock','Country rock, rock sureño')),row(B('From','Origen'),'Costa Rica'),
-      row(B('Produced by','Producción'),B('Andrés Corrales (also mix and mastering)','Andrés Corrales (también mezcla y masterización)')),row(B('Recorded at','Grabado en'),'3/4 Estudios'),
+      row(B('Co-produced by','Co-producido por'),B('Andrés Corrales, Jason Parra and Charlie Parra','Andrés Corrales, Jason Parra y Charlie Parra')),row(B('Recorded, mixed and mastered by','Grabado, mezclado y masterizado por'),'Andrés Corrales'),row(B('Recorded at','Grabado en'),'3/4 Estudios'),
       row(B('Singles so far','Sencillos publicados'),B('Uncle Martin (2024), When death calls your name (2025), Livin’ in an old country song (2026), Boots On (2026)','Uncle Martin (2024), When death calls your name (2025), Livin’ in an old country song (2026), Boots On (2026)')),
       row(B('Influences named by the band','Influencias citadas por la banda'),B('Blackberry Smoke, Chris Stapleton, Whiskey Myers, Zac Brown Band and traditional southern rock','Blackberry Smoke, Chris Stapleton, Whiskey Myers, Zac Brown Band y el rock sureño tradicional')),
       row(B('Website','Sitio web'),ext(ALBUM.site,'scrband.com'))),
@@ -691,26 +691,18 @@ function press(){const P=(en,es)=>h('p',{t:B(en,es)}),H2=(en,es)=>h('h2',{t:B(en
     h('dl',{},PEOPLE.core.flatMap(p=>[h('dt',{},ext(p[2],p[0])),h('dd',{t:p[1]})])),
     h('h3',{t:B('Additional musicians','Músicos adicionales')}),
     h('dl',{},PEOPLE.guests.flatMap(p=>[h('dt',{},p[0]),h('dd',{t:p[1]})])),
-    h('p',{class:'note',style:'margin-top:1rem',t:B('All songs written by Charlie Parra, produced by Andrés Corrales and recorded at 3/4 Estudios.','Todas las canciones fueron escritas por Charlie Parra, producidas por Andrés Corrales y grabadas en 3/4 Estudios.')}),
+    h('p',{class:'note',style:'margin-top:1rem',t:B('All songs written by Charlie Parra, co-produced by Andrés Corrales, Jason Parra and Charlie Parra, and recorded at 3/4 Estudios.','Todas las canciones fueron escritas por Charlie Parra, co-producidas por Andrés Corrales, Jason Parra y Charlie Parra, y grabadas en 3/4 Estudios.')}),
 
     H2('Photos and artwork','Fotos y arte'),
     h('div',{class:'photos'},
       h('div',{class:'slot'},h('span',{t:B('Album cover. Loads from scrband.com outside this preview.','Portada del álbum. Carga desde scrband.com fuera de esta vista previa.')}),img(ALBUM.cover,B('Campfire Stories album cover','Portada de Campfire Stories'))),
       h('div',{class:'slot logo',style:'color:var(--ink);border-style:solid;border-color:var(--rule)'},h('span',{class:'logo',role:'img','aria-label':ALBUM.artist,style:'width:78%'})),
-      h('div',{class:'slot'},h('span',{t:B('Placeholder: band photo, landscape, high resolution. Not supplied yet.','Espacio reservado: foto de la banda, horizontal, alta resolución. Aún no entregada.')})),
-      h('div',{class:'slot'},h('span',{t:B('Placeholder: live or studio photo. Not supplied yet.','Espacio reservado: foto en vivo o en estudio. Aún no entregada.')}))),
+      ...[['fotos/estudio-grupo.jpg',B('In the studio during the Campfire Stories sessions','En el estudio durante las sesiones de Campfire Stories')],
+          ['fotos/estudio-bajo.jpg',B('Bass in the studio','Bajo en el estudio')],
+          ['fotos/estudio-guitarra.jpg',B('Recording guitars','Grabando guitarras')]].map(([src,alt])=>h('a',{class:'slot',href:src,target:'_blank',rel:'noopener'},img(src,alt)))),
 
     H2('Listen and follow','Escuchar y seguir'),
-    h('ul',{class:'links'},LINKS.listen.concat(LINKS.follow).map(l=>h('li',{},ext(l[1],l[0])))),
-
-    H2('For press and promoters','Para prensa y promotores'),
-    h('div',{class:'pending'},h('p',{style:'margin-bottom:.4rem'},h('strong',{t:B('Still needed from the band before this kit goes out:','Falta que la banda entregue esto antes de enviar el kit:')})),
-      h('ul',{style:'margin:0;padding-left:1.2rem'},
-        pend('Press and booking contact (name, email, phone)','Contacto de prensa y contrataciones (nombre, correo, teléfono)'),
-        pend('High-resolution photos with photographer credits','Fotos en alta resolución con crédito de fotógrafo'),
-        pend('Album running time, label or distributor, and advance listening link','Duración del álbum, sello o distribuidora, y enlace de escucha anticipada'),
-        pend('Live availability, lineup on stage and technical rider','Disponibilidad para conciertos, formación en vivo y rider técnico'))),
-    h('p',{class:'note',style:'margin-top:1.2rem',t:B('Sources: everything in this kit comes from scrband.com and material supplied by the band, checked in November 2026. Nothing here has been invented to fill a gap.','Fuentes: todo lo que aparece en este kit viene de scrband.com y de material entregado por la banda, revisado en noviembre de 2026. Nada se inventó para rellenar vacíos.')}))}
+    h('ul',{class:'links'},LINKS.listen.concat(LINKS.follow).map(l=>h('li',{},ext(l[1],l[0])))),)}
 
 /* =========================================================
    9. WIRING: language, sound, routes, scroll
