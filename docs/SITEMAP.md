@@ -1,6 +1,6 @@
 # Sitemap y arquitectura de información — parrasanlabs.com
 
-> **Estado:** Fase 0 · Borrador para aprobación
+> **Estado:** Fase 0 · Aprobado conceptualmente (revisión 2, 2026-11-11)
 
 ## 1. Mapa del sitio
 
@@ -53,6 +53,8 @@ parrasanlabs.com/en/                      (FUTURO — no publicado en v1)
 - "Contacto" no aparece como enlace de texto: el botón CTA cumple esa función (evita duplicidad).
 - Página activa marcada con `aria-current="page"` y subrayado.
 
+El encabezado usa el tema oscuro (D1) en todas las páginas, incluidas las de contenido claro.
+
 ### 3.2 Encabezado (móvil)
 
 ```
@@ -63,16 +65,18 @@ Menú desplegable a pantalla completa con los 4 enlaces + CTA destacado al final
 ### 3.3 Footer
 
 ```
-Parrasan Labs                 Sitio              Legal                Contacto
-Agentes de IA y              Soluciones          Privacidad           cparra@parrasanlabs.com
-automatización               Cómo trabajamos     Términos             San José, Costa Rica*
+[Logo]                        Sitio              Legal                Contacto
+Agentes de IA y              Soluciones          Privacidad*          cparra@parrasanlabs.com
+automatización               Cómo trabajamos     Términos*            Costa Rica
 empresarial.                 Aplicaciones
 Hecho en Costa Rica.         Nosotros
                              Contacto
 ──────────────────────────────────────────────────────────────────────────────
-© 2026 Parrasan Labs*. Todos los derechos reservados.
+© 2026 Parrasan Labs. Todos los derechos reservados.
 ```
-`*` Razón social y ubicación exactas por confirmar.
+- "Parrasan Labs" es el nombre comercial. **No** se muestra razón social, cédula ni domicilio hasta que Parrasan Labs los confirme; se publica únicamente "Costa Rica".
+- `*` Los enlaces legales aparecen cuando esas páginas estén revisadas y publicadas.
+- `[Logo]` = componente `Logo` con los archivos oficiales (ver DESIGN_SYSTEM §2.5).
 
 ## 4. Flujos principales
 
@@ -86,13 +90,15 @@ Hecho en Costa Rica.         Nosotros
 `Inicio` → `/nosotros/` → `/como-trabajamos/` → `/privacidad/` → `/contacto/`
 
 ### Flujo D — Contacto directo
-Cualquier página → botón CTA del encabezado → `/contacto/` → formulario **o** `mailto:`
+Cualquier página → botón CTA del encabezado → `/contacto/` → formulario **o** `mailto:`.
+Mientras el formulario no esté activado, `/contacto/` muestra solo el correo `cparra@parrasanlabs.com`.
 
 ## 5. Prioridad de páginas (para orden de implementación)
 
 | Prioridad | Página | Razón |
 |-----------|--------|-------|
-| P0 | Inicio, Contacto, Privacidad | Mínimo viable para captar prospectos legalmente |
+| P0 | Inicio (prototipo visual a aprobar en escritorio y móvil antes del resto) | Define la experiencia de todo el sitio |
+| P0 | Contacto, Privacidad | Mínimo viable para captar prospectos legalmente; el formulario se activa solo tras revisar la política y validar la entrega real |
 | P1 | Soluciones, Cómo trabajamos | Explican y generan confianza |
 | P2 | Aplicaciones, Nosotros, Términos | Profundizan; dependen de insumos del cliente (fotos, bios) |
 | P3 | Versión EN | Futuro |
@@ -101,4 +107,4 @@ Cualquier página → botón CTA del encabezado → `/contacto/` → formulario 
 
 | Indexable | No indexable (`noindex`) |
 |-----------|---------------------------|
-| `/`, `/soluciones/`, `/como-trabajamos/`, `/aplicaciones/`, `/nosotros/`, `/contacto/`, `/privacidad/`, `/terminos/` | `/contacto/gracias/`, `/404`, entornos de *preview* (`*.workers.dev`, ramas) |
+| `/`, `/soluciones/`, `/como-trabajamos/`, `/aplicaciones/`, `/nosotros/`, `/contacto/`, `/privacidad/`, `/terminos/` | `/contacto/gracias/`, `/404`, entornos de *preview* (`*.workers.dev`, ramas), `/_styleguide/` (solo fuera de producción) |

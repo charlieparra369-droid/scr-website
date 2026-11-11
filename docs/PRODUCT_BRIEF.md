@@ -1,11 +1,28 @@
 # Product Brief — parrasanlabs.com
 
-> **Estado:** Fase 0 · Borrador para aprobación
-> **Fecha:** 2026-11-11
-> **Responsable de aprobación:** Dirección de Parrasan Labs
-> **Repositorio destino:** `parrasan-labs/parrasanlabs-web` (por crear; independiente de `parrasan-assist`)
+> **Estado:** Fase 0 · **Aprobado conceptualmente con ajustes** (revisión 2, 2026-11-11)
+> **Responsable de aprobación:** Charlie Parra, Parrasan Labs (revisa y autoriza todos los cambios)
+> **Repositorio:** `parrasan-labs/parrasanlabs-web` · **privado** · exclusivo para este proyecto, independiente de `parrasan-assist`.
+> Nada de este proyecto se fusiona ni se despliega desde `scr-website`.
 
 ---
+
+## 0. Registro de decisiones (revisión 2)
+
+| # | Tema | Decisión |
+|---|------|----------|
+| D1 | Identidad visual | **Propuesta A, "Nocturna precisa"**, como identidad principal. Secciones claras solo donde mejoran la legibilidad (Contacto y páginas legales). El sitio **no** será predominantemente blanco. |
+| D2 | Tipografía | **Manrope** para títulos, **Inter** para textos. |
+| D3 | Color | Se mantiene la paleta aprobada, se adoptan los tonos accesibles propuestos y se incorpora el **dorado del logo** como acento secundario (valor exacto a tomar de los archivos oficiales). |
+| D4 | Logo | Existe un logo oficial y se prepara una versión modernizada. El sistema debe aceptar los archivos definitivos sin reconstruir componentes. **No se dibuja ni se recrea el logo en código.** |
+| D5 | Formulario | **Postmark** con remitente verificado individualmente (sin cambios DNS). **Sin D1 en el MVP**; arquitectura preparada para añadirlo. Entrega real validada antes de publicar. |
+| D6 | Analítica | **Cloudflare Web Analytics** (sin cookies). |
+| D7 | Repositorio | Exclusivamente `parrasan-labs/parrasanlabs-web`, privado. Los seis documentos se trasladan como **PR-00** con verificación de integridad. La rama temporal de `scr-website` se elimina después. |
+| D8 | Revisión | Charlie Parra revisa y autoriza. Flujo compatible con PRs creados desde su propia cuenta. **Sin merges automáticos.** |
+| D9 | Plan | Se reduce a **12 entregables** (PR-00 a PR-11). Se aprueba la experiencia visual de Inicio (escritorio y móvil) antes de desarrollar las demás páginas. |
+| D10 | Datos legales | "Parrasan Labs" es el **nombre comercial**. Razón social, cédula jurídica, domicilio legal e integrantes del equipo quedan **pendientes**; no se publican datos ficticios. La política de privacidad se revisa antes de activar el formulario. |
+| D11 | DNS y correo | Sin cambios de DNS, dominio ni correo corporativo sin autorización específica. `cparra@parrasanlabs.com` debe seguir funcionando. |
+| D12 | Producción | No se despliega en producción hasta autorización explícita. |
 
 ## 1. Resumen
 
@@ -33,7 +50,7 @@ El sitio **no** es una plataforma de producto ni un portal de clientes. Es un si
 
 ### 3.2 Proto-personas (hipótesis, a validar)
 
-> Las siguientes personas son **hipótesis de diseño**, no clientes reales.
+> Las siguientes personas son **hipótesis de diseño** (nombres ficticios solo para uso interno, nunca se publican), no clientes reales.
 
 **Mariela — Gerente de operaciones, empresa de distribución (40 personas)**
 - Dolor: su equipo concilia pagos de clientes contra estados bancarios en hojas de cálculo cada semana.
@@ -80,9 +97,9 @@ El sitio **no** es una plataforma de producto ni un portal de clientes. Es un si
 ### 6.1 Dentro del alcance (v1)
 
 - 6 páginas: Inicio, Soluciones, Cómo trabajamos, Aplicaciones, Nosotros, Contacto.
-- Páginas legales: Política de privacidad, Términos de uso, (Aviso de cookies si se usa analítica con cookies).
+- Páginas legales: Política de privacidad, Términos de uso, (no se prevé aviso de cookies: Cloudflare Web Analytics no usa cookies).
 - Página 404.
-- Formulario de contacto con protección anti-spam y envío a `cparra@parrasanlabs.com`.
+- Formulario de contacto con protección anti-spam y envío a `cparra@parrasanlabs.com` mediante Postmark (activado solo tras revisar la política de privacidad y validar la entrega real).
 - SEO técnico, datos estructurados, sitemap, Open Graph.
 - Accesibilidad WCAG 2.2 AA.
 - Arquitectura preparada para i18n (ES por defecto, EN futuro).
@@ -95,6 +112,8 @@ El sitio **no** es una plataforma de producto ni un portal de clientes. Es un si
 - Chatbot en el sitio (se evalúa después; si se hace, debe ser una demostración honesta y con aviso).
 - Cambios en DNS, MX, SPF, DKIM, DMARC o cualquier configuración de correo. **Prohibido en este proyecto sin aprobación explícita y separada.**
 - Integración con `parrasan-assist` (repos y despliegues independientes).
+- Respaldo de envíos en base de datos (D1): fuera del MVP, arquitectura preparada.
+- Rediseño o recreación del logo (D4).
 
 ## 7. Llamado a la acción (CTA)
 
@@ -106,6 +125,9 @@ El sitio **no** es una plataforma de producto ni un portal de clientes. Es un si
 
 | Riesgo | Impacto | Mitigación |
 |--------|---------|------------|
+| Sitio oscuro con lecturas largas | Fatiga de lectura | Cuerpo ≥ 18 px en escritorio, texto `slate-300`/`mist-50`, Contacto y legales en tema claro (D1). |
+| Correo enviado por Postmark sin firma de dominio | Puede llegar a spam o rechazarse si `parrasanlabs.com` tiene una política DMARC estricta | Validar la entrega real a `cparra@parrasanlabs.com` antes de publicar (D5); si falla, se presenta la opción de verificación de dominio como decisión aparte (requiere autorización DNS, D11). |
+| Logo definitivo aún en desarrollo | Retrabajo | Componente `Logo` con ranuras de archivos y texto provisional; cambiar archivos no cambia componentes (D4). |
 | Falta de prueba social (sin clientes publicables) | Menor confianza | Compensar con transparencia de proceso, equipo real con nombre y foto, metodología, política de datos clara. Añadir casos reales solo con autorización escrita. |
 | Lenguaje demasiado técnico | Baja comprensión | Pruebas de lectura con audiencia; revisión editorial en cada PR de contenido. |
 | Spam en formulario | Ruido operativo | Cloudflare Turnstile + honeypot + rate limiting. |
@@ -113,23 +135,31 @@ El sitio **no** es una plataforma de producto ni un portal de clientes. Es un si
 | Expectativas infladas sobre IA | Pérdida de credibilidad | Sección "Lo que la IA no hace" / límites en cada solución. |
 | Mezcla con `parrasan-assist` | Acoplamiento, fugas de config | Repositorio, cuenta de Workers y secretos separados. |
 
-## 9. Supuestos y preguntas abiertas
+## 9. Datos pendientes y preguntas abiertas
 
-Requieren respuesta de Parrasan Labs antes o durante la Fase 1:
+**Pendientes que no se asumen ni se publican con valores ficticios (D10):**
 
-1. ¿Nombre legal, cédula jurídica y dirección para el footer y la política de privacidad?
-2. ¿Quiénes aparecen en *Nosotros* (nombres, cargos, fotos reales autorizadas)?
-3. ¿Hay algún proyecto real que pueda describirse con autorización? (Si no, se usan "escenarios ilustrativos" claramente rotulados.)
-4. ¿Se ofrece agendar llamada (ej. Cal.com) o solo formulario + correo?
-5. ¿Analítica: Cloudflare Web Analytics (sin cookies, recomendado) o ninguna?
-6. ¿Logotipo final existe? Si no, ¿se diseña un wordmark tipográfico provisional?
-7. ¿WhatsApp Business como canal de contacto? (Implica número público.)
-8. ¿Quién es el revisor humano de cada PR y quién aprueba contenido?
-9. ¿Dominio `parrasanlabs.com` ya está en Cloudflare? (Solo lectura; no se modifica DNS en este proyecto.)
+| Dato | Estado | Dónde se usa | Mientras tanto |
+|------|--------|--------------|----------------|
+| Razón social | Pendiente | Política de privacidad, términos | El responsable figura como "Parrasan Labs (nombre comercial)" solo en borradores; la política no se publica sin este dato |
+| Cédula jurídica | Pendiente | Política de privacidad | Idem |
+| Domicilio legal | Pendiente | Política de privacidad, JSON-LD `address` | Se omite `address`; el footer dice solo "Costa Rica" |
+| Integrantes del equipo | Pendiente | Nosotros | La sección de equipo no se muestra |
+| Archivos oficiales del logo (SVG) y valor exacto del dorado | Pendiente | Header, footer, favicon, Open Graph, tokens | Texto "Parrasan Labs" como sustituto provisional, sin imitar el logo |
+| Tiempo de respuesta real a contactos | Pendiente | Contacto | Se omite la promesa de plazo |
+
+**Preguntas abiertas (no bloquean el prototipo de Inicio):**
+1. ¿Hay algún proyecto real que pueda describirse con autorización? (Si no, solo "escenarios ilustrativos".)
+2. ¿Se ofrece agendar llamada o solo formulario y correo?
+3. ¿WhatsApp Business como canal de contacto? (Implica número público.)
+4. ¿Se atiende a empresas fuera de Costa Rica?
+5. ¿`parrasanlabs.com` ya está en Cloudflare? (Solo lectura; no se modifica nada, D11.)
 
 ## 10. Definición de éxito de Fase 0
 
-- [ ] Los 6 documentos en `docs/` están revisados y aprobados.
-- [ ] Se eligió una de las dos propuestas visuales (A o B) o una combinación explícita.
-- [ ] Se respondieron las preguntas abiertas críticas (1, 2, 5, 8).
-- [ ] Se aprobó el plan de PRs de `IMPLEMENTATION_PLAN.md`.
+- [x] Los 6 documentos revisados y aprobados conceptualmente (revisión 1).
+- [x] Propuesta visual elegida: A, "Nocturna precisa" (D1).
+- [x] Revisor definido: Charlie Parra (D8).
+- [x] Plan de entregables ajustado (D9).
+- [ ] Repositorio `parrasan-labs/parrasanlabs-web` creado (privado).
+- [ ] PR-00 abierto en el repositorio nuevo, con integridad verificada, y aprobado.

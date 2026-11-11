@@ -1,7 +1,7 @@
 # Design System — parrasanlabs.com
 
-> **Estado:** Fase 0 · Borrador para aprobación
-> Incluye **dos propuestas visuales** (§3) y **wireframes** móvil/escritorio (§10). Debe elegirse una propuesta antes de la Fase 1.
+> **Estado:** Fase 0 · Aprobado conceptualmente (revisión 2, 2026-11-11)
+> **Identidad elegida: Propuesta A, "Nocturna precisa"** (§3). Secciones claras solo en Contacto y páginas legales. Tipografía: Manrope (títulos) + Inter (textos). Dorado del logo como acento secundario. Wireframes en §10.
 
 ## 1. Principios de diseño
 
@@ -34,6 +34,21 @@
 | `danger` | `#B42318` | Errores de formulario (validar contraste en implementación) |
 | `success` | `#067647` | Confirmaciones (validar contraste en implementación) |
 
+### 2.2.1 Acento secundario: dorado del logo (D3)
+
+| Token | Hex | Rol |
+|-------|-----|-----|
+| `gold-500` | **`[PENDIENTE]`** — tomar el valor exacto de los archivos oficiales del logo (no se estima a ojo) | Acento secundario sobre oscuro |
+| `gold-700` | Derivado de `gold-500` cuando se conozca, oscurecido hasta lograr ≥ 4.5:1 sobre `mist-50` | Acento secundario sobre claro (solo si hace falta) |
+
+**Reglas de uso del dorado:**
+- Es **secundario**: el cyan sigue siendo el acento principal y el único color de los CTA. El dorado nunca se usa en botones ni enlaces.
+- Usos previstos: marca del logo, el nodo de "revisión humana" en los diagramas de flujo (el punto donde decide una persona), viñetas y separadores finos, numeración de etapas en *Cómo trabajamos*.
+- Superficie limitada: detalles pequeños, nunca fondos de sección ni bloques grandes.
+- Dorado y cyan no se colocan juntos en el mismo elemento.
+- Como texto, solo sobre `ink-950`/`ink-800` y solo si el valor oficial cumple ≥ 4.5:1 (o ≥ 3:1 en texto grande). La prueba automática de contraste (PR-02) se ejecuta en cuanto se registra el valor.
+- Hasta tener el valor oficial, el prototipo usa un dorado **provisional** rotulado como tal en la guía de estilo y en el PR; no se publica en producción con ese valor.
+
 ### 2.3 Contraste verificado (WCAG 2.x, ratio)
 
 | Primer plano / Fondo | Ratio | Resultado |
@@ -56,20 +71,59 @@
 - `slate-500` nunca para texto de cuerpo sobre claro ni sobre `ink-800` en tamaño normal.
 - El anillo de foco usa `cyan-400` sobre oscuro y `cyan-700` sobre claro, 2 px + 2 px de separación (cumple 2.4.13 / 1.4.11 ≥ 3:1).
 
-## 3. Propuestas visuales
+### 2.4 Mapa de temas por página (D1)
 
-### Propuesta A — "Nocturna precisa" (oscuro dominante)
+| Página / zona | Tema |
+|---------------|------|
+| Encabezado y footer (todas las páginas) | Oscuro (`ink-950`) |
+| Inicio | Oscuro completo, alternando `ink-950` y `ink-800` |
+| Soluciones, Cómo trabajamos, Aplicaciones, Nosotros, 404 | Oscuro |
+| Contacto | Hero oscuro; formulario y columna lateral en **claro** (`mist-50`, tarjeta `white`) |
+| Privacidad y Términos | Título oscuro; cuerpo del texto en **claro** (`mist-50`) |
+
+Los temas se aplican por sección con un atributo (`data-theme="dark" | "light"`) que redefine las variables CSS; los componentes no tienen colores fijos y funcionan en ambos temas.
+
+### 2.5 Logo y archivos de marca (D4)
+
+El logo oficial existe y hay una versión modernizada en desarrollo. **No se dibuja, vectoriza, recrea ni modifica el logo en código.** El sistema solo reserva lugares para los archivos oficiales.
+
+**Ubicación y nombres (contrato estable):**
+
+```
+src/assets/brand/
+├── brand.ts                     # manifiesto: rutas, proporciones, texto alternativo, versión
+├── logo-horizontal-on-dark.svg  # principal (sobre fondos oscuros)
+├── logo-horizontal-on-light.svg # sobre secciones claras
+├── logo-mark-on-dark.svg        # isotipo (favicon, móvil compacto)
+├── logo-mark-on-light.svg
+public/
+├── favicon.svg / favicon.ico / apple-touch-icon.png (180×180)
+└── og/default.png               # 1200×630, compuesto con el logo oficial
+```
+
+**Componente `Logo`:** `<Logo variant="horizontal" | "mark" tone="onDark" | "onLight" height={32} />`.
+- Lee rutas y proporciones desde `brand.ts`. Cambiar al logo modernizado = reemplazar los archivos (mismos nombres) y actualizar `brand.ts` (`version`, proporción). **Ningún componente cambia.**
+- Alturas definidas por tokens (`--logo-h-header: 32px` escritorio / `28px` móvil; `--logo-h-footer: 28px`); el ancho se deriva de la proporción para evitar saltos de diseño.
+- Envuelve el logo en un enlace a `/` con `aria-label="Parrasan Labs, inicio"`; la imagen lleva `alt=""` dentro del enlace para no duplicar la lectura.
+- **Sustituto provisional** mientras no estén los archivos: el texto "Parrasan Labs" en Manrope 600. Es solo texto; no intenta imitar el logo. Se rotula "Logo provisional" en la guía de estilo.
+- Requisitos de los archivos: SVG con `viewBox`, sin imágenes rasterizadas incrustadas, texto convertido a trazos, optimizado (SVGO) sin alterar la forma; área de protección indicada por el equipo de marca.
+- El valor exacto del dorado (`gold-500`) se toma de estos archivos.
+
+## 3. Identidad visual
+
+### Elegida — Propuesta A, "Nocturna precisa" (oscuro dominante)
 
 **Concepto:** El sitio se siente como un instrumento de precisión: fondo `ink-950`, tipografía clara, el cyan aparece como una línea de luz que guía la lectura. Transmite tecnología y seriedad.
 
 - **Fondo principal:** `ink-950`; secciones alternas en `ink-800`.
 - **Texto:** `mist-50` (títulos), `slate-300` (cuerpo).
-- **Acento:** `cyan-400` en CTA, números de pasos, líneas finas de 1 px.
-- **Motivo gráfico:** retícula de puntos muy sutil (opacidad 6–8 %) y diagramas de flujo minimalistas (nodos + conectores) que ilustran cada solución: *entrada → agente → revisión humana → resultado*. SVG, sin glow.
+- **Acento principal:** `cyan-400` en CTA, enlaces, foco y líneas finas de 1 px.
+- **Acento secundario:** `gold-500` (dorado del logo) en el nodo de revisión humana, numeración de etapas y detalles pequeños (§2.2.1).
+- **Motivo gráfico:** retícula de puntos muy sutil (opacidad 6–8 %) y diagramas de flujo minimalistas (nodos + conectores) que ilustran cada solución: *entrada → agente → revisión humana (nodo dorado) → resultado*. SVG, sin glow.
 - **Tarjetas:** `ink-800`, borde `1px rgba(123,135,155,.25)`, radio 12 px; hover: borde cyan.
 - **Ventajas:** Diferenciación fuerte, look "tech" sin clichés, el cyan luce al máximo.
 - **Riesgos:** Lectura larga más cansada; páginas legales y formularios deben aclararse; puede parecer "frío" para PYMES tradicionales.
-- **Mitigación:** Contacto y legales en tema claro; cuerpo de texto ≥ 18 px.
+- **Mitigación (aprobada):** Contacto y legales en tema claro (§2.4); cuerpo de texto ≥ 18 px en escritorio; párrafos cortos y ancho de línea ≤ 68 caracteres.
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -86,7 +140,9 @@
 └──────────────────────────────────────────────────────────────┘
 ```
 
-### Propuesta B — "Claridad editorial" (claro dominante con anclas oscuras)
+### Descartada — Propuesta B, "Claridad editorial" (claro dominante)
+
+> Se conserva como referencia. **No** se implementa: Parrasan Labs no quiere un sitio predominantemente blanco. Sus reglas de tema claro se reutilizan solo en Contacto y legales.
 
 **Concepto:** Un sitio que se lee como una buena publicación: fondo `mist-50`, tipografía oscura generosa, y bloques oscuros (`ink-950`) en momentos clave (hero, CTA final, footer). Transmite cercanía, orden y confianza.
 
@@ -114,20 +170,21 @@
 └──────────────────────────────────────────────────────────────┘
 ```
 
-### Recomendación
+### Decisión
 
-**Propuesta B** como base, adoptando de A el hero oscuro y los diagramas de flujo. Razón: la audiencia principal (PYMES y equipos operativos) valora legibilidad y cercanía; el objetivo es confianza antes que impacto. Ambas comparten tokens, por lo que cambiar de una a otra en Fase 1 es barato (modo de tema por sección).
+Se adopta **A**. La recomendación inicial (B) quedó superada por la decisión D1. La legibilidad que motivaba B se resuelve con el mapa de temas (§2.4) y las reglas de tipografía (§4).
 
 ## 4. Tipografía
 
 | Uso | Familia | Alternativa | Notas |
 |-----|---------|-------------|-------|
-| Títulos | **Inter Tight** o **Manrope** | system-ui | Geométrica, moderna, buena en español (acentos, ñ) |
-| Cuerpo | **Inter** | system-ui, sans-serif | Alta legibilidad en pantalla |
+| Títulos | **Manrope** (aprobada) | system-ui | Geométrica, moderna, buena en español (acentos, ñ); pesos 600 y 700 |
+| Cuerpo | **Inter** (aprobada) | system-ui, sans-serif | Alta legibilidad en pantalla; pesos 400 y 500 |
 | Datos / código | **JetBrains Mono** (opcional) | ui-monospace | Solo en diagramas o etiquetas técnicas |
 
 - Fuentes **autoalojadas** (WOFF2, subset latin + latin-ext), `font-display: swap`. Sin Google Fonts en tiempo de ejecución (privacidad + rendimiento).
-- Máximo 2 familias, 4 pesos en total (400, 500, 600, 700).
+- Máximo 2 familias, 4 archivos de fuente: Inter 400/500, Manrope 600/700 (o las versiones variables de ambas si pesan menos). Ambas con licencia SIL Open Font License.
+- Sobre fondo oscuro, el cuerpo usa `slate-300` con interlineado 1.65 para compensar el brillo del texto claro.
 
 ### Escala (fluida con `clamp`, base 16 px)
 
@@ -170,7 +227,8 @@
 | Componente | Variantes | Notas de accesibilidad |
 |------------|-----------|------------------------|
 | `Button` | `primary` (cyan-400 / texto ink-950), `secondary` (borde), `link` | Altura mín. 44 px; foco visible; `<a>` si navega, `<button>` si acciona |
-| `Header` | claro / oscuro, sticky simple | `<nav aria-label="Principal">`, menú móvil con `aria-expanded`, trampa de foco y `Esc` |
+| `Logo` | horizontal / isotipo · sobre oscuro / sobre claro | Ver §2.5; enlace con `aria-label`, imagen `alt=""` |
+| `Header` | siempre oscuro, sticky simple | `<nav aria-label="Principal">`, menú móvil con `aria-expanded`, trampa de foco y `Esc` |
 | `Footer` | — | `<nav aria-label="Pie de página">` |
 | `SkipLink` | — | Primer elemento enfocable |
 | `Hero` | home / interno | Un solo H1 |
@@ -197,6 +255,8 @@
 - `@media (prefers-reduced-motion: reduce)` → sin transiciones de entrada.
 
 ## 10. Wireframes
+
+> Los wireframes aplican a la Propuesta A: todas las bandas son oscuras salvo Contacto (formulario) y legales. `◆ Parrasan Labs` representa el componente `Logo`, no un diseño del logo.
 
 Leyenda: `[■ CTA]` botón primario · `[□ …]` botón secundario · `(img)` diagrama/imagen · `▓` banda oscura.
 
@@ -434,8 +494,13 @@ ESCRITORIO                                               MÓVIL
 colors: {
   ink:   { 950: '#0B1020', 800: '#17243C' },
   cyan:  { 400: '#23C7D9', 700: '#0A6B77' },
+  gold:  { 500: '<PENDIENTE: valor oficial del logo>', 700: '<derivado>' },
   mist:  { 50:  '#F4F6FA' },
   slate: { 300: '#B4BDCB', 500: '#7B879B', 700: '#4A5568' },
+}
+fontFamily: {
+  display: ['Manrope', 'system-ui', 'sans-serif'],
+  sans:    ['Inter', 'system-ui', 'sans-serif'],
 }
 ```
 Se definirán como variables CSS (`--color-*`) en Tailwind v4 (`@theme`) para permitir temas por sección.

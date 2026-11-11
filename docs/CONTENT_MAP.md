@@ -1,6 +1,7 @@
 # Content Map — parrasanlabs.com
 
-> **Estado:** Fase 0 · Contenido **preliminar** en español, sujeto a revisión editorial.
+> **Estado:** Fase 0 · Aprobado conceptualmente (revisión 2, 2026-11-11). Contenido **preliminar** en español, sujeto a revisión editorial.
+> Regla D10: "Parrasan Labs" es el nombre comercial. Razón social, cédula jurídica, domicilio legal e integrantes del equipo **no se asumen**; mientras falten, la sección correspondiente no se publica.
 > Los textos marcados con `[POR CONFIRMAR]` requieren información de Parrasan Labs.
 > Los textos marcados con `[ILUSTRATIVO]` son escenarios de ejemplo y **deben mostrarse rotulados como tales** en el sitio.
 
@@ -170,7 +171,7 @@ Cada solución sigue la misma estructura (componente `SolutionBlock`):
 - **¿Qué pasa si el piloto no funciona?** Revisamos juntos qué aprendimos y decidimos si ajustar, cambiar el enfoque o detenernos.
 - **¿Dónde quedan mis datos?** Depende de la solución y de tus herramientas actuales. En el diagnóstico definimos dónde se almacena la información, quién accede y por cuánto tiempo.
 - **¿La IA puede equivocarse?** Sí. Por eso diseñamos controles, registros y puntos de revisión humana.
-- **¿Trabajan con empresas fuera de Costa Rica?** `[POR CONFIRMAR]`
+- **¿Trabajan con empresas fuera de Costa Rica?** `[PENDIENTE — no se publica hasta tener respuesta]`
 
 ---
 
@@ -208,9 +209,9 @@ Estructura por tarjeta: *Área · Situación · Cómo podría ayudar un agente �
 - **H1:** Nosotros
 - **Intro:** Parrasan Labs es una empresa costarricense dedicada a diseñar agentes de IA y automatizaciones para empresas que quieren trabajar mejor, no solo más rápido.
 - **Por qué existimos:** Creemos que la IA es útil cuando resuelve problemas concretos y las personas mantienen el control. `[POR CONFIRMAR: historia fundacional real]`
-- **Equipo** `[POR CONFIRMAR]`: nombre, cargo, foto real autorizada, bio de 2 líneas, enlace a LinkedIn (opcional). **No** usar fotos de stock ni avatares generados.
+- **Equipo** `[PENDIENTE]`: nombre, cargo, foto real autorizada, bio de 2 líneas, enlace a LinkedIn (opcional). **No** usar fotos de stock ni avatares generados. **Mientras no haya datos confirmados, la sección de equipo no se muestra** (ni con marcadores visibles); la página se publica con Intro, Por qué existimos y Valores.
 - **Valores:** Claridad · Responsabilidad · Cercanía · Aprendizaje continuo.
-- **Ubicación:** Costa Rica `[POR CONFIRMAR: ciudad]`.
+- **Ubicación:** Costa Rica. (Ciudad y domicilio legal pendientes; no se muestran hasta confirmarse.)
 - **Sin** logos de clientes ni de "partners" salvo acuerdos verificables y autorizados.
 
 ---
@@ -222,7 +223,10 @@ Estructura por tarjeta: *Área · Situación · Cómo podría ayudar un agente �
 - Description: `Cuéntanos qué proceso quieres simplificar. Te respondemos con una primera opinión honesta, sin compromiso.`
 
 - **H1:** Hablemos de tu proyecto
-- **Intro:** Cuéntanos cómo funciona hoy el proceso que quieres mejorar. Leemos cada mensaje y respondemos personalmente. `[POR CONFIRMAR: tiempo de respuesta real, ej. "en 2 días hábiles"]`
+- **Intro:** Cuéntanos cómo funciona hoy el proceso que quieres mejorar. Leemos cada mensaje y respondemos personalmente. (No se promete un plazo de respuesta hasta que Parrasan Labs lo confirme.)
+- **Tema:** claro (D1), con encabezado y footer oscuros.
+- **Activación:** el formulario se muestra solo cuando la bandera `PUBLIC_CONTACT_FORM_ENABLED` está activa, lo cual requiere: (1) política de privacidad revisada y publicada, (2) entrega real por Postmark validada. Mientras tanto la página muestra:
+  > Escríbenos a **cparra@parrasanlabs.com** y cuéntanos qué proceso quieres simplificar.
 
 ### Formulario (ver `ARCHITECTURE.md §6` y `DESIGN_SYSTEM.md §8`)
 
@@ -249,16 +253,19 @@ Estructura por tarjeta: *Área · Situación · Cómo podría ayudar un agente �
 
 ## 7. Legales
 
-### 7.1 Política de privacidad (`/privacidad/`) — estructura mínima
-> Debe ser revisada por asesoría legal antes de publicar. Referencia: Ley N.º 8968 de Protección de la Persona frente al Tratamiento de sus Datos Personales (Costa Rica) y su reglamento.
+Tema claro (D1) para facilitar la lectura.
 
-1. Responsable del tratamiento `[POR CONFIRMAR: razón social, cédula jurídica, domicilio]`.
-2. Datos que recopilamos (solo los del formulario; analítica sin cookies si se usa).
+### 7.1 Política de privacidad (`/privacidad/`) — estructura mínima
+> Debe revisarse (idealmente con asesoría legal) **antes de activar el formulario**. Referencia: Ley N.º 8968 de Protección de la Persona frente al Tratamiento de sus Datos Personales (Costa Rica) y su reglamento.
+> **No se publica** mientras falten los datos del responsable: no se rellenan con valores ficticios ni genéricos.
+
+1. Responsable del tratamiento: `[PENDIENTE: razón social]`, `[PENDIENTE: cédula jurídica]`, `[PENDIENTE: domicilio legal]`, que opera bajo el nombre comercial Parrasan Labs. Contacto: cparra@parrasanlabs.com.
+2. Datos que recopilamos: los del formulario y métricas agregadas de visitas mediante Cloudflare Web Analytics (sin cookies ni identificadores persistentes).
 3. Finalidad (responder la consulta y dar seguimiento comercial relacionado).
 4. Base: consentimiento informado.
-5. Conservación `[POR CONFIRMAR: plazo, ej. 12 meses sin relación comercial]`.
-6. Encargados / terceros (Cloudflare; proveedor de envío de correo).
-7. Transferencias internacionales (servidores de Cloudflare / proveedor de correo fuera de CR).
+5. Conservación: en el MVP los mensajes solo se reciben en el buzón cparra@parrasanlabs.com (no hay base de datos). `[PENDIENTE: plazo de conservación en el buzón]`.
+6. Encargados / terceros: Cloudflare (alojamiento, Turnstile, Web Analytics sin cookies) y Postmark (envío de la notificación del formulario).
+7. Transferencias internacionales (Cloudflare y Postmark procesan datos fuera de Costa Rica).
 8. Derechos ARCO: acceso, rectificación, cancelación, oposición → escribir a `cparra@parrasanlabs.com`.
 9. Seguridad.
 10. Cambios a la política y fecha de última actualización.
@@ -282,6 +289,8 @@ Uso del sitio, propiedad intelectual, sin garantía sobre contenido informativo,
 | Selector de idioma (futuro) | Español / English |
 | Rótulo escenario | Escenario ilustrativo |
 | Footer tagline | Agentes de IA y automatización empresarial. Hecho en Costa Rica. |
+| Footer copyright | © 2026 Parrasan Labs. Todos los derechos reservados. (Nombre comercial; sin razón social hasta confirmarse) |
+| Texto alternativo del logo | Parrasan Labs |
 
 ## 9. Preparación para inglés
 
