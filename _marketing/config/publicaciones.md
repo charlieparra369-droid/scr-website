@@ -19,6 +19,9 @@ Las métricas las aporta la banda; si no hay dato, queda `pendiente`.
 - Visitas al perfil: Uncle Martin 1, Boots On 13 (después de agregar "Sigan a @scrband" y la slide de cierre). Follows siguen bajos (1-2 por post).
 - Ojo: el Reel salió el mismo día del sorteo, con más seguidores; las comparaciones no son 1 a 1.
 
+## Resumen de cuenta personal @charlie.parra (Edits, 2026-10-16 a 2026-11-15, dato de la banda)
+569 seguidores. Vistas de Reels 2,6 mil, 843 cuentas, 441 me gusta, 19 comentarios, 0 reposts, 17 compartidos, 6 guardados. Reels publicados desde esa cuenta en el periodo: 0 (las colaboraciones cuentan en @scrband). Pendiente: el mismo resumen de @scrband.
+
 ## Punto de partida (antes de la campaña)
 - Instagram @scrband: 133 seguidores (2026-10-30)
 - Spotify: 26 seguidores, 18 oyentes mensuales (2026-10-30)
