@@ -202,9 +202,13 @@ metricas:
   spotify_publico:
     - {fecha: 2026-11-06, oyentes_mensuales: 22, fuente: "perfil público open.spotify.com/artist/6DmC1YYXIWndaude1eqIu9"}
   spotify_seguidores:
-    total: 26                      # seguidores del perfil (distinto de oyentes mensuales)
-    fecha: 2026-10-30
-    fuente: Spotify for Artists → Audience, dato de la banda
+    total: 37                      # seguidores del perfil (distinto de oyentes mensuales)
+    fecha: 2026-11-15
+    fuente: Spotify for Artists → Audience (últimos 28 días), captura de la banda
+    historial:
+      - {fecha: 2026-10-30, total: 26}
+      - {fecha: 2026-11-15, total: 37, nota: "+42 %; la subida empieza alrededor del 3-6 de noviembre"}
+    playlist_adds_28_dias: {valor: 16, fecha: 2026-11-15}   # el 1-28 oct eran 1
   amazon_music: null               # fans pendientes
 
 presupuesto_promocion:
