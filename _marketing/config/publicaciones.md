@@ -20,7 +20,12 @@ Las métricas las aporta la banda; si no hay dato, queda `pendiente`.
 - Ojo: el Reel salió el mismo día del sorteo, con más seguidores; las comparaciones no son 1 a 1.
 
 ## Resumen de cuenta personal @charlie.parra (Edits, 2026-10-16 a 2026-11-15, dato de la banda)
-569 seguidores. Vistas de Reels 2,6 mil, 843 cuentas, 441 me gusta, 19 comentarios, 0 reposts, 17 compartidos, 6 guardados. Reels publicados desde esa cuenta en el periodo: 0 (las colaboraciones cuentan en @scrband). Pendiente: el mismo resumen de @scrband.
+569 seguidores. Vistas de Reels 2,6 mil, 843 cuentas, 441 me gusta, 19 comentarios, 0 reposts, 17 compartidos, 6 guardados. Reels publicados desde esa cuenta en el periodo: 0 (las colaboraciones cuentan en @scrband). 
+## Resumen de cuenta @scrband (panel de Instagram, 2026-10-17 a 2026-11-15, capturas de la banda)
+- Vistas: 11.674 (+2.988 % contra el periodo anterior). Cuentas alcanzadas: 2.052 (+1.716 %).
+- Seguidores: 456 (+248 %), seguidores netos +325 (incluye el sorteo del 5-nov).
+- Vistas por tipo: Stories 4,6 mil, posts 4,1 mil, Reels 2,8 mil.
+- Últimos contenidos (vistas al 2026-11-15/17): Story merch "Ya pueden pedir la suya" 49 (7 h); Reel/animación "Todo empezó con una línea…" 222, 19 me gusta, 2 comentarios; anuncio de merch 123; Reel "Vayan a scrband.com/experienc…" 422; "Mucho amor para el responsable…" 536; tarjeta de Andrés "Si hay un responsable del sonido…" 675, 16 me gusta; "Les conté como una película de C…" (When Death) 50 en 7 días; invitación "Vení a la fogata" 349.
 
 ## Punto de partida (antes de la campaña)
 - Instagram @scrband: 133 seguidores (2026-10-30)
