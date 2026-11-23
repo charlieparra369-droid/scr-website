@@ -11,6 +11,7 @@ banda:
     ciudad: San José
     pais: Costa Rica
   web: https://scrband.com/
+  experiencia_interactiva: https://scrband.com/experience
   tagline: "Where I found the songs I thought had died"
   bio_corta: >
     Country y southern rock con influencia del metal y el espíritu del rock clásico.
@@ -202,7 +203,7 @@ metricas:
   spotify_publico:
     - {fecha: 2026-11-06, oyentes_mensuales: 22, fuente: "perfil público open.spotify.com/artist/6DmC1YYXIWndaude1eqIu9"}
   spotify_seguidores:
-    total: 52                      # seguidores del perfil (distinto de oyentes mensuales)
+    total: 59                      # seguidores del perfil (distinto de oyentes mensuales)
     fecha: 2026-11-20
     fuente: Spotify for Artists → Audience (últimos 28 días), captura de la banda
     historial:
@@ -210,6 +211,7 @@ metricas:
       - {fecha: 2026-11-15, total: 37, nota: "+42 %; la subida empieza alrededor del 3-6 de noviembre"}
       - {fecha: 2026-11-20, total: 46, nota: "subida tras el post Misión Release Radar (meta 50 antes del 27)"}
       - {fecha: 2026-11-21, total: 52, nota: "META 50 CUMPLIDA (gráfica de Spotify al 20-nov); +100 % en 28 días"}
+      - {fecha: 2026-11-23, total: 59, nota: "dato de la banda"}
     playlist_adds_28_dias: {valor: 16, fecha: 2026-11-15}   # el 1-28 oct eran 1
   amazon_music: null               # fans pendientes
 
