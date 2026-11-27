@@ -130,6 +130,8 @@
 
     .buttons { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
 
+    .album-buttons { justify-content: flex-start; gap: 14px; }
+
     .btn { 
 
       display: inline-block; padding: 12px 28px; border: none; cursor: pointer; 
@@ -470,6 +472,8 @@
 
       .buttons { justify-content: center; }
 
+      .album-buttons { justify-content: center; }
+
       .story-heading { font-size: 40px; }
 
       .category-heading { font-size: 32px; }
@@ -626,9 +630,14 @@
 
             </p>
 
-            <a href="experience.html" class="btn btn-primary">
-              <span class="lang-en">Enter the experience</span><span class="lang-es">Vive la experiencia</span>
-            </a>
+            <div class="buttons album-buttons">
+              <a href="https://listen.scrband.com" class="btn btn-primary">
+                <span class="lang-en">Listen now</span><span class="lang-es">Escúchalo ya</span>
+              </a>
+              <a href="experience.html" class="btn btn-secondary">
+                <span class="lang-en">Enter the experience</span><span class="lang-es">Vive la experiencia</span>
+              </a>
+            </div>
 
           </div>
 

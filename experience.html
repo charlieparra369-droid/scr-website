@@ -329,6 +329,7 @@ const ext=(href,label)=>h('a',{href,target:'_blank',rel:'noopener'},label);
 const ALBUM={title:'Campfire Stories',artist:'Southern Colored Rooster',release:Date.UTC(2026,10,27),
   dateText:B('November 27, 2026','27 de noviembre de 2026'),site:'https://scrband.com',lyricsUrl:'https://scrband.com/#album',
   cover:'https://scrband.com/Portada_CampfireStories.jpg',logo:'https://scrband.com/logo-no-background.png'};
+const ALBUM_LISTEN=[['Spotify','https://open.spotify.com/album/4a3fP6Vub0NwPMod6KE103'],['Apple Music','https://music.apple.com/cr/album/campfire-stories/6826463999'],['YouTube Music','https://music.youtube.com/playlist?list=OLAK5uy_n2Mb3XjbxlA8QO9hV5tPckpG_hJCCQXuo'],['Amazon Music','https://music.amazon.com/albums/B0HP3QPNSQ']];
 const LINKS={listen:[['Spotify','https://open.spotify.com/artist/6DmC1YYXIWndaude1eqIu9'],['Apple Music','https://music.apple.com/cr/artist/southern-colored-rooster/1883805126'],['Amazon Music','https://music.amazon.com/artists/B0GRWH4SJS'],['YouTube Music','https://music.youtube.com/channel/UClj3vwTsxolvTN--9FHd51Q']],
   follow:[['Instagram','https://instagram.com/scrband'],['TikTok','https://tiktok.com/@charlie.parra'],['YouTube','https://youtube.com/@cparra79'],['scrband.com','https://scrband.com']]};
 const WRITTEN=B('Written by Charlie Parra','Escrita por Charlie Parra'),GTR_JP=B('Guitars: Jason Parra','Guitarras: Jason Parra'),
@@ -591,7 +592,7 @@ function metaBlock(s){return h('div',{class:'meta'},
   s.year?h('p',{t:B(`Released as a single in ${s.year}.`,`Publicada como sencillo en ${s.year}.`)}):h('p',{t:B('Released on Campfire Stories, '+ALBUM.dateText.en+'.','Publicada en Campfire Stories, el '+ALBUM.dateText.es+'.')}),
   s.credits&&h('p',{class:'credits'},...s.credits.flatMap((cr,i)=>[i?h('br',{}):'',h('span',{t:cr})])),
   previewBtn(s),
-  h('p',{},...(s.listen||[]).map(l=>ext(l[1],l[0])),ext(ALBUM.lyricsUrl,h('span',{t:B('Read the lyrics on scrband.com','Leer la letra en scrband.com')}))))}
+  h('p',{},...(s.listen||ALBUM_LISTEN).map(l=>ext(l[1],l[0])),ext(ALBUM.lyricsUrl,h('span',{t:B('Read the lyrics on scrband.com','Leer la letra en scrband.com')}))))}
 function songSection(s,i){const status=h('p',{class:'status',role:'status'}),scene=h('div',{class:'scene'});
   const sec=h('section',{class:'song',id:s.id,'data-sky':s.sky.join(),'data-stars':s.stars,'aria-labelledby':s.id+'-h'},
     h('header',{class:'s-head'},h('p',{class:'when'},h('span',{t:B(`Track ${i+1} of 9`,`Pista ${i+1} de 9`)}),h('span',{t:s.time})),h('h2',{id:s.id+'-h',lang:'en'},s.title),s.feat&&h('p',{class:'feat'},s.feat),h('p',{class:'line',t:s.line})),
