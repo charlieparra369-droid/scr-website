@@ -588,7 +588,7 @@ function previewBtn(s){if(!s.snippet)return null;let a=null;const msg=h('span',{
     if(a.paused){$$('audio').forEach(o=>o.pause());const p=a.play();p&&p.catch(()=>{});tx(b,B('Pause the preview','Pausar el adelanto'))}else{a.pause();tx(b,B('Play the preview','Escuchar el adelanto'))}}});
   return h('p',{},b,msg)}
 function metaBlock(s){return h('div',{class:'meta'},
-  s.year?h('p',{t:B(`Released as a single in ${s.year}.`,`Publicada como sencillo en ${s.year}.`)}):h('p',{t:B('Unreleased until the album arrives on '+ALBUM.dateText.en+'.','Inédita hasta que el disco salga el '+ALBUM.dateText.es+'.')}),
+  s.year?h('p',{t:B(`Released as a single in ${s.year}.`,`Publicada como sencillo en ${s.year}.`)}):h('p',{t:B('Released on Campfire Stories, '+ALBUM.dateText.en+'.','Publicada en Campfire Stories, el '+ALBUM.dateText.es+'.')}),
   s.credits&&h('p',{class:'credits'},...s.credits.flatMap((cr,i)=>[i?h('br',{}):'',h('span',{t:cr})])),
   previewBtn(s),
   h('p',{},...(s.listen||[]).map(l=>ext(l[1],l[0])),ext(ALBUM.lyricsUrl,h('span',{t:B('Read the lyrics on scrband.com','Leer la letra en scrband.com')}))))}
@@ -612,7 +612,7 @@ function hero(){const s=SONGS[0];let t0=0,rafH=0;
   return h('section',{class:'hero'+(state.lit?' lit':''),id:s.id,'data-sky':s.sky.join(),'data-stars':1,'aria-labelledby':'cs-h'},
     h('p',{class:'by'},h('span',{class:'logo',role:'img','aria-label':ALBUM.artist})),
     h('h1',{id:'cs-h',lang:'en'},h('span',{},'Campfire'),h('span',{},'Stories')),
-    h('p',{class:'sub',t:B('Nine stories, one night. The debut album arrives '+ALBUM.dateText.en+'.','Nueve historias, una noche. El álbum debut llega el '+ALBUM.dateText.es+'.')}),
+    h('p',{class:'sub',t:B('Nine stories, one night. The debut album is out now.','Nueve historias, una noche. El álbum debut ya salió.')}),
     btn,hint,
     h('div',{class:'intro'},h('p',{class:'when'},h('span',{t:B('Track 1 of 9','Pista 1 de 9')}),h('span',{t:s.time})),h('p',{class:'line',style:'margin:0 0 1rem',t:s.line}),s.story.map(p=>h('p',{t:p})),h('p',{class:'credits'},...s.credits.flatMap((cr,i)=>[i?h('br',{}):'',h('span',{t:cr})])),
       h('p',{},ext(ALBUM.lyricsUrl,h('span',{t:B('Read the lyrics on scrband.com','Leer la letra en scrband.com')}))),
@@ -622,7 +622,7 @@ function dawn(){
   const days=h('p',{class:'days'}),rooWrap=h('div',{}),keptP=h('p',{});
   const text=h('textarea',{readonly:true,rows:4});ta(text,'aria-label',B('Message to share','Mensaje para compartir'));let mine=null;
   const copied=h('span',{role:'status'});
-  const compose=()=>{if(!mine)return;text.value=pick(B(`My story from Campfire Stories is “${mine.title}”. Southern Colored Rooster’s debut album is out ${ALBUM.dateText.en}. Find yours: scrband.com`,`Mi historia de Campfire Stories es “${mine.title}”. El álbum debut de Southern Colored Rooster sale el ${ALBUM.dateText.es}. Encontrá la tuya: scrband.com`))};
+  const compose=()=>{if(!mine)return;text.value=pick(B(`My story from Campfire Stories is “${mine.title}”. Southern Colored Rooster’s debut album is out now. Find yours: scrband.com`,`Mi historia de Campfire Stories es “${mine.title}”. El álbum debut de Southern Colored Rooster ya salió. Encontrá la tuya: scrband.com`))};
   const picks=SONGS.slice(1).map(s=>{const b=h('button',{class:'pill','aria-pressed':'false',lang:'en',onclick(){mine=s;picks.forEach(p=>p.setAttribute('aria-pressed',p===b));box.hidden=false;compose();tx(copied,'')}},s.title);return b});
   const box=h('div',{hidden:true},text,h('p',{style:'margin-top:.6rem'},h('button',{class:'pill hot',t:B('Copy the message','Copiar el mensaje'),async onclick(){let ok=false;try{await navigator.clipboard.writeText(text.value);ok=true}catch(e){text.select();try{ok=document.execCommand('copy')}catch(_){}}
     tx(copied,ok?B(' Copied.',' Copiado.'):B(' Select the text and copy it by hand.',' Seleccioná el texto y copialo a mano.'))}}),copied));
@@ -637,7 +637,7 @@ function dawn(){
   const sec=h('section',{class:'dawn',id:'dawn','data-sky':'#1c2a52,#7d3f33','data-stars':.15,'aria-labelledby':'dawn-h'},
     h('div',{},h('p',{class:'when'},h('span',{t:B('After the last track','Después de la última pista')}),h('span',{t:B('5:30 am','5:30 a. m.')})),
       h('h2',{id:'dawn-h',t:B('The fire is low. The rooster isn’t.','El fuego está bajo. El gallo no.')}),days,keptP,
-      h('p',{t:B('Nine stories went into the fire tonight: a man who didn’t fit, a rooster pulled from the wreckage, a jukebox, a mirror, an old friend with six strings, a chain, a storm and a showdown. The record that holds them is nearly here.','Nueve historias pasaron por el fuego esta noche: un hombre que no calzaba, un gallo sacado de los escombros, una rocola, un espejo, un viejo amigo de seis cuerdas, una cadena, una tormenta y un duelo. El disco que las guarda ya casi llega.')}),
+      h('p',{t:B('Nine stories went into the fire tonight: a man who didn’t fit, a rooster pulled from the wreckage, a jukebox, a mirror, an old friend with six strings, a chain, a storm and a showdown. The record that holds them is out now.','Nueve historias pasaron por el fuego esta noche: un hombre que no calzaba, un gallo sacado de los escombros, una rocola, un espejo, un viejo amigo de seis cuerdas, una cadena, una tormenta y un duelo. El disco que las guarda ya salió.')}),
       h('ul',{class:'links'},LINKS.listen.concat(LINKS.follow).map(l=>h('li',{},ext(l[1],l[0])))),
       h('p',{class:'credits',t:B('Campfire Stories was co-produced by Andrés Corrales, Jason Parra and Charlie Parra and recorded at 3/4 Estudios. All songs written by Charlie Parra.','Campfire Stories fue co-producido por Andrés Corrales, Jason Parra y Charlie Parra, y grabado en 3/4 Estudios. Todas las canciones fueron escritas por Charlie Parra.')}),
       h('div',{class:'yours'},h('h3',{t:B('Which story was yours?','¿Cuál historia fue la tuya?')}),h('div',{class:'picks'},picks),box),
@@ -650,8 +650,8 @@ function img(src,alt){const i=h('img',{src,loading:'lazy',alt:''});ta(i,'alt',al
    8. PRESS KIT (built from the same data as the night)
    ========================================================= */
 function press(){const P=(en,es)=>h('p',{t:B(en,es)}),H2=(en,es)=>h('h2',{t:B(en,es)});
-  const shortBio=B('Southern Colored Rooster is a country rock and southern rock band from Costa Rica, led by songwriter and bassist Charlie Parra. Its debut album, Campfire Stories, collects nine songs about loss, redemption and second chances, co-produced by Andrés Corrales, Jason Parra and Charlie Parra and recorded at 3/4 Estudios. It is out '+ALBUM.dateText.en+'.',
-    'Southern Colored Rooster es una banda costarricense de country rock y rock sureño, liderada por el compositor y bajista Charlie Parra. Su álbum debut, Campfire Stories, reúne nueve canciones sobre pérdida, redención y segundas oportunidades, co-producidas por Andrés Corrales, Jason Parra y Charlie Parra, y grabadas en 3/4 Estudios. Sale el '+ALBUM.dateText.es+'.');
+  const shortBio=B('Southern Colored Rooster is a country rock and southern rock band from Costa Rica, led by songwriter and bassist Charlie Parra. Its debut album, Campfire Stories, collects nine songs about loss, redemption and second chances, co-produced by Andrés Corrales, Jason Parra and Charlie Parra and recorded at 3/4 Estudios. It came out on '+ALBUM.dateText.en+'.',
+    'Southern Colored Rooster es una banda costarricense de country rock y rock sureño, liderada por el compositor y bajista Charlie Parra. Su álbum debut, Campfire Stories, reúne nueve canciones sobre pérdida, redención y segundas oportunidades, co-producidas por Andrés Corrales, Jason Parra y Charlie Parra, y grabadas en 3/4 Estudios. Salió el '+ALBUM.dateText.es+'.');
   const bioEl=h('p',{class:'lede',t:shortBio}),copied=h('span',{role:'status'});
   const row=(a,b)=>[h('dt',{t:a}),h('dd',{},typeof b==='object'&&b.nodeType?b:h('span',{t:b}))];
   const pend=(en,es)=>h('li',{t:B(en,es)});
